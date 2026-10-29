@@ -1,0 +1,3715 @@
+<!doctype html>
+<html lang="en" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="description" content="Private, offline English vocabulary practice with Russian translations, contextual quizzes, and spaced repetition.">
+<title>English Training — Your daily vocabulary practice</title><style>:root{--blue:#4264dd;--blue-soft:#edf1ff;--ink:#1d293d;--muted:#6e7889;--line:#e6e9f0;--paper:#fff;--bg:#f6f7fb;--green:#267e5b;--orange:#a86321;--radius:18px;font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);color-scheme:light;--primary-bg:#4264dd;--primary-hover:#3454c9;--hover:#f0f2f9;--subtle:#f7f8fc;--selected:#f4f7ff;--word-selected:#f0f3ff;--direction-selected:#f7f9ff;--hero-start:#edf2ff;--hero-end:#f8f9ff;--hero-border:#dfe6fe;--field-border:#dce1ea;--focus:#7d98f0;--focus-ring:#91a6ff;--selection-border:#9caff6;--choice-border:#8ca3f5;--placeholder:#9ba2ae;--context:#566079;--info-bg:#f7f9ff;--info-text:#53617c;--info-border:#e4e9fa;--warn-bg:#fff8ee;--warn-text:#896638;--warn-border:#f5e6cd;--error-bg:#fff1ef;--error-text:#a64039;--error-border:#f3d4cf;--green-bg:#ebf6f0;--orange-bg:#fff3e6;--gray-bg:#f0f2f5;--correct-bg:#f1faf5;--correct-border:#9ccdb7;--progress-bg:#e7ebf6;--dialog-footer:#fcfcfe;--code-bg:#edf0f6;--danger:#b64b47;--toast-bg:#253552;--toast-text:#fff;--decorative:#4264dd0b;--feedback-green:#60a282;--feedback-orange:#dba264}*{box-sizing:border-box}body{margin:0;background:var(--bg)}button,input,textarea,select{font:inherit}button{cursor:pointer;border:1px solid var(--line);background:var(--paper);color:var(--ink);padding:9px 15px;border-radius:9px;font-weight:600;transition:background .15s,transform .15s}button:hover:not(:disabled){background:var(--hover)}button:active:not(:disabled){transform:translateY(1px)}button:disabled{opacity:.45;cursor:not-allowed}button:focus-visible,a:focus-visible{outline:3px solid var(--focus-ring);outline-offset:3px}.primary{background:var(--primary-bg);color:white;border-color:var(--primary-bg)}.primary:hover:not(:disabled){background:var(--primary-hover)}.quiet{border:0;background:transparent;color:var(--blue)}.danger{color:var(--danger)}.small{font-size:12px;padding:6px 10px}.app{display:grid;grid-template-columns:238px minmax(0,1fr);min-height:100vh}.sidebar{background:var(--paper);border-right:1px solid var(--line);padding:30px 18px 20px;display:flex;flex-direction:column;position:sticky;top:0;height:100vh}.brand{display:flex;gap:12px;align-items:center;margin:0 7px 38px}.logo{display:grid;place-items:center;color:white;background:linear-gradient(140deg,#6b8af3,#4264dd);width:43px;height:43px;border-radius:13px;font-size:23px;font-weight:700;box-shadow:0 5px 12px #4264dd22}.brand strong{font-size:15px;letter-spacing:-.3px}.brand small{display:block;color:var(--muted);font-size:11px;margin-top:3px}.nav{display:flex;flex-direction:column;gap:7px}.nav button{display:flex;gap:12px;align-items:center;border:0;text-align:left;background:transparent;font-weight:500;padding:12px 16px;color:var(--muted)}.nav button.active{background:var(--blue-soft);color:var(--blue);font-weight:650}.nav svg{width:19px;height:19px}.sidebar-foot{margin-top:auto;font-size:11px;color:var(--muted);padding:15px 10px;display:grid;gap:12px}.sidebar-foot .dot{display:inline-block;width:6px;height:6px;background:#4e9d79;border-radius:50%;margin-right:5px}main{padding:44px 48px 65px;max-width:1400px;width:100%;margin:auto}h1,h2,h3,p{margin:0}h1{font-size:32px;line-height:1.25;letter-spacing:-1.1px;font-weight:700}h2{font-size:19px;letter-spacing:-.4px}h3{font-size:15px}.eyebrow{color:var(--blue);font-size:10px;font-weight:750;letter-spacing:1.7px;text-transform:uppercase;margin-bottom:12px}.sub{color:var(--muted);margin-top:11px;max-width:690px;line-height:1.6}.heading{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:30px}.heading .primary{white-space:nowrap}.stack{display:grid;gap:23px}.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:0 2px 4px #17294d02}.hero{background:linear-gradient(120deg,var(--hero-start),var(--hero-end));border:1px solid var(--hero-border);padding:34px;border-radius:20px;position:relative;overflow:hidden}.hero .hero-text{max-width:590px}.hero .primary{margin-top:24px}.hero .decoration{position:absolute;right:30px;top:25px;font-size:110px;line-height:1;color:var(--decorative);font-weight:800;pointer-events:none}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.stat{padding:20px 24px}.stat .value{font-size:29px;font-weight:700;letter-spacing:-1px;margin-top:9px}.caption,.muted{color:var(--muted)}.caption{font-size:12px}.row{display:flex;align-items:center;gap:12px}.between{justify-content:space-between}.wrap{flex-wrap:wrap}.badge{font-size:10px;font-weight:700;letter-spacing:.25px;color:var(--blue);background:var(--blue-soft);padding:4px 9px;border-radius:20px;white-space:nowrap;display:inline-block}.badge.green{background:var(--green-bg);color:var(--green)}.badge.orange{background:var(--orange-bg);color:var(--orange)}.badge.gray{background:var(--gray-bg);color:var(--muted)}.directions{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin:21px 0}.direction{padding:21px;text-align:left;border:1px solid var(--line);border-radius:12px;display:grid;gap:10px;font-weight:400}.direction.selected{border-color:var(--selection-border);background:var(--info-bg);box-shadow:0 0 0 1px #9caff633}.direction .glyph{font-size:24px;color:var(--blue)}.direction strong{font-size:15px}.direction .caption{line-height:1.6}.section-title{margin-bottom:17px}.footer-note{font-size:12px;color:var(--muted);line-height:1.8}.empty{padding:60px 25px;text-align:center;color:var(--muted)}.empty .glyph{display:grid;place-items:center;font-size:29px;background:var(--blue-soft);width:65px;height:65px;border-radius:20px;margin:0 auto 20px;color:var(--blue)}.empty h2{color:var(--ink);margin-bottom:12px}.empty p{max-width:380px;margin:auto}.empty button{margin-top:22px}.toolbar{display:flex;gap:12px;margin-bottom:20px}.toolbar input{flex:1;min-width:140px}input,textarea,select{color:var(--ink);border:1px solid var(--field-border);border-radius:8px;background:var(--paper);padding:10px 12px;outline:none}input:focus,textarea:focus,select:focus{border-color:var(--focus);box-shadow:0 0 0 3px #4264dd10}textarea{resize:vertical;min-height:80px;line-height:1.6;width:100%}input{min-width:0}input::placeholder,textarea::placeholder{color:var(--placeholder)}.library-layout{display:grid;grid-template-columns:minmax(230px,.85fr) minmax(0,1.2fr);gap:21px;align-items:start}.word-list{padding:7px;max-height:75vh;overflow-y:auto}.word-item{border:0;border-radius:10px;display:block;width:100%;padding:17px;text-align:left;font-weight:400;background:var(--paper);margin:3px 0}.word-item.selected{background:var(--word-selected)}.word-item:hover{background:var(--subtle)}.word-item strong{font-size:15px}.word-item .translation{font-size:13px;color:var(--muted);margin:6px 0}.word-item .caption{font-size:10px}.word-detail{display:grid;gap:21px}.detail-title{font-size:30px;letter-spacing:-.8px;line-height:1.3;margin:12px 0}.block{margin-top:17px}.label{font-size:10px;font-weight:750;letter-spacing:1.1px;color:var(--muted);text-transform:uppercase;margin-bottom:7px}.bilingual{display:grid;gap:7px}.bilingual+.bilingual{margin-top:18px;padding-top:18px;border-top:1px solid var(--line)}.learning{background:var(--bg);padding:17px;border-radius:10px;display:grid;gap:8px;margin-top:12px}.notice{padding:15px 18px;background:var(--info-bg);color:var(--info-text);border:1px solid var(--info-border);border-radius:10px;font-size:12px;line-height:1.7}.notice.warn{background:var(--warn-bg);border-color:var(--warn-border);color:var(--warn-text)}.notice.error{background:var(--error-bg);border-color:var(--error-border);color:var(--error-text)}#alert-region{margin-bottom:20px}#alert-region:empty{display:none}.error-actions{display:flex;gap:12px;margin-top:10px}.quiz-progress{height:5px;border-radius:10px;background:var(--progress-bg);overflow:hidden;margin:16px 0 24px}.quiz-progress span{display:block;height:100%;background:var(--blue)}.question .prompt{font-size:31px;line-height:1.35;font-weight:700;letter-spacing:-.5px;margin:15px 0}.question .context{font-size:18px;color:var(--context);line-height:1.7}.choices{display:grid;gap:11px}.choice{display:flex;gap:15px;align-items:center;padding:16px 18px;width:100%;text-align:left;font-weight:400;border-radius:12px}.choice .num{display:grid;place-items:center;width:28px;height:28px;border-radius:7px;background:var(--bg);color:var(--muted);font-size:11px;flex-shrink:0}.choice .check{margin-left:auto;color:var(--blue);font-weight:750}.choice.selected{border-color:var(--choice-border);background:var(--selected)}.choice.correct{border-color:var(--correct-border);background:var(--correct-bg)}.choice:disabled{opacity:1;cursor:default}.feedback{border-left:3px solid var(--feedback-green)}.feedback h2{color:var(--green)}.feedback.incorrect,.feedback.unknown{border-left-color:var(--feedback-orange)}.feedback.incorrect h2,.feedback.unknown h2{color:var(--orange)}.feedback-section{margin-top:19px}.feedback-section+.feedback-section{padding-top:17px;border-top:1px solid var(--line)}.feedback-label{font-size:19px;font-weight:650;margin-bottom:9px}.feedback-example{font-style:italic;color:var(--muted);margin-top:9px}.score{font-size:55px;color:var(--blue);font-weight:750;letter-spacing:-2px}.counts{display:grid;gap:8px;text-align:right}.history-list{display:grid;gap:13px}.history-item{text-align:left;padding:22px;background:var(--paper);border-radius:14px;font-weight:400}.history-item:hover{border-color:#bac9f7}.history-item .score-mini{font-size:24px;font-weight:700;color:var(--blue)}.review-choice{font-size:13px;padding:5px 0;color:var(--muted)}.review-choice.correct{color:var(--green);font-weight:600}.import-record{padding:17px 0;border-top:1px solid var(--line);display:grid;gap:7px}.import-record:first-of-type{margin-top:17px}.file-name{font-weight:600;font-size:13px;overflow-wrap:anywhere}.settings-grid{display:grid;gap:23px}details>summary{cursor:pointer;font-weight:600;list-style-position:outside;margin:5px 0}.meanings{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px;max-height:350px;overflow:auto}.meaning{padding:13px;background:var(--bg);border-radius:9px;font-size:12px}.meaning span{display:block;color:var(--muted);margin-top:5px}.guide{font-size:13px;color:var(--muted);line-height:1.85}.guide li+li{margin-top:9px}dialog{border:1px solid var(--line);border-radius:20px;padding:0;color:var(--ink);box-shadow:0 30px 100px #0f234e30;max-height:91vh;width:660px;max-width:94vw}dialog::backdrop{background:#1b294d55;backdrop-filter:blur(3px)}.dialog-head{padding:25px 28px 21px;border-bottom:1px solid var(--line)}.dialog-content{padding:24px 28px;max-height:62vh;overflow-y:auto;display:grid;gap:23px}.dialog-foot{padding:18px 28px;display:flex;gap:10px;justify-content:flex-end;border-top:1px solid var(--line);background:var(--dialog-footer)}.dialog-foot .cancel{margin-right:auto}label.field{display:grid;gap:9px;font-weight:600;font-size:13px}.fields{display:grid;gap:10px}.translation-field{display:flex;gap:10px}.translation-field input{flex:1}.example-fields{padding:17px;border:1px solid var(--line);border-radius:12px;display:grid;gap:12px}.example-fields textarea{min-height:62px}.file-input{position:absolute;width:1px;height:1px;overflow:hidden;opacity:0}.spinner{display:inline-block;width:13px;height:13px;border:2px solid #ccd5f5;border-top-color:var(--blue);border-radius:50%;animation:spin 1s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}.toast{position:fixed;bottom:24px;right:24px;padding:14px 22px;color:var(--toast-text);background:var(--toast-bg);border-radius:12px;box-shadow:0 5px 30px #1d293d22;z-index:10;max-width:90vw}.hidden{display:none!important}.divider{height:1px;background:var(--line);margin:19px 0}code{background:var(--code-bg);padding:2px 5px;border-radius:4px;font-size:12px}.network-note{font-size:11px;opacity:.8}a{color:var(--blue)}.two-columns{display:grid;grid-template-columns:1fr 1fr;gap:13px}@media(min-width:1350px){main{padding:48px 65px}}@media(max-width:1000px){main{padding:30px 26px}.app{grid-template-columns:204px 1fr}.sidebar{padding:25px 12px}.brand{gap:8px;margin-left:0}.brand strong{font-size:13px}.library-layout{grid-template-columns:1fr}.word-list{max-height:330px}.stats{gap:10px}.stat{padding:17px}.directions{grid-template-columns:1fr}.hero .decoration{display:none}}@media(max-width:650px){.app{display:block}.sidebar{position:sticky;top:0;height:auto;border-right:0;border-bottom:1px solid var(--line);z-index:4;padding:12px 15px}.brand{margin:0 0 10px}.brand small,.sidebar-foot{display:none}.logo{width:31px;height:31px;font-size:19px;border-radius:9px}.brand strong{font-size:14px}.nav{flex-direction:row;justify-content:space-between;gap:4px}.nav button{padding:8px 10px;font-size:11px;gap:6px}.nav svg{width:15px;height:15px}main{padding:26px 18px 45px}h1{font-size:27px}.heading{flex-wrap:wrap;gap:15px}.card{padding:20px}.hero{padding:24px}.stats{grid-template-columns:1fr 1fr}.stats .stat:last-child{grid-column:1/-1}.toolbar{flex-wrap:wrap}.toolbar input{flex-basis:100%}.toolbar select{flex:1}.meanings,.two-columns{grid-template-columns:1fr}.question .prompt{font-size:27px}.row.wrap-mobile{flex-wrap:wrap}.dialog-foot{padding:15px}.dialog-head,.dialog-content{padding:20px}.direction{padding:17px}.score{font-size:46px}}@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* Appearance settings: native controls and all semantic surfaces follow the same palette. */
+:root[data-theme="dark"]{--blue:#a4baff;--blue-soft:#253552;--ink:#e6ecf6;--muted:#a7b4c9;--line:#334158;--paper:#1a2434;--bg:#111824;--green:#8bdbb6;--orange:#f0c18b;--primary-bg:#4963cf;--primary-hover:#3e55bc;--hover:#27364c;--subtle:#202e43;--selected:#26395e;--word-selected:#26395e;--direction-selected:#22334e;--hero-start:#1c2d49;--hero-end:#192438;--hero-border:#384d6c;--field-border:#41516b;--focus:#a4baff;--focus-ring:#b4c7ff;--selection-border:#8ba5e9;--choice-border:#8ba5e9;--placeholder:#9daac0;--context:#bdc9dd;--info-bg:#1e2e47;--info-text:#c4d1e8;--info-border:#3c5070;--warn-bg:#372d20;--warn-text:#f0cd98;--warn-border:#6b573a;--error-bg:#3b252a;--error-text:#ffbbb3;--error-border:#77505a;--green-bg:#193a31;--orange-bg:#3c2d1d;--gray-bg:#2b3546;--correct-bg:#1b392f;--correct-border:#5da585;--progress-bg:#2b3850;--dialog-footer:#172131;--code-bg:#2b3850;--danger:#ffb1ab;--toast-bg:#dce7ff;--toast-text:#18223b;--decorative:#a4baff16;--feedback-green:#8bdbb6;--feedback-orange:#f0c18b;color-scheme:dark}
+@media(prefers-color-scheme:dark){:root[data-theme="system"]{--blue:#a4baff;--blue-soft:#253552;--ink:#e6ecf6;--muted:#a7b4c9;--line:#334158;--paper:#1a2434;--bg:#111824;--green:#8bdbb6;--orange:#f0c18b;--primary-bg:#4963cf;--primary-hover:#3e55bc;--hover:#27364c;--subtle:#202e43;--selected:#26395e;--word-selected:#26395e;--direction-selected:#22334e;--hero-start:#1c2d49;--hero-end:#192438;--hero-border:#384d6c;--field-border:#41516b;--focus:#a4baff;--focus-ring:#b4c7ff;--selection-border:#8ba5e9;--choice-border:#8ba5e9;--placeholder:#9daac0;--context:#bdc9dd;--info-bg:#1e2e47;--info-text:#c4d1e8;--info-border:#3c5070;--warn-bg:#372d20;--warn-text:#f0cd98;--warn-border:#6b573a;--error-bg:#3b252a;--error-text:#ffbbb3;--error-border:#77505a;--green-bg:#193a31;--orange-bg:#3c2d1d;--gray-bg:#2b3546;--correct-bg:#1b392f;--correct-border:#5da585;--progress-bg:#2b3850;--dialog-footer:#172131;--code-bg:#2b3850;--danger:#ffb1ab;--toast-bg:#dce7ff;--toast-text:#18223b;--decorative:#a4baff16;--feedback-green:#8bdbb6;--feedback-orange:#f0c18b;color-scheme:dark}}
+.theme-controls{display:flex;gap:7px;align-items:center;flex-wrap:wrap}.theme-controls button{font-size:12px;padding:8px 13px}.theme-controls button[aria-pressed="true"]{background:var(--blue-soft);color:var(--blue);border-color:var(--selection-border)}#theme-toggle{display:flex;align-items:center;gap:8px;text-align:left;padding:9px 10px;color:var(--muted);font-size:12px}@media(max-width:650px){.sidebar-foot{display:flex;padding:8px 0 0;align-items:center;justify-content:space-between;gap:8px}.sidebar-foot>span{display:none}.sidebar-foot #resume-side{font-size:11px;padding:5px}.sidebar-foot #theme-toggle{font-size:11px;padding:5px 9px}}
+dialog{background:var(--paper)}
+
+/* Focused practice layout and accessible interaction refinements. */
+main{max-width:1240px}button{min-height:44px}.small{min-height:36px}.caption{font-size:13px}.eyebrow,.label{font-size:11px}.heading{margin-bottom:28px}.card{box-shadow:0 6px 24px #00000008}.nav button{border-radius:12px}.nav button.active{box-shadow:inset 3px 0 var(--blue)}.hero{padding:28px 32px}.direction{position:relative;min-height:155px}.direction.selected::after{content:'✓';position:absolute;right:18px;top:18px;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:var(--blue-soft);color:var(--blue);font-weight:700}.direction:hover:not(:disabled),.choice:hover:not(:disabled){border-color:var(--selection-border)}.question{padding:30px}.question .prompt{font-size:clamp(28px,3.2vw,40px);overflow-wrap:anywhere}.question .context{border-left:3px solid var(--line);padding-left:18px;margin-top:18px}.quiz-progress{height:8px}.quiz-progress span{transition:width .2s ease}.choice{min-height:62px}.choice.selected{box-shadow:inset 3px 0 var(--blue)}.choice.correct{box-shadow:inset 3px 0 var(--green)}.choice.wrong{border-color:var(--error-border);background:var(--error-bg);box-shadow:inset 3px 0 var(--danger)}.choice.wrong .check{color:var(--danger)}.choice[data-id="unknown"]{border-style:dashed;color:var(--muted);min-height:48px}.quiz-actions{position:sticky;bottom:16px;z-index:3;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 20px;box-shadow:0 8px 28px #00000018;gap:16px}.quiz-actions .primary{min-width:155px}.keyboard-hint{font-size:12px;color:var(--muted);margin-top:5px}kbd{font:inherit;font-size:11px;border:1px solid var(--line);border-bottom-width:2px;border-radius:4px;padding:1px 5px;background:var(--bg)}.word-list{scrollbar-gutter:stable}.word-item.selected{box-shadow:inset 3px 0 var(--blue)}.word-item strong,.translation,.feedback-label{overflow-wrap:anywhere}.toolbar input{min-height:46px}.feedback{scroll-margin:24px}.feedback h2{font-size:21px}.feedback-example{line-height:1.8}dialog{overscroll-behavior:contain}.dialog-content{scrollbar-gutter:stable}.history-item{min-height:125px}
+@media(min-width:1001px){.library-layout>div:last-child{position:sticky;top:24px}.directions{gap:18px}}
+@media(max-width:650px){main{padding:24px 16px 36px}.sidebar{background:var(--paper)}.nav button{min-height:44px;flex:1;justify-content:center}.nav button.active{box-shadow:inset 0 -3px var(--blue)}.hero{padding:24px}.question{padding:23px}.question .context{font-size:16px}.quiz-actions{bottom:8px;padding:13px;flex-wrap:wrap}.quiz-actions>span{flex:1;min-width:130px}.quiz-actions .primary{min-width:130px;flex:1}.keyboard-hint{display:none}.choice{padding:15px 13px;gap:11px}.stats{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.stats .stat:last-child{grid-column:auto}.stat{padding:14px 10px}.stat .caption{font-size:11px}.stat .value{font-size:25px}.dialog-foot{flex-wrap:wrap}.dialog-foot button{flex:1;white-space:nowrap}.heading .primary{width:100%}}
+@media(prefers-reduced-motion:reduce){.quiz-progress span{transition:none}}
+
+/* Language studio — expressive typography, tactile cards, restrained motion. */
+:root{--studio-accent:#d9fa76;--studio-violet:#b9a1ff;--studio-peach:#ffc4a3;--studio-ink:#242039;--radius:24px;--blue:#6741c4;--blue-soft:#eee8ff;--bg:#f4f1eb;--paper:#fffcf7;--line:#e0dbd2;--primary-bg:#6842c7;--primary-hover:#5633ad;--focus-ring:#8661d6;--hover:#eee9f4;--selected:#eee6ff;--word-selected:#eee6ff;--choice-border:#8862db;--selection-border:#8862db;--hero-border:#c6b1fb;--hero-start:#cdb7ff;--hero-end:#bea1f3;--ink:#272334;--muted:#716c7c}
+:root[data-theme="dark"]{--bg:#141319;--paper:#1e1c25;--ink:#f5f1fa;--muted:#b2aabb;--line:#393440;--blue:#c3aaff;--blue-soft:#352a49;--primary-bg:#d9fa76;--primary-hover:#e4ff99;--hover:#2b2635;--selected:#332944;--word-selected:#332944;--choice-border:#c3aaff;--selection-border:#b99aef;--hero-border:#bd9df5;--field-border:#4a4256;--focus:#cfb8ff;--focus-ring:#c3aaff;--info-bg:#2a2535;--info-text:#d4c9e7;--info-border:#483b60;--subtle:#29242f;--progress-bg:#37303f;--dialog-footer:#19161f;--gray-bg:#302a38;--context:#d0c6da;--code-bg:#332c3e}
+@media(prefers-color-scheme:dark){:root[data-theme="system"]{--bg:#141319;--paper:#1e1c25;--ink:#f5f1fa;--muted:#b2aabb;--line:#393440;--blue:#c3aaff;--blue-soft:#352a49;--primary-bg:#d9fa76;--primary-hover:#e4ff99;--hover:#2b2635;--selected:#332944;--word-selected:#332944;--choice-border:#c3aaff;--selection-border:#b99aef;--field-border:#4a4256;--focus:#cfb8ff;--focus-ring:#c3aaff;--info-bg:#2a2535;--info-text:#d4c9e7;--info-border:#483b60;--subtle:#29242f;--progress-bg:#37303f;--dialog-footer:#19161f;--gray-bg:#302a38;--context:#d0c6da;--code-bg:#332c3e}}
+body{background:radial-gradient(ellipse at 95% 0%,#a078e211,transparent 45%),var(--bg);-webkit-font-smoothing:antialiased}::selection{background:#bba0ff;color:#21172f}.app{grid-template-columns:224px minmax(0,1fr)}main{max-width:1260px;padding:44px 48px 72px}.sidebar{background:var(--bg);padding:32px 16px 22px;border-color:var(--line)}.brand{margin:0 8px 44px;gap:10px}.brand strong{font-size:16px;letter-spacing:-.7px}.brand small{font-size:10px;letter-spacing:.3px}.logo{background:var(--studio-violet);color:var(--studio-ink);border-radius:15px 15px 5px 15px;box-shadow:none;font-family:Georgia,serif;font-style:italic;font-size:29px;transform:rotate(-7deg)}.nav{gap:9px}.nav button{border-radius:14px;padding:13px 17px;transition:background .18s,color .18s}.nav button.active{background:var(--ink);color:var(--bg);box-shadow:none}.nav button svg{stroke-width:1.6}.sidebar-foot{border-top:1px solid var(--line);padding-top:21px}.heading{align-items:center;margin-bottom:30px}.heading .eyebrow{letter-spacing:2px;font-size:10px;opacity:.8}.heading h1{font-size:clamp(30px,3.3vw,44px);font-weight:680;letter-spacing:-1.8px;line-height:1.12}.heading .sub{font-size:14px;max-width:580px}.stack{gap:20px}.card{border-radius:24px;padding:27px;box-shadow:0 4px 15px #00000005}.primary{border:0;border-radius:100px;padding:13px 24px;box-shadow:0 4px 12px #00000012;font-weight:750;letter-spacing:-.2px;transition:transform .18s,background .18s,box-shadow .18s}.primary:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 8px 20px #00000020}.primary:active:not(:disabled){transform:translateY(0)}:root[data-theme="dark"] .primary{color:var(--studio-ink)}@media(prefers-color-scheme:dark){:root[data-theme="system"] .primary{color:var(--studio-ink)}}button:not(.primary){border-radius:12px}.hero{isolation:isolate;background:#bca2f0;color:var(--studio-ink);border:0;border-radius:28px;padding:34px 36px;min-height:254px;display:flex;align-items:center;overflow:hidden}.hero::before{content:'';position:absolute;width:390px;height:390px;right:-160px;top:-215px;border:1px solid #32224430;border-radius:50%;box-shadow:0 0 0 45px #32224408,0 0 0 90px #32224406;z-index:-1}.hero .hero-text{max-width:66%;position:relative;z-index:2}.hero .eyebrow{color:#45305e;font-size:10px;letter-spacing:2px}.hero h2{font-size:clamp(30px,3.8vw,48px)!important;line-height:1.05!important;letter-spacing:-2px;font-weight:650}.hero h2 em{font-family:Georgia,'Times New Roman',serif;font-weight:400}.hero .sub{color:#443453;font-size:14px;line-height:1.65;max-width:440px}.hero-art{position:absolute;right:34px;top:50%;width:190px;height:190px;transform:translateY(-50%);pointer-events:none;z-index:1}.letter-tile{display:grid;place-items:center;position:absolute;width:113px;height:136px;border-radius:20px;border:1px solid #29233220;box-shadow:0 12px 24px #39204b25;font-size:84px;line-height:1;font-family:Georgia,serif}.letter-tile.first{background:#f9f4e8;left:0;top:7px;transform:rotate(-13deg)}.letter-tile.second{background:var(--studio-accent);right:0;bottom:3px;transform:rotate(12deg)}.studio-spark{position:absolute;right:4px;top:-9px;font-size:48px;color:#3b294e}.hero-stamp{position:absolute;bottom:16px;right:20px;background:#292132;color:#f5eddc;border-radius:30px;padding:6px 11px;font-size:9px;letter-spacing:1.1px;transform:rotate(-5deg)}.stats{gap:14px}.stat{position:relative;padding:20px 23px;overflow:hidden;min-height:112px}.stat::after{position:absolute;right:19px;bottom:15px;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-size:18px;background:var(--blue-soft);color:var(--blue)}.stat:nth-child(1)::after{content:'Aa';font-family:Georgia,serif;font-size:17px}.stat:nth-child(2)::after{content:'↗';background:#d9fa7622;color:var(--green)}.stat:nth-child(3)::after{content:'✓';background:#ffc4a322;color:var(--orange)}.stat .caption{font-size:12px}.stat .value{font-size:36px;letter-spacing:-1.7px;margin-top:7px;line-height:1}.direction{border-radius:19px!important;background:var(--bg);padding:23px;gap:12px;transition:border-color .18s,background .18s,transform .18s}.direction:hover:not(:disabled){transform:translateY(-2px)}.direction.selected{background:var(--selected);border-color:var(--selection-border);box-shadow:none}.direction .glyph{font-size:28px;letter-spacing:1px;font-family:Georgia,serif}.direction strong{font-size:16px;letter-spacing:-.35px}.direction .caption{font-size:13px;max-width:300px}.direction.selected::after{border-radius:50%;background:var(--blue);color:var(--paper);width:22px;height:22px;font-size:12px}.badge{padding:5px 10px;font-size:10px;letter-spacing:.3px}.question{background:radial-gradient(ellipse at top right,#a478e514,transparent 60%),var(--paper);padding:34px}.question .prompt{font-size:clamp(32px,4vw,48px);letter-spacing:-1.4px}.question .context{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:21px;font-weight:400;line-height:1.65;border-left:2px solid var(--blue);padding-left:20px}.choices{gap:10px}.choice{border-radius:17px!important;min-height:65px;padding:15px 19px;font-size:16px}.choice .num{background:var(--bg);border:1px solid var(--line);width:30px;height:30px;border-radius:9px;font-size:12px}.choice.selected .num{background:var(--blue);border-color:transparent;color:var(--paper)}.quiz-progress{height:6px;background:var(--line)}.quiz-progress span{background:var(--studio-violet);border-radius:10px}.quiz-actions{border-radius:20px;background:var(--paper);box-shadow:0 10px 40px #00000026;padding:17px 22px}.feedback{border-radius:20px}.feedback-label{font-size:23px;letter-spacing:-.5px}.feedback-example{font-family:Georgia,serif;font-size:17px}.score{font-size:70px;color:var(--blue);font-weight:650}.toolbar{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:8px;gap:8px}.toolbar input{border:0;background:transparent;padding-left:15px}.toolbar select{border:0;background:var(--bg);border-radius:11px}.toolbar button{background:var(--bg)}input,textarea,select{border-radius:11px}.word-list{padding:8px}.word-item{border-radius:15px!important;padding:17px 18px;margin:4px 0}.detail-title{font-size:38px;font-weight:650;letter-spacing:-1.3px}.bilingual .muted{font-family:Georgia,serif;font-style:italic}.learning{border-radius:15px}.history-item{border-radius:21px!important;padding:25px}.history-item .score-mini{font-size:33px;letter-spacing:-1px}.settings-grid{gap:18px}.notice{border-radius:14px}.meaning{border-radius:13px}dialog{border-radius:26px;box-shadow:0 30px 100px #00000055}.dialog-head{padding:27px 29px}.dialog-head h2{font-size:25px;letter-spacing:-.8px}.dialog-foot{border-radius:0 0 26px 26px}.empty .glyph{border-radius:23px;font-family:Georgia,serif;font-size:32px}.toast{border-radius:18px}.footer-note{font-size:11px;opacity:.85;max-width:680px}
+@media(min-width:1350px){main{padding:48px 60px 80px}}
+@media(max-width:1000px){.app{grid-template-columns:190px minmax(0,1fr)}main{padding:30px 25px 60px}.brand strong{font-size:13px}.sidebar{padding:28px 12px}.hero-art{right:20px;transform:translateY(-50%) scale(.8);transform-origin:right center}.hero{padding:30px;min-height:240px}.hero .hero-text{max-width:68%}.directions{grid-template-columns:1fr 1fr}.direction{padding:18px}.direction strong{font-size:14px}}
+@media(max-width:650px){.app{display:block}.sidebar{padding:12px 16px 9px;background:var(--bg);border-bottom:1px solid var(--line)}.brand{margin:0 0 9px}.brand strong{font-size:15px}.logo{font-size:23px}.nav{gap:5px}.nav button{padding:10px 6px;border-radius:11px;gap:6px;font-size:11px}.nav button.active{box-shadow:none}.sidebar-foot{border:0;padding:6px 0 0}main{padding:26px 16px 40px}.heading h1{font-size:32px;letter-spacing:-1.1px}.heading .sub{font-size:13px}.hero{border-radius:23px;padding:27px 24px;min-height:260px;align-items:flex-start}.hero .hero-text{max-width:100%;padding-right:0}.hero h2{font-size:36px!important;letter-spacing:-1.4px}.hero .sub{font-size:12px;max-width:70%;margin-top:16px}.hero-art{display:block;right:9px;top:auto;bottom:4px;transform:scale(.48);transform-origin:right bottom}.hero-stamp{display:none}.hero .eyebrow{font-size:9px}.stat{padding:17px 11px;min-height:116px;border-radius:19px}.stat .caption{font-size:10px;max-width:75px;min-height:30px;line-height:1.4}.stat .value{font-size:30px}.stat::after{width:23px;height:23px;right:9px;bottom:12px;font-size:13px}.stat:nth-child(1)::after{font-size:11px}.card{padding:22px;border-radius:22px}.directions{grid-template-columns:1fr;gap:10px}.direction{min-height:120px;padding:19px;gap:7px}.direction .glyph{font-size:24px}.direction strong{font-size:16px}.direction .caption{max-width:none}.question .context{font-size:18px}.choice{font-size:15px;min-height:62px;padding:14px}.quiz-actions{padding:14px;border-radius:18px}.quiz-actions .primary{font-size:14px}.word-list{padding:7px}.toolbar{padding:7px;border-radius:16px}.detail-title{font-size:33px}.question .prompt{font-size:34px}.history-item{padding:20px}.card.stat{padding:17px 11px}.footer-note{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.primary:hover:not(:disabled),.direction:hover:not(:disabled){transform:none}}
+</style></head>
+<body><div class="app"><aside class="sidebar" aria-label="Main navigation"><div class="brand"><div class="logo" aria-hidden="true">я</div><div><strong>English Training</strong><small>YOUR LANGUAGE STUDIO</small></div></div><nav class="nav" aria-label="Learning pages"><button type="button" data-route="quiz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="14" rx="3"/><path d="M8 2h8M8 22h8M9 10l6 2-6 3z"/></svg><span>Quiz</span></button><button type="button" data-route="vocabulary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h6a3 3 0 013 3v14a3 3 0 00-3-3H4zm16 0h-4a3 3 0 00-3 3v14a3 3 0 013-3h4z"/></svg><span>Vocabulary</span></button><button type="button" data-route="history"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 119 9M3 4v8h7M12 7v5l3 2"/></svg><span>History</span></button><button type="button" data-route="settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 17h16M9 4v6M15 14v6"/></svg><span>Settings</span></button></nav><div class="sidebar-foot"><button type="button" id="theme-toggle" data-action="toggle-theme" aria-label="Switch to light mode">☀ Switch to Light</button><button type="button" id="resume-side" class="quiet hidden" data-action="resume">↗ Resume Quiz</button><span><span class="dot"></span><span id="storage-label">Checking storage…</span></span><span>Private practice. No account needed.</span></div></aside><main id="main"><div id="alert-region"></div><div id="page"></div></main></div>
+<dialog id="editor-dialog" aria-labelledby="editor-title"></dialog>
+<dialog id="discard-dialog" aria-labelledby="discard-title"><div class="dialog-head"><h2 id="discard-title">Discard unsaved changes?</h2><p class="sub">Your changes have not been saved.</p></div><div class="dialog-foot"><button type="button" data-action="discard-cancel">Keep Editing</button><button type="button" class="danger" data-action="discard-confirm">Discard Changes</button></div></dialog>
+<dialog id="delete-dialog" aria-labelledby="delete-title"><div class="dialog-head"><h2 id="delete-title">Delete this word?</h2><p id="delete-description" class="sub"></p></div><div class="dialog-foot"><button type="button" data-action="delete-cancel">Cancel</button><button type="button" class="danger" id="delete-confirm" data-action="delete-confirm">Delete Word</button></div></dialog>
+<input type="file" id="json-files" class="file-input" accept=".json,application/json" multiple aria-label="Import vocabulary JSON files">
+<div id="toast" class="toast hidden" role="status" aria-live="polite"></div><noscript><p style="padding:30px">Enable JavaScript in your browser to use English Training.</p></noscript><script>globalThis.TRAINING_DICTIONARY = [
+  {
+    "id": "attempt",
+    "family": "action",
+    "aliases": [
+      "attempt",
+      "try",
+      "make an attempt"
+    ],
+    "content": {
+      "english_term": "attempt",
+      "russian_translations": [
+        "пытаться",
+        "предпринимать попытку",
+        "попытка"
+      ],
+      "explanation_en": "To try to do something, especially something difficult.",
+      "explanation_ru": "Пробовать или прилагать усилия для выполнения действия.",
+      "examples": [
+        {
+          "en": "I will attempt to solve the problem.",
+          "ru": "Я попытаюсь решить эту проблему."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": "achieve",
+    "family": "action",
+    "aliases": [
+      "achieve",
+      "accomplish",
+      "attain"
+    ],
+    "content": {
+      "english_term": "achieve",
+      "russian_translations": [
+        "достигать",
+        "достичь"
+      ],
+      "explanation_en": "To successfully reach a goal through effort.",
+      "explanation_ru": "Успешно достичь цели благодаря усилиям.",
+      "examples": [
+        {
+          "en": "She worked hard to achieve her goal.",
+          "ru": "Она усердно работала, чтобы достичь своей цели."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": "avoid",
+    "family": "action",
+    "aliases": [
+      "avoid",
+      "shun"
+    ],
+    "content": {
+      "english_term": "avoid",
+      "russian_translations": [
+        "избегать",
+        "избежать"
+      ],
+      "explanation_en": "To keep away from something or prevent it from happening.",
+      "explanation_ru": "Держаться в стороне от чего-либо или предотвращать это.",
+      "examples": [
+        {
+          "en": "We avoid this busy road.",
+          "ru": "Мы избегаем этой оживлённой дороги."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": "improve",
+    "family": "action",
+    "aliases": [
+      "improve",
+      "enhance"
+    ],
+    "content": {
+      "english_term": "improve",
+      "russian_translations": [
+        "улучшать",
+        "улучшаться",
+        "улучшить"
+      ],
+      "explanation_en": "To make something better or become better.",
+      "explanation_ru": "Делать что-либо лучше или становиться лучше.",
+      "examples": [
+        {
+          "en": "Practice will improve your skills.",
+          "ru": "Практика улучшит ваши навыки."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": "remember",
+    "family": "memory",
+    "aliases": [
+      "remember",
+      "recall"
+    ],
+    "content": {
+      "english_term": "remember",
+      "russian_translations": [
+        "помнить",
+        "вспоминать"
+      ],
+      "explanation_en": "To keep or bring information back into your mind.",
+      "explanation_ru": "Сохранять сведения в памяти или вспоминать их.",
+      "examples": [
+        {
+          "en": "I remember your name.",
+          "ru": "Я помню ваше имя."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": "forget",
+    "family": "memory",
+    "aliases": [
+      "forget"
+    ],
+    "content": {
+      "english_term": "forget",
+      "russian_translations": [
+        "забывать",
+        "забыть"
+      ],
+      "explanation_en": "To fail to remember something.",
+      "explanation_ru": "Не суметь вспомнить что-либо.",
+      "examples": [
+        {
+          "en": "Do not forget your keys.",
+          "ru": "Не забудьте свои ключи."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": "borrow",
+    "family": "transfer",
+    "aliases": [
+      "borrow"
+    ],
+    "content": {
+      "english_term": "borrow",
+      "russian_translations": [
+        "брать взаймы",
+        "одалживать у кого-либо",
+        "занимать"
+      ],
+      "explanation_en": "To receive something temporarily and return it later.",
+      "explanation_ru": "Временно брать что-либо с обязательством вернуть.",
+      "examples": [
+        {
+          "en": "May I borrow your pen?",
+          "ru": "Можно одолжить у вас ручку?"
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": "lend",
+    "family": "transfer",
+    "aliases": [
+      "lend"
+    ],
+    "content": {
+      "english_term": "lend",
+      "russian_translations": [
+        "давать взаймы",
+        "одалживать кому-либо"
+      ],
+      "explanation_en": "To give something temporarily, expecting it back.",
+      "explanation_ru": "Временно давать что-либо с ожиданием возврата.",
+      "examples": [
+        {
+          "en": "I can lend you my pen.",
+          "ru": "Я могу дать вам свою ручку на время."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": "purchase",
+    "family": "transfer",
+    "aliases": [
+      "purchase",
+      "buy"
+    ],
+    "content": {
+      "english_term": "purchase",
+      "russian_translations": [
+        "покупать",
+        "покупка",
+        "купить"
+      ],
+      "explanation_en": "To obtain something by paying for it.",
+      "explanation_ru": "Приобретать что-либо за деньги.",
+      "examples": [
+        {
+          "en": "They will purchase a new table.",
+          "ru": "Они купят новый стол."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": "sell",
+    "family": "transfer",
+    "aliases": [
+      "sell"
+    ],
+    "content": {
+      "english_term": "sell",
+      "russian_translations": [
+        "продавать",
+        "продать"
+      ],
+      "explanation_en": "To give something to someone in exchange for money.",
+      "explanation_ru": "Передавать что-либо другому за деньги.",
+      "examples": [
+        {
+          "en": "They sell fresh bread here.",
+          "ru": "Здесь продают свежий хлеб."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": "arrive",
+    "family": "movement",
+    "aliases": [
+      "arrive",
+      "reach a destination"
+    ],
+    "content": {
+      "english_term": "arrive",
+      "russian_translations": [
+        "прибывать",
+        "прибыть",
+        "приезжать"
+      ],
+      "explanation_en": "To reach a place at the end of a journey.",
+      "explanation_ru": "Добраться до места в конце пути.",
+      "examples": [
+        {
+          "en": "We arrive at noon.",
+          "ru": "Мы прибываем в полдень."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": "depart",
+    "family": "movement",
+    "aliases": [
+      "depart",
+      "leave"
+    ],
+    "content": {
+      "english_term": "depart",
+      "russian_translations": [
+        "уезжать",
+        "отправляться",
+        "отбывать"
+      ],
+      "explanation_en": "To leave a place, especially to start a journey.",
+      "explanation_ru": "Покидать место, особенно отправляясь в путь.",
+      "examples": [
+        {
+          "en": "The train will depart soon.",
+          "ru": "Поезд скоро отправится."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": "enter",
+    "family": "movement",
+    "aliases": [
+      "enter",
+      "go in"
+    ],
+    "content": {
+      "english_term": "enter",
+      "russian_translations": [
+        "входить",
+        "войти"
+      ],
+      "explanation_en": "To go into a place.",
+      "explanation_ru": "Перемещаться внутрь какого-либо места.",
+      "examples": [
+        {
+          "en": "Please enter the room quietly.",
+          "ru": "Пожалуйста, войдите в комнату тихо."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": "return",
+    "family": "movement",
+    "aliases": [
+      "return",
+      "come back",
+      "go back"
+    ],
+    "content": {
+      "english_term": "return",
+      "russian_translations": [
+        "возвращаться",
+        "вернуться",
+        "возвращать"
+      ],
+      "explanation_en": "To come or go back to a place.",
+      "explanation_ru": "Приходить или отправляться обратно.",
+      "examples": [
+        {
+          "en": "We will return home tomorrow.",
+          "ru": "Мы вернёмся домой завтра."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": "increase",
+    "family": "change",
+    "aliases": [
+      "increase",
+      "grow"
+    ],
+    "content": {
+      "english_term": "increase",
+      "russian_translations": [
+        "увеличивать",
+        "увеличиваться",
+        "увеличение"
+      ],
+      "explanation_en": "To become greater in size, number, or amount.",
+      "explanation_ru": "Становиться больше по размеру, числу или количеству.",
+      "examples": [
+        {
+          "en": "Prices may increase next month.",
+          "ru": "Цены могут увеличиться в следующем месяце."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": "decrease",
+    "family": "change",
+    "aliases": [
+      "decrease",
+      "reduce",
+      "diminish"
+    ],
+    "content": {
+      "english_term": "decrease",
+      "russian_translations": [
+        "уменьшать",
+        "уменьшаться",
+        "уменьшение"
+      ],
+      "explanation_en": "To become smaller in size, number, or amount.",
+      "explanation_ru": "Становиться меньше по размеру, числу или количеству.",
+      "examples": [
+        {
+          "en": "The noise began to decrease.",
+          "ru": "Шум начал уменьшаться."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": "begin",
+    "family": "change",
+    "aliases": [
+      "begin",
+      "start"
+    ],
+    "content": {
+      "english_term": "begin",
+      "russian_translations": [
+        "начинать",
+        "начинаться",
+        "начать"
+      ],
+      "explanation_en": "To start doing something or start happening.",
+      "explanation_ru": "Приступать к действию или начинать происходить.",
+      "examples": [
+        {
+          "en": "The lesson will begin at nine.",
+          "ru": "Урок начнётся в девять."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": "finish",
+    "family": "change",
+    "aliases": [
+      "finish",
+      "complete",
+      "end"
+    ],
+    "content": {
+      "english_term": "finish",
+      "russian_translations": [
+        "заканчивать",
+        "закончить",
+        "завершать"
+      ],
+      "explanation_en": "To bring an activity to an end.",
+      "explanation_ru": "Доводить действие до конца.",
+      "examples": [
+        {
+          "en": "Please finish your work today.",
+          "ru": "Пожалуйста, закончите свою работу сегодня."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": "explain",
+    "family": "communication",
+    "aliases": [
+      "explain",
+      "clarify"
+    ],
+    "content": {
+      "english_term": "explain",
+      "russian_translations": [
+        "объяснять",
+        "объяснить"
+      ],
+      "explanation_en": "To make something clear by giving details.",
+      "explanation_ru": "Делать что-либо понятным, сообщая подробности.",
+      "examples": [
+        {
+          "en": "Can you explain this rule?",
+          "ru": "Можете объяснить это правило?"
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": "ask",
+    "family": "communication",
+    "aliases": [
+      "ask",
+      "inquire"
+    ],
+    "content": {
+      "english_term": "ask",
+      "russian_translations": [
+        "спрашивать",
+        "спросить",
+        "задавать вопрос"
+      ],
+      "explanation_en": "To say a question in order to get information.",
+      "explanation_ru": "Задавать вопрос, чтобы получить сведения.",
+      "examples": [
+        {
+          "en": "I want to ask a question.",
+          "ru": "Я хочу задать вопрос."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": "answer",
+    "family": "communication",
+    "aliases": [
+      "answer",
+      "respond",
+      "reply"
+    ],
+    "content": {
+      "english_term": "answer",
+      "russian_translations": [
+        "отвечать",
+        "ответить",
+        "ответ"
+      ],
+      "explanation_en": "To respond to a question.",
+      "explanation_ru": "Давать ответ на вопрос.",
+      "examples": [
+        {
+          "en": "Please answer the question.",
+          "ru": "Пожалуйста, ответьте на вопрос."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": "listen",
+    "family": "communication",
+    "aliases": [
+      "listen"
+    ],
+    "content": {
+      "english_term": "listen",
+      "russian_translations": [
+        "слушать",
+        "выслушивать"
+      ],
+      "explanation_en": "To pay attention to sounds or someone speaking.",
+      "explanation_ru": "Внимательно воспринимать звуки или чью-либо речь.",
+      "examples": [
+        {
+          "en": "Listen to the instructions carefully.",
+          "ru": "Внимательно слушайте инструкции."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": "happy",
+    "family": "feeling",
+    "aliases": [
+      "happy",
+      "joyful",
+      "glad",
+      "cheerful"
+    ],
+    "content": {
+      "english_term": "happy",
+      "russian_translations": [
+        "счастливый",
+        "радостный",
+        "довольный"
+      ],
+      "explanation_en": "Feeling pleasure or joy.",
+      "explanation_ru": "Испытывающий радость или удовольствие.",
+      "examples": [
+        {
+          "en": "She felt happy after the visit.",
+          "ru": "Она чувствовала себя счастливой после визита."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "sad",
+    "family": "feeling",
+    "aliases": [
+      "sad",
+      "sorrowful",
+      "unhappy"
+    ],
+    "content": {
+      "english_term": "sad",
+      "russian_translations": [
+        "грустный",
+        "печальный"
+      ],
+      "explanation_en": "Feeling sorrow or unhappiness.",
+      "explanation_ru": "Испытывающий грусть или печаль.",
+      "examples": [
+        {
+          "en": "He felt sad when his friend left.",
+          "ru": "Ему было грустно, когда друг уехал."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "angry",
+    "family": "feeling",
+    "aliases": [
+      "angry",
+      "furious",
+      "annoyed"
+    ],
+    "content": {
+      "english_term": "angry",
+      "russian_translations": [
+        "сердитый",
+        "злой",
+        "разгневанный"
+      ],
+      "explanation_en": "Feeling strong displeasure or annoyance.",
+      "explanation_ru": "Испытывающий сильное недовольство или раздражение.",
+      "examples": [
+        {
+          "en": "She was angry about the delay.",
+          "ru": "Она сердилась из-за задержки."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "afraid",
+    "family": "feeling",
+    "aliases": [
+      "afraid",
+      "scared",
+      "frightened"
+    ],
+    "content": {
+      "english_term": "afraid",
+      "russian_translations": [
+        "испуганный",
+        "боящийся"
+      ],
+      "explanation_en": "Feeling fear about danger or harm.",
+      "explanation_ru": "Испытывающий страх перед опасностью или вредом.",
+      "examples": [
+        {
+          "en": "The child was afraid of the storm.",
+          "ru": "Ребёнок боялся грозы."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "tired",
+    "family": "feeling",
+    "aliases": [
+      "tired",
+      "exhausted",
+      "weary"
+    ],
+    "content": {
+      "english_term": "tired",
+      "russian_translations": [
+        "уставший",
+        "усталый"
+      ],
+      "explanation_en": "Needing rest because of effort or lack of sleep.",
+      "explanation_ru": "Нуждающийся в отдыхе из-за нагрузки или недосыпания.",
+      "examples": [
+        {
+          "en": "I am tired after the long walk.",
+          "ru": "Я устал после долгой прогулки."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "confident",
+    "family": "feeling",
+    "aliases": [
+      "confident",
+      "self-assured"
+    ],
+    "content": {
+      "english_term": "confident",
+      "russian_translations": [
+        "уверенный",
+        "уверенный в себе"
+      ],
+      "explanation_en": "Believing in your ability to do something.",
+      "explanation_ru": "Верящий в свою способность сделать что-либо.",
+      "examples": [
+        {
+          "en": "She is confident about the exam.",
+          "ru": "Она уверена в себе перед экзаменом."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "careful",
+    "family": "quality",
+    "aliases": [
+      "careful",
+      "cautious"
+    ],
+    "content": {
+      "english_term": "careful",
+      "russian_translations": [
+        "осторожный",
+        "внимательный"
+      ],
+      "explanation_en": "Taking care to avoid mistakes or danger.",
+      "explanation_ru": "Действующий внимательно, чтобы избежать ошибок или опасности.",
+      "examples": [
+        {
+          "en": "Be careful on the wet floor.",
+          "ru": "Будьте осторожны на мокром полу."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "brave",
+    "family": "quality",
+    "aliases": [
+      "brave",
+      "courageous"
+    ],
+    "content": {
+      "english_term": "brave",
+      "russian_translations": [
+        "смелый",
+        "храбрый"
+      ],
+      "explanation_en": "Willing to face danger despite fear.",
+      "explanation_ru": "Готовый встретиться с опасностью, несмотря на страх.",
+      "examples": [
+        {
+          "en": "The brave firefighter entered the building.",
+          "ru": "Храбрый пожарный вошёл в здание."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "honest",
+    "family": "quality",
+    "aliases": [
+      "honest",
+      "truthful"
+    ],
+    "content": {
+      "english_term": "honest",
+      "russian_translations": [
+        "честный",
+        "правдивый"
+      ],
+      "explanation_en": "Telling the truth and not deceiving people.",
+      "explanation_ru": "Говорящий правду и не обманывающий людей.",
+      "examples": [
+        {
+          "en": "Give me an honest answer.",
+          "ru": "Дайте мне честный ответ."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "patient",
+    "family": "quality",
+    "aliases": [
+      "patient"
+    ],
+    "content": {
+      "english_term": "patient",
+      "russian_translations": [
+        "терпеливый"
+      ],
+      "explanation_en": "Able to wait calmly without becoming annoyed.",
+      "explanation_ru": "Способный спокойно ждать, не раздражаясь.",
+      "examples": [
+        {
+          "en": "Our teacher is very patient.",
+          "ru": "Наш учитель очень терпелив."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "generous",
+    "family": "quality",
+    "aliases": [
+      "generous"
+    ],
+    "content": {
+      "english_term": "generous",
+      "russian_translations": [
+        "щедрый"
+      ],
+      "explanation_en": "Willing to give money, time, or help freely.",
+      "explanation_ru": "Охотно отдающий деньги, время или помощь.",
+      "examples": [
+        {
+          "en": "That was a generous gift.",
+          "ru": "Это был щедрый подарок."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "reliable",
+    "family": "quality",
+    "aliases": [
+      "reliable",
+      "dependable",
+      "trustworthy"
+    ],
+    "content": {
+      "english_term": "reliable",
+      "russian_translations": [
+        "надёжный",
+        "надежный"
+      ],
+      "explanation_en": "Able to be trusted to do what is expected.",
+      "explanation_ru": "Тот, кому можно доверять выполнение ожидаемого.",
+      "examples": [
+        {
+          "en": "This is a reliable service.",
+          "ru": "Это надёжная служба."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "quiet",
+    "family": "sound",
+    "aliases": [
+      "quiet",
+      "silent"
+    ],
+    "content": {
+      "english_term": "quiet",
+      "russian_translations": [
+        "тихий",
+        "спокойный"
+      ],
+      "explanation_en": "Making little or no noise.",
+      "explanation_ru": "Создающий мало шума или не создающий его.",
+      "examples": [
+        {
+          "en": "The library is quiet.",
+          "ru": "В библиотеке тихо."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "loud",
+    "family": "sound",
+    "aliases": [
+      "loud",
+      "noisy"
+    ],
+    "content": {
+      "english_term": "loud",
+      "russian_translations": [
+        "громкий"
+      ],
+      "explanation_en": "Producing a strong or high-volume sound.",
+      "explanation_ru": "Создающий сильный, хорошо слышимый звук.",
+      "examples": [
+        {
+          "en": "The music is too loud.",
+          "ru": "Музыка слишком громкая."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "ancient",
+    "family": "age",
+    "aliases": [
+      "ancient"
+    ],
+    "content": {
+      "english_term": "ancient",
+      "russian_translations": [
+        "древний"
+      ],
+      "explanation_en": "Belonging to the very distant past.",
+      "explanation_ru": "Относящийся к очень далёкому прошлому.",
+      "examples": [
+        {
+          "en": "We visited an ancient city.",
+          "ru": "Мы посетили древний город."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "modern",
+    "family": "age",
+    "aliases": [
+      "modern",
+      "contemporary"
+    ],
+    "content": {
+      "english_term": "modern",
+      "russian_translations": [
+        "современный"
+      ],
+      "explanation_en": "Relating to the present or recent times.",
+      "explanation_ru": "Относящийся к настоящему или недавнему времени.",
+      "examples": [
+        {
+          "en": "They live in a modern building.",
+          "ru": "Они живут в современном здании."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "expensive",
+    "family": "cost",
+    "aliases": [
+      "expensive",
+      "costly"
+    ],
+    "content": {
+      "english_term": "expensive",
+      "russian_translations": [
+        "дорогой",
+        "дорогостоящий"
+      ],
+      "explanation_en": "Costing a lot of money.",
+      "explanation_ru": "Стоящий много денег.",
+      "examples": [
+        {
+          "en": "This coat is expensive.",
+          "ru": "Это пальто дорогое."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "cheap",
+    "family": "cost",
+    "aliases": [
+      "cheap",
+      "inexpensive"
+    ],
+    "content": {
+      "english_term": "cheap",
+      "russian_translations": [
+        "дешёвый",
+        "дешевый",
+        "недорогой"
+      ],
+      "explanation_en": "Costing little money.",
+      "explanation_ru": "Стоящий мало денег.",
+      "examples": [
+        {
+          "en": "We found a cheap hotel.",
+          "ru": "Мы нашли недорогую гостиницу."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "journey",
+    "family": "noun",
+    "aliases": [
+      "journey",
+      "trip"
+    ],
+    "content": {
+      "english_term": "journey",
+      "russian_translations": [
+        "путешествие",
+        "поездка",
+        "путь"
+      ],
+      "explanation_en": "An act of travelling from one place to another.",
+      "explanation_ru": "Перемещение из одного места в другое.",
+      "examples": [
+        {
+          "en": "The journey took three hours.",
+          "ru": "Поездка заняла три часа."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "opportunity",
+    "family": "noun",
+    "aliases": [
+      "opportunity",
+      "chance"
+    ],
+    "content": {
+      "english_term": "opportunity",
+      "russian_translations": [
+        "возможность",
+        "благоприятная возможность"
+      ],
+      "explanation_en": "A suitable situation that makes something possible.",
+      "explanation_ru": "Подходящая ситуация, позволяющая что-либо сделать.",
+      "examples": [
+        {
+          "en": "This is an opportunity to learn.",
+          "ru": "Это возможность научиться."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "challenge",
+    "family": "noun",
+    "aliases": [
+      "challenge"
+    ],
+    "content": {
+      "english_term": "challenge",
+      "russian_translations": [
+        "сложная задача",
+        "вызов",
+        "трудность"
+      ],
+      "explanation_en": "A difficult task that tests your ability.",
+      "explanation_ru": "Трудная задача, проверяющая способности.",
+      "examples": [
+        {
+          "en": "Learning a new language is a challenge.",
+          "ru": "Изучение нового языка — сложная задача."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "knowledge",
+    "family": "noun",
+    "aliases": [
+      "knowledge"
+    ],
+    "content": {
+      "english_term": "knowledge",
+      "russian_translations": [
+        "знание",
+        "знания"
+      ],
+      "explanation_en": "Information and understanding gained through experience or study.",
+      "explanation_ru": "Сведения и понимание, полученные благодаря опыту или учёбе.",
+      "examples": [
+        {
+          "en": "Reading increases your knowledge.",
+          "ru": "Чтение расширяет ваши знания."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "effort",
+    "family": "noun",
+    "aliases": [
+      "effort"
+    ],
+    "content": {
+      "english_term": "effort",
+      "russian_translations": [
+        "усилие",
+        "усилия"
+      ],
+      "explanation_en": "Physical or mental energy used to do something.",
+      "explanation_ru": "Физическая или умственная энергия, затраченная на действие.",
+      "examples": [
+        {
+          "en": "This task requires effort.",
+          "ru": "Эта задача требует усилий."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "decision",
+    "family": "noun",
+    "aliases": [
+      "decision"
+    ],
+    "content": {
+      "english_term": "decision",
+      "russian_translations": [
+        "решение"
+      ],
+      "explanation_en": "A choice made after considering possibilities.",
+      "explanation_ru": "Выбор, сделанный после рассмотрения возможностей.",
+      "examples": [
+        {
+          "en": "We made a decision together.",
+          "ru": "Мы приняли решение вместе."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "weather",
+    "family": "noun",
+    "aliases": [
+      "weather"
+    ],
+    "content": {
+      "english_term": "weather",
+      "russian_translations": [
+        "погода"
+      ],
+      "explanation_en": "The conditions outside, including temperature, rain, and wind.",
+      "explanation_ru": "Состояние атмосферы: температура, осадки и ветер.",
+      "examples": [
+        {
+          "en": "The weather is warm today.",
+          "ru": "Сегодня тёплая погода."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "book",
+    "family": "object",
+    "aliases": [
+      "book"
+    ],
+    "content": {
+      "english_term": "book",
+      "russian_translations": [
+        "книга"
+      ],
+      "explanation_en": "A set of written or printed pages bound together.",
+      "explanation_ru": "Скреплённые вместе страницы с текстом.",
+      "examples": [
+        {
+          "en": "She opened the book.",
+          "ru": "Она открыла книгу."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "table",
+    "family": "object",
+    "aliases": [
+      "table"
+    ],
+    "content": {
+      "english_term": "table",
+      "russian_translations": [
+        "стол"
+      ],
+      "explanation_en": "A piece of furniture with a flat top and legs.",
+      "explanation_ru": "Предмет мебели с плоской поверхностью на ножках.",
+      "examples": [
+        {
+          "en": "Put the cup on the table.",
+          "ru": "Поставьте чашку на стол."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "window",
+    "family": "object",
+    "aliases": [
+      "window"
+    ],
+    "content": {
+      "english_term": "window",
+      "russian_translations": [
+        "окно"
+      ],
+      "explanation_en": "An opening with glass in a wall that lets in light.",
+      "explanation_ru": "Проём со стеклом в стене, пропускающий свет.",
+      "examples": [
+        {
+          "en": "Please open the window.",
+          "ru": "Пожалуйста, откройте окно."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "door",
+    "family": "object",
+    "aliases": [
+      "door"
+    ],
+    "content": {
+      "english_term": "door",
+      "russian_translations": [
+        "дверь"
+      ],
+      "explanation_en": "A movable barrier used to enter or leave a room.",
+      "explanation_ru": "Подвижная преграда для входа в помещение и выхода из него.",
+      "examples": [
+        {
+          "en": "He closed the door.",
+          "ru": "Он закрыл дверь."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "chair",
+    "family": "object",
+    "aliases": [
+      "chair"
+    ],
+    "content": {
+      "english_term": "chair",
+      "russian_translations": [
+        "стул"
+      ],
+      "explanation_en": "A seat for one person, usually with a back.",
+      "explanation_ru": "Сиденье для одного человека, обычно со спинкой.",
+      "examples": [
+        {
+          "en": "Please sit on this chair.",
+          "ru": "Пожалуйста, сядьте на этот стул."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "v76-01",
+    "family": "noun",
+    "aliases": [
+      "abundance"
+    ],
+    "content": {
+      "english_term": "Abundance",
+      "russian_translations": [
+        "изобилие",
+        "обилие"
+      ],
+      "explanation_en": "A very large amount of something.",
+      "explanation_ru": "Очень большое количество чего-либо.",
+      "examples": [
+        {
+          "en": "The garden has an abundance of flowers.",
+          "ru": "В саду обилие цветов."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "v76-02",
+    "family": "noun",
+    "aliases": [
+      "affirmation"
+    ],
+    "content": {
+      "english_term": "Affirmation",
+      "russian_translations": [
+        "утверждение",
+        "подтверждение"
+      ],
+      "explanation_en": "A statement that expresses support, confidence, or belief.",
+      "explanation_ru": "Высказывание, выражающее поддержку, уверенность или убеждение.",
+      "examples": [
+        {
+          "en": "Her words were an affirmation of our progress.",
+          "ru": "Её слова были подтверждением нашего прогресса."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "v76-03",
+    "family": "adjective",
+    "aliases": [
+      "ambitious"
+    ],
+    "content": {
+      "english_term": "Ambitious",
+      "russian_translations": [
+        "амбициозный",
+        "честолюбивый"
+      ],
+      "explanation_en": "Having a strong desire to achieve success.",
+      "explanation_ru": "Имеющий сильное стремление добиться успеха.",
+      "examples": [
+        {
+          "en": "She is an ambitious young researcher.",
+          "ru": "Она амбициозный молодой исследователь."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "v76-04",
+    "family": "preposition",
+    "aliases": [
+      "amongst"
+    ],
+    "content": {
+      "english_term": "Amongst",
+      "russian_translations": [
+        "среди",
+        "между"
+      ],
+      "explanation_en": "In or surrounded by a group; another form of among.",
+      "explanation_ru": "Внутри группы или в окружении чего-либо; вариант слова among.",
+      "examples": [
+        {
+          "en": "He felt comfortable amongst friends.",
+          "ru": "Он чувствовал себя спокойно среди друзей."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "preposition"
+  },
+  {
+    "id": "v76-05",
+    "family": "adjective",
+    "aliases": [
+      "ascending"
+    ],
+    "content": {
+      "english_term": "Ascending",
+      "russian_translations": [
+        "возрастающий",
+        "идущий вверх"
+      ],
+      "explanation_en": "Moving upward or increasing in value.",
+      "explanation_ru": "Движущийся вверх или увеличивающийся по значению.",
+      "examples": [
+        {
+          "en": "The chart shows an ascending trend.",
+          "ru": "График показывает возрастающую тенденцию."
+        }
+      ]
+    },
+    "conflicts": [
+      "v76-13"
+    ],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "v76-06",
+    "family": "noun",
+    "aliases": [
+      "ascending order"
+    ],
+    "content": {
+      "english_term": "Ascending order",
+      "russian_translations": [
+        "порядок возрастания"
+      ],
+      "explanation_en": "An arrangement from the smallest value to the largest.",
+      "explanation_ru": "Расположение от наименьшего значения к наибольшему.",
+      "examples": [
+        {
+          "en": "Put the numbers in ascending order.",
+          "ru": "Расположите числа в порядке возрастания."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "v76-07",
+    "family": "verb",
+    "aliases": [
+      "augment"
+    ],
+    "content": {
+      "english_term": "Augment",
+      "russian_translations": [
+        "увеличивать",
+        "дополнять"
+      ],
+      "explanation_en": "To increase something by adding to it.",
+      "explanation_ru": "Увеличивать что-либо, добавляя к нему новые элементы.",
+      "examples": [
+        {
+          "en": "We hired two assistants to augment the team.",
+          "ru": "Мы наняли двух помощников, чтобы усилить команду."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": "v76-08",
+    "family": "noun",
+    "aliases": [
+      "commodity"
+    ],
+    "content": {
+      "english_term": "Commodity",
+      "russian_translations": [
+        "товар",
+        "сырьевой товар"
+      ],
+      "explanation_en": "A basic product, often a raw material, that can be bought and sold.",
+      "explanation_ru": "Основной товар, часто сырьё, который можно покупать и продавать.",
+      "examples": [
+        {
+          "en": "Wheat is an important agricultural commodity.",
+          "ru": "Пшеница — важный сельскохозяйственный товар."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "v76-09",
+    "family": "noun",
+    "aliases": [
+      "crew"
+    ],
+    "content": {
+      "english_term": "Crew",
+      "russian_translations": [
+        "экипаж",
+        "команда"
+      ],
+      "explanation_en": "A group of people who work together on a ship, aircraft, or similar task.",
+      "explanation_ru": "Группа людей, совместно работающих на судне, самолёте или над общей задачей.",
+      "examples": [
+        {
+          "en": "The crew prepared the aircraft for departure.",
+          "ru": "Экипаж подготовил самолёт к вылету."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "v76-10",
+    "family": "verb",
+    "aliases": [
+      "delete"
+    ],
+    "content": {
+      "english_term": "Delete",
+      "russian_translations": [
+        "удалять",
+        "удалить"
+      ],
+      "explanation_en": "To remove text, a file, or another item.",
+      "explanation_ru": "Убирать текст, файл или другой элемент.",
+      "examples": [
+        {
+          "en": "Please delete the duplicate file.",
+          "ru": "Пожалуйста, удалите дубликат файла."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": "v76-11",
+    "family": "adjective",
+    "aliases": [
+      "delusional"
+    ],
+    "content": {
+      "english_term": "Delusional",
+      "russian_translations": [
+        "страдающий бредовыми убеждениями",
+        "оторванный от реальности"
+      ],
+      "explanation_en": "Holding beliefs that are clearly disconnected from reality; also used informally for unrealistic thinking.",
+      "explanation_ru": "Придерживающийся убеждений, явно не соответствующих реальности; в разговорной речи — мыслящий нереалистично.",
+      "examples": [
+        {
+          "en": "It is delusional to expect a year of work to be finished in one afternoon.",
+          "ru": "Ожидать, что годовую работу закончат за один день, — значит отрываться от реальности."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "v76-12",
+    "family": "noun",
+    "aliases": [
+      "deputy"
+    ],
+    "content": {
+      "english_term": "Deputy",
+      "russian_translations": [
+        "заместитель"
+      ],
+      "explanation_en": "A person authorized to act for someone with a higher position.",
+      "explanation_ru": "Человек, уполномоченный действовать вместо вышестоящего руководителя.",
+      "examples": [
+        {
+          "en": "The deputy director chaired the meeting.",
+          "ru": "Заместитель директора провёл совещание."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "v76-13",
+    "family": "adjective",
+    "aliases": [
+      "descending"
+    ],
+    "content": {
+      "english_term": "Descending",
+      "russian_translations": [
+        "убывающий",
+        "идущий вниз"
+      ],
+      "explanation_en": "Moving downward or decreasing in value.",
+      "explanation_ru": "Движущийся вниз или уменьшающийся по значению.",
+      "examples": [
+        {
+          "en": "The melody follows a descending pattern.",
+          "ru": "Мелодия движется по нисходящему рисунку."
+        }
+      ]
+    },
+    "conflicts": [
+      "v76-05"
+    ],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "v76-14",
+    "family": "noun",
+    "aliases": [
+      "descending order"
+    ],
+    "content": {
+      "english_term": "Descending order",
+      "russian_translations": [
+        "порядок убывания"
+      ],
+      "explanation_en": "An arrangement from the largest value to the smallest.",
+      "explanation_ru": "Расположение от наибольшего значения к наименьшему.",
+      "examples": [
+        {
+          "en": "Sort the prices in descending order.",
+          "ru": "Отсортируйте цены в порядке убывания."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "v76-15",
+    "family": "noun",
+    "aliases": [
+      "deviation"
+    ],
+    "content": {
+      "english_term": "Deviation",
+      "russian_translations": [
+        "отклонение"
+      ],
+      "explanation_en": "A difference from what is expected, usual, or planned.",
+      "explanation_ru": "Отличие от ожидаемого, обычного или запланированного.",
+      "examples": [
+        {
+          "en": "The report explains the deviation from the original plan.",
+          "ru": "В отчёте объясняется отклонение от первоначального плана."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "v76-16",
+    "family": "adjective",
+    "aliases": [
+      "different"
+    ],
+    "content": {
+      "english_term": "Different",
+      "russian_translations": [
+        "другой",
+        "отличающийся"
+      ],
+      "explanation_en": "Not the same as something or someone else.",
+      "explanation_ru": "Не такой, как что-либо или кто-либо другой.",
+      "examples": [
+        {
+          "en": "We need a different approach.",
+          "ru": "Нам нужен другой подход."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "v76-17",
+    "family": "adjective",
+    "aliases": [
+      "distinctive"
+    ],
+    "content": {
+      "english_term": "Distinctive",
+      "russian_translations": [
+        "отличительный",
+        "характерный"
+      ],
+      "explanation_en": "Having a quality that makes something easy to recognize.",
+      "explanation_ru": "Обладающий качеством, по которому легко узнать предмет или человека.",
+      "examples": [
+        {
+          "en": "The building has a distinctive roof.",
+          "ru": "У здания характерная крыша."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "v76-18",
+    "family": "noun",
+    "aliases": [
+      "distinctive feature"
+    ],
+    "content": {
+      "english_term": "Distinctive feature",
+      "russian_translations": [
+        "отличительная черта",
+        "отличительная особенность"
+      ],
+      "explanation_en": "A characteristic that helps distinguish something from others.",
+      "explanation_ru": "Характеристика, позволяющая отличить что-либо от других объектов.",
+      "examples": [
+        {
+          "en": "Its red roof is the house's most distinctive feature.",
+          "ru": "Красная крыша — самая заметная отличительная особенность этого дома."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "v76-19",
+    "family": "verb",
+    "aliases": [
+      "distract"
+    ],
+    "content": {
+      "english_term": "Distract",
+      "russian_translations": [
+        "отвлекать"
+      ],
+      "explanation_en": "To take someone's attention away from something.",
+      "explanation_ru": "Переключать чьё-либо внимание с одного предмета на другой.",
+      "examples": [
+        {
+          "en": "Notifications distract me from my work.",
+          "ru": "Уведомления отвлекают меня от работы."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": "v76-20",
+    "family": "noun",
+    "aliases": [
+      "domain"
+    ],
+    "content": {
+      "english_term": "Domain",
+      "russian_translations": [
+        "область",
+        "сфера"
+      ],
+      "explanation_en": "A particular field of knowledge or activity.",
+      "explanation_ru": "Определённая область знаний или деятельности.",
+      "examples": [
+        {
+          "en": "This problem is outside my domain of expertise.",
+          "ru": "Эта проблема находится вне моей области компетенции."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "v76-21",
+    "family": "adjective",
+    "aliases": [
+      "embedded"
+    ],
+    "content": {
+      "english_term": "Embedded",
+      "russian_translations": [
+        "встроенный",
+        "внедрённый"
+      ],
+      "explanation_en": "Fixed or included firmly within something else.",
+      "explanation_ru": "Прочно включённый или встроенный во что-либо другое.",
+      "examples": [
+        {
+          "en": "The sensor is embedded in the device.",
+          "ru": "Датчик встроен в устройство."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "v76-22",
+    "family": "noun",
+    "aliases": [
+      "evolution"
+    ],
+    "content": {
+      "english_term": "Evolution",
+      "russian_translations": [
+        "эволюция",
+        "постепенное развитие"
+      ],
+      "explanation_en": "Gradual development or change over time.",
+      "explanation_ru": "Постепенное развитие или изменение с течением времени.",
+      "examples": [
+        {
+          "en": "The book describes the evolution of written language.",
+          "ru": "В книге описывается развитие письменной речи."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "v76-23",
+    "family": "adjective",
+    "aliases": [
+      "fat"
+    ],
+    "content": {
+      "english_term": "Fat",
+      "russian_translations": [
+        "толстый",
+        "полный"
+      ],
+      "explanation_en": "Having a large amount of body fat; describing a person this way can sound rude.",
+      "explanation_ru": "Имеющий много жировой ткани; такое описание человека может звучать грубо.",
+      "examples": [
+        {
+          "en": "The cat became fat after eating too many treats.",
+          "ru": "Кот растолстел, потому что ел слишком много лакомств."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "v76-24",
+    "family": "adjective",
+    "aliases": [
+      "generic"
+    ],
+    "content": {
+      "english_term": "Generic",
+      "russian_translations": [
+        "общий",
+        "неспецифический",
+        "типовой"
+      ],
+      "explanation_en": "Not specific to a particular person, product, or situation.",
+      "explanation_ru": "Не относящийся к конкретному человеку, продукту или ситуации.",
+      "examples": [
+        {
+          "en": "The website displayed a generic error message.",
+          "ru": "На сайте появилось общее сообщение об ошибке."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "v76-25",
+    "family": "adjective",
+    "aliases": [
+      "genuine"
+    ],
+    "content": {
+      "english_term": "Genuine",
+      "russian_translations": [
+        "подлинный",
+        "настоящий"
+      ],
+      "explanation_en": "Real or authentic rather than false or copied.",
+      "explanation_ru": "Настоящий, а не поддельный или скопированный.",
+      "examples": [
+        {
+          "en": "The museum confirmed that the painting was genuine.",
+          "ru": "Музей подтвердил, что картина подлинная."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "v76-26",
+    "family": "noun",
+    "aliases": [
+      "homie"
+    ],
+    "content": {
+      "english_term": "Homie",
+      "russian_translations": [
+        "приятель",
+        "кореш"
+      ],
+      "explanation_en": "An informal slang word for a close friend.",
+      "explanation_ru": "Разговорное сленговое слово для близкого друга.",
+      "examples": [
+        {
+          "en": "He's my homie from school.",
+          "ru": "Он мой школьный кореш."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "v76-27",
+    "family": "noun",
+    "aliases": [
+      "hypocrisy"
+    ],
+    "content": {
+      "english_term": "Hypocrisy",
+      "russian_translations": [
+        "лицемерие"
+      ],
+      "explanation_en": "Claiming to have moral standards that one's own behavior does not follow.",
+      "explanation_ru": "Провозглашение моральных принципов, которым собственное поведение не соответствует.",
+      "examples": [
+        {
+          "en": "He criticized the hypocrisy of demanding honesty while telling lies.",
+          "ru": "Он осудил лицемерие людей, которые требуют честности, но сами лгут."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "v76-28",
+    "family": "verb",
+    "aliases": [
+      "i can't be bothered to"
+    ],
+    "content": {
+      "english_term": "I can't be bothered to",
+      "russian_translations": [
+        "мне лень",
+        "не хочу утруждать себя"
+      ],
+      "explanation_en": "An informal expression meaning that one does not want to make the effort to do something; it is followed by a verb.",
+      "explanation_ru": "Разговорное выражение, означающее нежелание прилагать усилия; после него ставится глагол.",
+      "examples": [
+        {
+          "en": "I can't be bothered to cook tonight.",
+          "ru": "Мне лень готовить сегодня вечером."
+        }
+      ]
+    },
+    "conflicts": [
+      "v76-29",
+      "v76-30"
+    ],
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": "v76-29",
+    "family": "verb",
+    "aliases": [
+      "i don't feel like going"
+    ],
+    "content": {
+      "english_term": "I don't feel like going",
+      "russian_translations": [
+        "мне не хочется идти"
+      ],
+      "explanation_en": "An expression saying that one has no desire to go.",
+      "explanation_ru": "Выражение, сообщающее об отсутствии желания идти.",
+      "examples": [
+        {
+          "en": "I don't feel like going to the party tonight.",
+          "ru": "Мне не хочется идти на вечеринку сегодня вечером."
+        }
+      ]
+    },
+    "conflicts": [
+      "v76-28",
+      "v76-30"
+    ],
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": "v76-30",
+    "family": "verb",
+    "aliases": [
+      "i'm too lazy to go"
+    ],
+    "content": {
+      "english_term": "I'm too lazy to go",
+      "russian_translations": [
+        "мне слишком лень идти"
+      ],
+      "explanation_en": "An informal way to say that unwillingness to make an effort prevents one from going.",
+      "explanation_ru": "Разговорный способ сказать, что идти мешает нежелание прилагать усилия.",
+      "examples": [
+        {
+          "en": "I'm too lazy to go to the shop today.",
+          "ru": "Мне слишком лень идти в магазин сегодня."
+        }
+      ]
+    },
+    "conflicts": [
+      "v76-28",
+      "v76-29"
+    ],
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": "v76-31",
+    "family": "adjective",
+    "aliases": [
+      "idle"
+    ],
+    "content": {
+      "english_term": "Idle",
+      "russian_translations": [
+        "бездействующий",
+        "незанятый"
+      ],
+      "explanation_en": "Not working, active, or being used.",
+      "explanation_ru": "Не работающий, не действующий или не используемый.",
+      "examples": [
+        {
+          "en": "The machine stood idle all morning.",
+          "ru": "Станок бездействовал всё утро."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "v76-32",
+    "family": "verb",
+    "aliases": [
+      "imitate"
+    ],
+    "content": {
+      "english_term": "Imitate",
+      "russian_translations": [
+        "подражать",
+        "имитировать"
+      ],
+      "explanation_en": "To copy someone's actions, behavior, or way of doing something.",
+      "explanation_ru": "Копировать чьи-либо действия, поведение или способ выполнения чего-либо.",
+      "examples": [
+        {
+          "en": "Children often imitate their parents.",
+          "ru": "Дети часто подражают родителям."
+        }
+      ]
+    },
+    "conflicts": [
+      "v76-33"
+    ],
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": "v76-33",
+    "family": "verb",
+    "aliases": [
+      "impersonate"
+    ],
+    "content": {
+      "english_term": "Impersonate",
+      "russian_translations": [
+        "выдавать себя за другого",
+        "изображать другого человека"
+      ],
+      "explanation_en": "To pretend to be another person or copy their voice and manner.",
+      "explanation_ru": "Притворяться другим человеком или копировать его голос и манеры.",
+      "examples": [
+        {
+          "en": "The actor can impersonate several famous singers.",
+          "ru": "Актёр умеет изображать нескольких известных певцов."
+        }
+      ]
+    },
+    "conflicts": [
+      "v76-32"
+    ],
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": "v76-34",
+    "family": "noun",
+    "aliases": [
+      "impersonation"
+    ],
+    "content": {
+      "english_term": "Impersonation",
+      "russian_translations": [
+        "имитация",
+        "изображение другого человека"
+      ],
+      "explanation_en": "An act of pretending to be another person or copying their voice and manner.",
+      "explanation_ru": "Действие, при котором изображают другого человека, копируя его голос и манеры.",
+      "examples": [
+        {
+          "en": "Her impersonation of the presenter made everyone laugh.",
+          "ru": "Её пародия на ведущего всех рассмешила."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "v76-35",
+    "family": "noun",
+    "aliases": [
+      "impersonator"
+    ],
+    "content": {
+      "english_term": "Impersonator",
+      "russian_translations": [
+        "пародист",
+        "человек, выдающий себя за другого"
+      ],
+      "explanation_en": "Someone who pretends to be another person, often as entertainment.",
+      "explanation_ru": "Человек, который изображает другого, часто ради развлечения.",
+      "examples": [
+        {
+          "en": "An Elvis impersonator performed at the event.",
+          "ru": "На мероприятии выступил пародист, изображающий Элвиса."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "v76-36",
+    "family": "noun",
+    "aliases": [
+      "incentive"
+    ],
+    "content": {
+      "english_term": "Incentive",
+      "russian_translations": [
+        "стимул",
+        "побуждение"
+      ],
+      "explanation_en": "Something that encourages a person to take action.",
+      "explanation_ru": "То, что побуждает человека к действию.",
+      "examples": [
+        {
+          "en": "The bonus provides an incentive to finish early.",
+          "ru": "Премия служит стимулом закончить работу раньше."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "v76-37",
+    "family": "noun",
+    "aliases": [
+      "inference"
+    ],
+    "content": {
+      "english_term": "Inference",
+      "russian_translations": [
+        "вывод",
+        "умозаключение"
+      ],
+      "explanation_en": "A conclusion reached from evidence and reasoning rather than a direct statement.",
+      "explanation_ru": "Заключение, сделанное на основе фактов и рассуждений, а не прямого сообщения.",
+      "examples": [
+        {
+          "en": "Her inference was based on the available evidence.",
+          "ru": "Её вывод основывался на имеющихся фактах."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "v76-38",
+    "family": "noun",
+    "aliases": [
+      "ingratitude"
+    ],
+    "content": {
+      "english_term": "Ingratitude",
+      "russian_translations": [
+        "неблагодарность"
+      ],
+      "explanation_en": "A failure to show appreciation for help or kindness.",
+      "explanation_ru": "Отсутствие признательности за помощь или доброту.",
+      "examples": [
+        {
+          "en": "His ingratitude upset the people who had helped him.",
+          "ru": "Его неблагодарность огорчила людей, которые ему помогли."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "v76-39",
+    "family": "adverb",
+    "aliases": [
+      "in plain english"
+    ],
+    "content": {
+      "english_term": "In plain English",
+      "russian_translations": [
+        "простыми словами",
+        "на понятном языке"
+      ],
+      "explanation_en": "Using clear, simple English without unnecessary technical language.",
+      "explanation_ru": "Используя ясный, простой английский без ненужных специальных терминов.",
+      "examples": [
+        {
+          "en": "Can you explain the result in plain English?",
+          "ru": "Можете объяснить результат простыми словами?"
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adverb"
+  },
+  {
+    "id": "v76-40",
+    "family": "adjective",
+    "aliases": [
+      "lazy"
+    ],
+    "content": {
+      "english_term": "Lazy",
+      "russian_translations": [
+        "ленивый"
+      ],
+      "explanation_en": "Unwilling to work or make an effort.",
+      "explanation_ru": "Не желающий работать или прилагать усилия.",
+      "examples": [
+        {
+          "en": "I felt lazy and stayed on the sofa.",
+          "ru": "Мне было лень что-либо делать, и я остался на диване."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "v76-41",
+    "family": "noun",
+    "aliases": [
+      "legal precedent"
+    ],
+    "content": {
+      "english_term": "Legal precedent",
+      "russian_translations": [
+        "судебный прецедент"
+      ],
+      "explanation_en": "An earlier court decision used as a reference when considering similar legal questions.",
+      "explanation_ru": "Предыдущее судебное решение, используемое как ориентир при рассмотрении сходных правовых вопросов.",
+      "examples": [
+        {
+          "en": "The earlier judgment was cited as a legal precedent.",
+          "ru": "На предыдущее решение сослались как на судебный прецедент."
+        }
+      ]
+    },
+    "conflicts": [
+      "v76-53"
+    ],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "v76-42",
+    "family": "verb",
+    "aliases": [
+      "leverage"
+    ],
+    "content": {
+      "english_term": "Leverage",
+      "russian_translations": [
+        "использовать с выгодой",
+        "эффективно использовать"
+      ],
+      "explanation_en": "To use an existing resource or advantage to achieve a result.",
+      "explanation_ru": "Использовать имеющийся ресурс или преимущество для достижения результата.",
+      "examples": [
+        {
+          "en": "We can leverage our experience to improve the process.",
+          "ru": "Мы можем использовать наш опыт для улучшения процесса."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": "v76-43",
+    "family": "adjective",
+    "aliases": [
+      "lightweight"
+    ],
+    "content": {
+      "english_term": "Lightweight",
+      "russian_translations": [
+        "лёгкий",
+        "маловесный"
+      ],
+      "explanation_en": "Weighing little compared with similar things.",
+      "explanation_ru": "Имеющий небольшой вес по сравнению с похожими предметами.",
+      "examples": [
+        {
+          "en": "This lightweight jacket is easy to pack.",
+          "ru": "Эту лёгкую куртку удобно брать с собой."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "v76-44",
+    "family": "adjective",
+    "aliases": [
+      "mechanical"
+    ],
+    "content": {
+      "english_term": "Mechanical",
+      "russian_translations": [
+        "механический"
+      ],
+      "explanation_en": "Relating to machines or their moving parts.",
+      "explanation_ru": "Относящийся к механизмам или их движущимся частям.",
+      "examples": [
+        {
+          "en": "The car has a mechanical problem.",
+          "ru": "У автомобиля механическая неисправность."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "v76-45",
+    "family": "noun",
+    "aliases": [
+      "moat"
+    ],
+    "content": {
+      "english_term": "Moat",
+      "russian_translations": [
+        "ров",
+        "защитный ров"
+      ],
+      "explanation_en": "A deep ditch, often filled with water, around a castle or fort.",
+      "explanation_ru": "Глубокая канава, часто заполненная водой, вокруг замка или крепости.",
+      "examples": [
+        {
+          "en": "A wide moat surrounded the castle.",
+          "ru": "Замок окружал широкий ров."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "v76-46",
+    "family": "adverb",
+    "aliases": [
+      "occasionally"
+    ],
+    "content": {
+      "english_term": "Occasionally",
+      "russian_translations": [
+        "иногда",
+        "изредка"
+      ],
+      "explanation_en": "Sometimes, but not often or regularly.",
+      "explanation_ru": "Время от времени, но не часто и не регулярно.",
+      "examples": [
+        {
+          "en": "We occasionally have lunch together.",
+          "ru": "Мы иногда обедаем вместе."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adverb"
+  },
+  {
+    "id": "v76-47",
+    "family": "adjective",
+    "aliases": [
+      "overseen"
+    ],
+    "content": {
+      "english_term": "Overseen",
+      "russian_translations": [
+        "под контролем",
+        "под наблюдением"
+      ],
+      "explanation_en": "The past participle of oversee: supervised or managed.",
+      "explanation_ru": "Причастие прошедшего времени от oversee: находившийся под наблюдением или управлением.",
+      "examples": [
+        {
+          "en": "The project was overseen by an experienced manager.",
+          "ru": "Проект находился под контролем опытного руководителя."
+        }
+      ]
+    },
+    "conflicts": [
+      "v76-48"
+    ],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "v76-48",
+    "family": "verb",
+    "aliases": [
+      "overseeing"
+    ],
+    "content": {
+      "english_term": "Overseeing",
+      "russian_translations": [
+        "контролирующий",
+        "осуществляющий надзор"
+      ],
+      "explanation_en": "Supervising or managing an activity; the -ing form of oversee.",
+      "explanation_ru": "Наблюдение за деятельностью или управление ею; форма глагола oversee с окончанием -ing.",
+      "examples": [
+        {
+          "en": "She is overseeing the installation of the new equipment.",
+          "ru": "Она контролирует установку нового оборудования."
+        }
+      ]
+    },
+    "conflicts": [
+      "v76-47"
+    ],
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": "v76-49",
+    "family": "adjective",
+    "aliases": [
+      "perplexed"
+    ],
+    "content": {
+      "english_term": "Perplexed",
+      "russian_translations": [
+        "озадаченный",
+        "недоумевающий"
+      ],
+      "explanation_en": "Confused because something is difficult to understand.",
+      "explanation_ru": "Растерянный из-за того, что что-либо трудно понять.",
+      "examples": [
+        {
+          "en": "He looked perplexed by the instructions.",
+          "ru": "Он выглядел озадаченным инструкциями."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "v76-50",
+    "family": "noun",
+    "aliases": [
+      "pillars"
+    ],
+    "content": {
+      "english_term": "Pillars",
+      "russian_translations": [
+        "столбы",
+        "колонны"
+      ],
+      "explanation_en": "Tall vertical structures that support a building or part of it.",
+      "explanation_ru": "Высокие вертикальные конструкции, поддерживающие здание или его часть.",
+      "examples": [
+        {
+          "en": "Four stone pillars support the roof.",
+          "ru": "Четыре каменные колонны поддерживают крышу."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "v76-51",
+    "family": "noun",
+    "aliases": [
+      "plain english"
+    ],
+    "content": {
+      "english_term": "Plain English",
+      "russian_translations": [
+        "простой английский",
+        "понятный английский"
+      ],
+      "explanation_en": "Clear English that avoids unnecessary complexity and jargon.",
+      "explanation_ru": "Ясный английский язык без ненужных сложностей и профессионального жаргона.",
+      "examples": [
+        {
+          "en": "The guide is written in plain English.",
+          "ru": "Руководство написано понятным английским языком."
+        }
+      ]
+    },
+    "conflicts": [
+      "v76-52"
+    ],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "v76-52",
+    "family": "noun",
+    "aliases": [
+      "plain language"
+    ],
+    "content": {
+      "english_term": "Plain language",
+      "russian_translations": [
+        "простой язык",
+        "понятный язык"
+      ],
+      "explanation_en": "Language organized and written so its intended readers can understand it easily.",
+      "explanation_ru": "Язык, организованный так, чтобы целевая аудитория могла легко его понять.",
+      "examples": [
+        {
+          "en": "Please rewrite the notice in plain language.",
+          "ru": "Пожалуйста, перепишите уведомление понятным языком."
+        }
+      ]
+    },
+    "conflicts": [
+      "v76-51"
+    ],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "v76-53",
+    "family": "noun",
+    "aliases": [
+      "precedent"
+    ],
+    "content": {
+      "english_term": "Precedent",
+      "russian_translations": [
+        "прецедент"
+      ],
+      "explanation_en": "An earlier event or decision that serves as an example for later situations.",
+      "explanation_ru": "Предыдущее событие или решение, служащее примером для последующих случаев.",
+      "examples": [
+        {
+          "en": "There is a precedent for extending the deadline.",
+          "ru": "Прецедент продления срока уже существует."
+        }
+      ]
+    },
+    "conflicts": [
+      "v76-41"
+    ],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "v76-54",
+    "family": "verb",
+    "aliases": [
+      "retrieve"
+    ],
+    "content": {
+      "english_term": "Retrieve",
+      "russian_translations": [
+        "извлекать",
+        "получать обратно"
+      ],
+      "explanation_en": "To get something back or obtain stored information.",
+      "explanation_ru": "Получать что-либо обратно или извлекать сохранённую информацию.",
+      "examples": [
+        {
+          "en": "The system can retrieve the saved document.",
+          "ru": "Система может извлечь сохранённый документ."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": "v76-55",
+    "family": "noun",
+    "aliases": [
+      "rollout"
+    ],
+    "content": {
+      "english_term": "Rollout",
+      "russian_translations": [
+        "внедрение",
+        "поэтапный запуск"
+      ],
+      "explanation_en": "The introduction of a new product, service, or system, often in stages.",
+      "explanation_ru": "Вывод нового продукта, услуги или системы в использование, часто поэтапный.",
+      "examples": [
+        {
+          "en": "The rollout of the new app begins next week.",
+          "ru": "Внедрение нового приложения начнётся на следующей неделе."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "v76-56",
+    "family": "verb",
+    "aliases": [
+      "self-replicate"
+    ],
+    "content": {
+      "english_term": "Self-replicate",
+      "russian_translations": [
+        "самовоспроизводиться"
+      ],
+      "explanation_en": "To produce copies of oneself or itself.",
+      "explanation_ru": "Создавать копии самого себя.",
+      "examples": [
+        {
+          "en": "Some simple organisms can self-replicate.",
+          "ru": "Некоторые простые организмы способны самовоспроизводиться."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": "v76-57",
+    "family": "adjective",
+    "aliases": [
+      "self-replicating"
+    ],
+    "content": {
+      "english_term": "Self-replicating",
+      "russian_translations": [
+        "самовоспроизводящийся"
+      ],
+      "explanation_en": "Able to produce copies of itself.",
+      "explanation_ru": "Способный создавать собственные копии.",
+      "examples": [
+        {
+          "en": "The researchers studied a self-replicating molecule.",
+          "ru": "Исследователи изучали самовоспроизводящуюся молекулу."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "v76-58",
+    "family": "noun",
+    "aliases": [
+      "self-replication"
+    ],
+    "content": {
+      "english_term": "Self-replication",
+      "russian_translations": [
+        "самовоспроизведение"
+      ],
+      "explanation_en": "The process of producing copies of oneself or itself.",
+      "explanation_ru": "Процесс создания копий самого себя.",
+      "examples": [
+        {
+          "en": "The experiment examined the process of self-replication.",
+          "ru": "В эксперименте изучался процесс самовоспроизведения."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "v76-59",
+    "family": "verb",
+    "aliases": [
+      "set a precedent"
+    ],
+    "content": {
+      "english_term": "Set a precedent",
+      "russian_translations": [
+        "создать прецедент"
+      ],
+      "explanation_en": "To establish an example that may influence similar situations in the future.",
+      "explanation_ru": "Создать пример, способный повлиять на аналогичные ситуации в будущем.",
+      "examples": [
+        {
+          "en": "This decision could set a precedent for future requests.",
+          "ru": "Это решение может создать прецедент для будущих запросов."
+        }
+      ]
+    },
+    "conflicts": [
+      "v76-60"
+    ],
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": "v76-60",
+    "family": "verb",
+    "aliases": [
+      "set a dangerous precedent"
+    ],
+    "content": {
+      "english_term": "Set a dangerous precedent",
+      "russian_translations": [
+        "создать опасный прецедент"
+      ],
+      "explanation_en": "To establish an example that could encourage harmful decisions or behavior later.",
+      "explanation_ru": "Создать пример, который впоследствии может способствовать вредным решениям или действиям.",
+      "examples": [
+        {
+          "en": "Ignoring this rule could set a dangerous precedent.",
+          "ru": "Игнорирование этого правила может создать опасный прецедент."
+        }
+      ]
+    },
+    "conflicts": [
+      "v76-59"
+    ],
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": "v76-61",
+    "family": "adjective",
+    "aliases": [
+      "short"
+    ],
+    "content": {
+      "english_term": "Short",
+      "russian_translations": [
+        "невысокий",
+        "низкорослый"
+      ],
+      "explanation_en": "Having less than average height, when describing a person.",
+      "explanation_ru": "Имеющий рост ниже среднего, если речь идёт о человеке.",
+      "examples": [
+        {
+          "en": "He is short, but his brother is tall.",
+          "ru": "Он невысокий, а его брат высокий."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "v76-62",
+    "family": "adjective",
+    "aliases": [
+      "skinny"
+    ],
+    "content": {
+      "english_term": "Skinny",
+      "russian_translations": [
+        "тощий",
+        "очень худой"
+      ],
+      "explanation_en": "Very thin, often in a way that suggests being too thin; informal.",
+      "explanation_ru": "Очень худой, часто с оттенком чрезмерной худобы; разговорное слово.",
+      "examples": [
+        {
+          "en": "The rescued dog was skinny and hungry.",
+          "ru": "Спасённая собака была тощей и голодной."
+        }
+      ]
+    },
+    "conflicts": [
+      "v76-63",
+      "v76-65"
+    ],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "v76-63",
+    "family": "adjective",
+    "aliases": [
+      "slim"
+    ],
+    "content": {
+      "english_term": "Slim",
+      "russian_translations": [
+        "стройный"
+      ],
+      "explanation_en": "Thin in an attractive or healthy-looking way.",
+      "explanation_ru": "Худощавый в привлекательном или здоровом смысле.",
+      "examples": [
+        {
+          "en": "She has a slim build.",
+          "ru": "У неё стройное телосложение."
+        }
+      ]
+    },
+    "conflicts": [
+      "v76-62",
+      "v76-65"
+    ],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "v76-64",
+    "family": "adjective",
+    "aliases": [
+      "tall"
+    ],
+    "content": {
+      "english_term": "Tall",
+      "russian_translations": [
+        "высокий"
+      ],
+      "explanation_en": "Having greater than average height, especially when describing a person.",
+      "explanation_ru": "Имеющий рост выше среднего, особенно если речь идёт о человеке.",
+      "examples": [
+        {
+          "en": "Her brother is very tall.",
+          "ru": "Её брат очень высокий."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "v76-65",
+    "family": "adjective",
+    "aliases": [
+      "thin"
+    ],
+    "content": {
+      "english_term": "Thin",
+      "russian_translations": [
+        "худой",
+        "худощавый"
+      ],
+      "explanation_en": "Having little body fat; a relatively neutral description of body build.",
+      "explanation_ru": "Имеющий мало жировой ткани; относительно нейтральное описание телосложения.",
+      "examples": [
+        {
+          "en": "He was thin when he was younger.",
+          "ru": "В молодости он был худым."
+        }
+      ]
+    },
+    "conflicts": [
+      "v76-62",
+      "v76-63"
+    ],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "v76-66",
+    "family": "preposition",
+    "aliases": [
+      "through"
+    ],
+    "content": {
+      "english_term": "Through",
+      "russian_translations": [
+        "через",
+        "сквозь"
+      ],
+      "explanation_en": "From one side or end of something to the other.",
+      "explanation_ru": "С одной стороны или из одного конца чего-либо на другую сторону или в другой конец.",
+      "examples": [
+        {
+          "en": "We walked through the tunnel.",
+          "ru": "Мы прошли через туннель."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "preposition"
+  },
+  {
+    "id": "v76-67",
+    "family": "noun",
+    "aliases": [
+      "throughput"
+    ],
+    "content": {
+      "english_term": "Throughput",
+      "russian_translations": [
+        "пропускная способность",
+        "объём обработки"
+      ],
+      "explanation_en": "The amount of work, material, or data processed in a given time.",
+      "explanation_ru": "Количество работы, материала или данных, обрабатываемых за определённое время.",
+      "examples": [
+        {
+          "en": "The upgrade increased the system's throughput.",
+          "ru": "Обновление увеличило пропускную способность системы."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "v76-68",
+    "family": "noun",
+    "aliases": [
+      "thumb"
+    ],
+    "content": {
+      "english_term": "Thumb",
+      "russian_translations": [
+        "большой палец руки"
+      ],
+      "explanation_en": "The short, thick finger on the side of the hand.",
+      "explanation_ru": "Короткий толстый палец, расположенный сбоку кисти руки.",
+      "examples": [
+        {
+          "en": "He pressed the button with his thumb.",
+          "ru": "Он нажал кнопку большим пальцем руки."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "v76-69",
+    "family": "adjective",
+    "aliases": [
+      "transactional"
+    ],
+    "content": {
+      "english_term": "Transactional",
+      "russian_translations": [
+        "основанный на обмене",
+        "ориентированный на выгоду"
+      ],
+      "explanation_en": "Based mainly on an exchange of goods, services, or benefits.",
+      "explanation_ru": "Основанный прежде всего на обмене товарами, услугами или выгодами.",
+      "examples": [
+        {
+          "en": "Their relationship was purely transactional.",
+          "ru": "Их отношения строились исключительно на взаимной выгоде."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "v76-70",
+    "family": "noun",
+    "aliases": [
+      "turnover"
+    ],
+    "content": {
+      "english_term": "Turnover",
+      "russian_translations": [
+        "оборот",
+        "выручка"
+      ],
+      "explanation_en": "The total value of a business's sales during a period; this entry uses the business-sales meaning.",
+      "explanation_ru": "Общая стоимость продаж компании за период; здесь используется значение, связанное с выручкой.",
+      "examples": [
+        {
+          "en": "The company reported higher annual turnover.",
+          "ru": "Компания сообщила об увеличении годового оборота."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "v76-71",
+    "family": "adjective",
+    "aliases": [
+      "unique"
+    ],
+    "content": {
+      "english_term": "Unique",
+      "russian_translations": [
+        "уникальный",
+        "единственный в своём роде"
+      ],
+      "explanation_en": "Being the only one of its kind.",
+      "explanation_ru": "Единственный в своём роде.",
+      "examples": [
+        {
+          "en": "Each handmade bowl is unique.",
+          "ru": "Каждая миска ручной работы уникальна."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "v76-72",
+    "family": "adjective",
+    "aliases": [
+      "unlikely"
+    ],
+    "content": {
+      "english_term": "Unlikely",
+      "russian_translations": [
+        "маловероятный"
+      ],
+      "explanation_en": "Not expected or not likely to happen.",
+      "explanation_ru": "Такой, который вряд ли произойдёт.",
+      "examples": [
+        {
+          "en": "A delay is unlikely in this weather.",
+          "ru": "В такую погоду задержка маловероятна."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "v76-73",
+    "family": "adjective",
+    "aliases": [
+      "unprecedented"
+    ],
+    "content": {
+      "english_term": "Unprecedented",
+      "russian_translations": [
+        "беспрецедентный",
+        "небывалый"
+      ],
+      "explanation_en": "Never known or experienced before.",
+      "explanation_ru": "Никогда ранее не известный и не наблюдавшийся.",
+      "examples": [
+        {
+          "en": "The storm caused unprecedented damage.",
+          "ru": "Буря нанесла небывалый ущерб."
+        }
+      ]
+    },
+    "conflicts": [
+      "v76-76"
+    ],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "v76-74",
+    "family": "noun",
+    "aliases": [
+      "unprecedented growth"
+    ],
+    "content": {
+      "english_term": "Unprecedented growth",
+      "russian_translations": [
+        "беспрецедентный рост"
+      ],
+      "explanation_en": "An increase on a scale not previously experienced.",
+      "explanation_ru": "Увеличение в масштабах, которые ранее не наблюдались.",
+      "examples": [
+        {
+          "en": "The town experienced unprecedented growth.",
+          "ru": "Город пережил беспрецедентный рост."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "v76-75",
+    "family": "noun",
+    "aliases": [
+      "variant"
+    ],
+    "content": {
+      "english_term": "Variant",
+      "russian_translations": [
+        "вариант",
+        "разновидность"
+      ],
+      "explanation_en": "A form or version that differs from another form of the same thing.",
+      "explanation_ru": "Форма или версия, отличающаяся от другой формы того же объекта.",
+      "examples": [
+        {
+          "en": "This model is a smaller variant of the original design.",
+          "ru": "Эта модель — уменьшенный вариант первоначальной конструкции."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": "v76-76",
+    "family": "adjective",
+    "aliases": [
+      "without precedent"
+    ],
+    "content": {
+      "english_term": "Without precedent",
+      "russian_translations": [
+        "не имеющий прецедента",
+        "беспрецедентный"
+      ],
+      "explanation_en": "Having no known earlier example of the same kind.",
+      "explanation_ru": "Не имеющий известного предыдущего примера того же рода.",
+      "examples": [
+        {
+          "en": "The scale of the event was without precedent.",
+          "ru": "Масштаб события не имел прецедента."
+        }
+      ]
+    },
+    "conflicts": [
+      "v76-73"
+    ],
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": "extra-before",
+    "family": "preposition",
+    "aliases": [
+      "before"
+    ],
+    "content": {
+      "english_term": "before",
+      "russian_translations": [
+        "до"
+      ],
+      "explanation_en": "Earlier than something.",
+      "explanation_ru": "Раньше чего-либо.",
+      "examples": [
+        {
+          "en": "Come before noon.",
+          "ru": "Приходи до полудня."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "preposition"
+  },
+  {
+    "id": "extra-after",
+    "family": "preposition",
+    "aliases": [
+      "after"
+    ],
+    "content": {
+      "english_term": "after",
+      "russian_translations": [
+        "после"
+      ],
+      "explanation_en": "Later than something.",
+      "explanation_ru": "Позже чего-либо.",
+      "examples": [
+        {
+          "en": "We rest after lunch.",
+          "ru": "Мы отдыхаем после обеда."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "preposition"
+  },
+  {
+    "id": "extra-under",
+    "family": "preposition",
+    "aliases": [
+      "under"
+    ],
+    "content": {
+      "english_term": "under",
+      "russian_translations": [
+        "под"
+      ],
+      "explanation_en": "Below something.",
+      "explanation_ru": "Ниже чего-либо.",
+      "examples": [
+        {
+          "en": "The cat is under the table.",
+          "ru": "Кошка под столом."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "preposition"
+  },
+  {
+    "id": "extra-above",
+    "family": "preposition",
+    "aliases": [
+      "above"
+    ],
+    "content": {
+      "english_term": "above",
+      "russian_translations": [
+        "над"
+      ],
+      "explanation_en": "Higher than something.",
+      "explanation_ru": "Выше чего-либо.",
+      "examples": [
+        {
+          "en": "The lamp is above the desk.",
+          "ru": "Лампа над столом."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "preposition"
+  },
+  {
+    "id": "extra-without",
+    "family": "preposition",
+    "aliases": [
+      "without"
+    ],
+    "content": {
+      "english_term": "without",
+      "russian_translations": [
+        "без"
+      ],
+      "explanation_en": "Not having something.",
+      "explanation_ru": "При отсутствии чего-либо.",
+      "examples": [
+        {
+          "en": "I drink tea without sugar.",
+          "ru": "Я пью чай без сахара."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "preposition"
+  },
+  {
+    "id": "extra-always",
+    "family": "adverb",
+    "aliases": [
+      "always"
+    ],
+    "content": {
+      "english_term": "always",
+      "russian_translations": [
+        "всегда"
+      ],
+      "explanation_en": "On every occasion.",
+      "explanation_ru": "Каждый раз.",
+      "examples": [
+        {
+          "en": "I always read at night.",
+          "ru": "Я всегда читаю вечером."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adverb"
+  },
+  {
+    "id": "extra-never",
+    "family": "adverb",
+    "aliases": [
+      "never"
+    ],
+    "content": {
+      "english_term": "never",
+      "russian_translations": [
+        "никогда"
+      ],
+      "explanation_en": "At no time.",
+      "explanation_ru": "Ни в какое время.",
+      "examples": [
+        {
+          "en": "I never smoke.",
+          "ru": "Я никогда не курю."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adverb"
+  },
+  {
+    "id": "extra-quickly",
+    "family": "adverb",
+    "aliases": [
+      "quickly"
+    ],
+    "content": {
+      "english_term": "quickly",
+      "russian_translations": [
+        "быстро"
+      ],
+      "explanation_en": "At a fast speed.",
+      "explanation_ru": "С большой скоростью.",
+      "examples": [
+        {
+          "en": "She ran quickly.",
+          "ru": "Она бежала быстро."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adverb"
+  },
+  {
+    "id": "extra-carefully",
+    "family": "adverb",
+    "aliases": [
+      "carefully"
+    ],
+    "content": {
+      "english_term": "carefully",
+      "russian_translations": [
+        "осторожно"
+      ],
+      "explanation_en": "With attention to avoid mistakes or harm.",
+      "explanation_ru": "Внимательно, чтобы избежать ошибок или вреда.",
+      "examples": [
+        {
+          "en": "Drive carefully.",
+          "ru": "Веди машину осторожно."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adverb"
+  },
+  {
+    "id": "extra-here",
+    "family": "adverb",
+    "aliases": [
+      "here"
+    ],
+    "content": {
+      "english_term": "here",
+      "russian_translations": [
+        "здесь"
+      ],
+      "explanation_en": "In this place.",
+      "explanation_ru": "В этом месте.",
+      "examples": [
+        {
+          "en": "Wait here.",
+          "ru": "Жди здесь."
+        }
+      ]
+    },
+    "conflicts": [],
+    "partOfSpeech": "adverb"
+  }
+];
+
+/* English Training: pure, browser-independent domain rules. No network or DOM access. */
+(function (root) {
+'use strict';
+const DAY=86400000, MAX_BYTES=1048576;
+const norm=s=>String(s??'').trim().normalize('NFC').toLocaleLowerCase('en-US');
+const clone=o=>JSON.parse(JSON.stringify(o));
+const uid=()=>{const b=new Uint8Array(16); if(root.crypto?.getRandomValues)root.crypto.getRandomValues(b);else for(let i=0;i<16;i++)b[i]=Math.floor(Math.random()*256); b[6]=(b[6]&15)|64;b[8]=(b[8]&63)|128;const h=Array.from(b,x=>x.toString(16).padStart(2,'0')).join('');return `${h.slice(0,8)}-${h.slice(8,12)}-${h.slice(12,16)}-${h.slice(16,20)}-${h.slice(20)}`;};
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
+const blankContent=()=>({english_term:'',russian_translations:[],explanation_en:'',explanation_ru:'',examples:[]});
+const initial=()=>({schema:1,revision:0,words:[],sessions:[],learning:{},scheduling:{},imports:[],settings:{folderName:''}});
+const initialLearning=()=>({repetitions:0,intervalDays:0,ease:2.5,nextReview:null,lastPracticed:null,correctCount:0,incorrectCount:0,unknownCount:0});
+function invalid(message,existingID){const e=new Error(message);e.existingID=existingID;throw e;}
+function validate(c) {
+ if(!c||typeof c!=='object'||Array.isArray(c))invalid('One JSON object is required per vocabulary entry.');
+ const strings=['english_term','explanation_en','explanation_ru'];
+ if(strings.some(k=>typeof c[k]!=='string')||!Array.isArray(c.russian_translations)||c.russian_translations.some(x=>typeof x!=='string')||!Array.isArray(c.examples)||c.examples.some(x=>!x||typeof x.en!=='string'||typeof x.ru!=='string'))invalid('Field types do not match the vocabulary JSON schema.');
+ if(!norm(c.english_term))invalid('Enter an English word or phrase.');
+ if(!c.russian_translations.length||c.russian_translations.some(x=>!norm(x)))invalid('Add at least one nonempty Russian translation.');
+ if(!norm(c.explanation_en)||!norm(c.explanation_ru))invalid('Complete both English and Russian explanations.');
+ if(!c.examples.length||c.examples.some(x=>!norm(x.en)||!norm(x.ru)))invalid('Add at least one complete bilingual example; finish both languages of every pair.');
+ if(c.english_term.length>300||c.russian_translations.length>50||c.examples.length>50||c.explanation_en.length>20000||c.explanation_ru.length>20000||c.russian_translations.some(x=>x.length>1000)||c.examples.some(x=>x.en.length>10000||x.ru.length>10000))invalid('Entry exceeds the content limits. Shorten its text or reduce the number of examples/translations.');
+ return true;
+}
+function trim(c){return {english_term:c.english_term.trim(),russian_translations:c.russian_translations.map(x=>x.trim()),explanation_en:c.explanation_en.trim(),explanation_ru:c.explanation_ru.trim(),examples:c.examples.map(x=>({en:x.en.trim(),ru:x.ru.trim()}))};}
+function duplicate(state,term,excluding){const n=norm(term);return n?state.words.find(w=>w.deletedAt==null&&w.id!==excluding&&norm(w.content.english_term)===n):undefined;}
+function saveWord(s,word,status,now=Date.now()) {
+ if(!['draft','ready'].includes(status))invalid('Invalid vocabulary status.');
+ const c=trim(word.content);
+ if(status==='ready')validate(c);
+ const existing=duplicate(s,c.english_term,word.id);
+ if(existing)invalid('This English term already exists. Open the existing entry to edit its meaning.',existing.id);
+ const old=s.words.find(w=>w.id===word.id);
+ if(old&&old.deletedAt!=null)invalid('This entry was deleted. Create a new entry instead.');
+ const w={id:old?.id||word.id||uid(),content:c,status,createdAt:old?.createdAt??now,updatedAt:now,deletedAt:null};
+ if(old)s.words[s.words.indexOf(old)]=w;else s.words.push(w);
+ for(const d of ['enRu','ruEn'])s.learning[`${w.id}:${d}`]??=initialLearning();
+ return w;
+}
+function deleteWord(s,id,now=Date.now()){const w=s.words.find(w=>w.id===id);if(w){w.deletedAt=now;w.updatedAt=now;}}
+function resolve(c,dictionary){const ru=new Set(c.russian_translations.map(norm));const found=dictionary.filter(m=>m.aliases.map(norm).includes(norm(c.english_term))&&ru.size&&[...ru].every(t=>m.content.russian_translations.map(norm).includes(t)));return found.length===1?found[0]:null;}
+function hideAnswers(sentence,aliases){let text=sentence;for(const a of aliases.slice().sort((a,b)=>b.length-a.length)){if(!a.trim())continue;const escaped=a.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');const re=new RegExp('(^|[^\\p{L}\\p{N}])('+escaped+')(?=$|[^\\p{L}\\p{N}])','giu');text=text.replace(re,(_,prefix)=>prefix+'____');}return text;}
+function makeChoice(c,meaningID,d,example){return {id:uid(),label:d==='enRu'?c.russian_translations.join('; '):c.english_term,definition:d==='enRu'?c.explanation_ru:c.explanation_en,example:d==='enRu'?example.ru:example.en,meaningID};}
+function generate(s,d,dictionary,now=Date.now()){
+ if(!['enRu','ruEn'].includes(d))invalid('Choose a quiz direction.');
+ const words=shuffle(s.words.filter(w=>w.deletedAt==null&&w.status==='ready'));
+ if(!words.length)invalid('Add a ready word before starting a quiz.');
+ const rank=w=>{const l=s.learning[`${w.id}:${d}`]||initialLearning();return l.lastPracticed===null?0:(l.nextReview??0)<=now?1:2;};
+ words.sort((a,b)=>{const ra=rank(a),rb=rank(b);if(ra!==rb)return ra-rb;if(ra===1){const x=s.learning[`${a.id}:${d}`],y=s.learning[`${b.id}:${d}`];return (y.incorrectCount+y.unknownCount)-(x.incorrectCount+x.unknownCount)||(x.nextReview??0)-(y.nextReview??0);}return 0;});
+ const selected=words.slice(0,5),questions=[];
+ for(let i=0;i<5;i++){
+  const w=selected[i%selected.length],c=w.content;validate(c);const sense=resolve(c,dictionary);
+  if(!sense)invalid(`Cannot verify a safe offline quiz for “${c.english_term}”. Check Supported Meanings in Settings and the stored Russian translations. Your entry is saved; no quiz has been created.`);
+  const en=new Set(sense.aliases.map(norm)),ru=new Set(sense.content.russian_translations.map(norm));
+  const safe=dictionary.filter(m=>m.id!==sense.id&&m.partOfSpeech===sense.partOfSpeech&&!sense.conflicts.includes(m.id)&&!m.conflicts.includes(sense.id)&&!m.aliases.some(a=>en.has(norm(a)))&&!m.content.russian_translations.some(a=>ru.has(norm(a))));
+  let question=null;
+  for(let attempt=0;attempt<12&&!question;attempt++){
+   const candidates=[...shuffle(safe.filter(m=>m.family===sense.family)),...shuffle(safe.filter(m=>m.family!==sense.family))].slice(0,4);
+   if(candidates.length!==4)continue;
+   const example=c.examples[(i+attempt)%c.examples.length],feedback=c.examples.length>1?c.examples[(i+attempt+1)%c.examples.length]:example;
+   const correct=makeChoice(c,sense.id,d,feedback),choices=shuffle([correct,...candidates.map(m=>makeChoice(m.content,m.id,d,m.content.examples[0]))]);
+   if(new Set(choices.map(x=>norm(x.label))).size!==5||new Set(choices.map(x=>x.meaningID)).size!==5)continue;
+   question={id:uid(),wordID:w.id,prompt:d==='enRu'?c.english_term:c.russian_translations.join('; '),context:hideAnswers(d==='enRu'?example.en:example.ru,d==='enRu'?sense.content.russian_translations:sense.aliases),choices,correctID:correct.id};
+  }
+  if(!question)invalid(`Could not generate five unambiguous choices for “${c.english_term}” after 12 attempts. Edit its meaning or examples.`);
+  questions.push(question);
+ }
+ return shuffle(questions);
+}
+function start(s,d,dictionary,now=Date.now()){const active=s.sessions.find(x=>x.status==='in_progress');if(active)return active;const questions=generate(s,d,dictionary,now);const session={id:uid(),direction:d,status:'in_progress',startedAt:now,completedAt:null,currentIndex:0,questions,answers:[],score:0};s.sessions.push(session);return session;}
+function schedule(previous,outcomes,now){const s=clone(previous);for(const o of outcomes)s[o==='correct'?'correctCount':o==='incorrect'?'incorrectCount':'unknownCount']++;if(outcomes.every(o=>o==='correct')){s.repetitions++;s.intervalDays=s.repetitions===1?1:s.repetitions===2?6:Math.max(1,Math.round(s.intervalDays*s.ease));}else{s.repetitions=0;s.ease=Math.max(1.3,s.ease-0.2);s.intervalDays=1;}s.lastPracticed=now;s.nextReview=now+s.intervalDays*DAY;return s;}
+function submit(s,id,qid,selectedID,now=Date.now()){
+ const quiz=s.sessions.find(x=>x.id===id);if(!quiz)invalid('Quiz not found.');
+ if(quiz.answers.some(a=>a.questionID===qid))return quiz;
+ const q=quiz.questions[quiz.currentIndex];if(quiz.status!=='in_progress'||q.id!==qid)invalid('This is not the current question.');
+ const chosen=q.choices.find(x=>x.id===selectedID),correct=q.choices.find(x=>x.id===q.correctID);
+ if(selectedID!==null&&!chosen)invalid('Select one of the saved answer choices.');
+ const outcome=selectedID===null?'unknown':selectedID===q.correctID?'correct':'incorrect';
+ quiz.answers.push({questionID:qid,selectedID,outcome,submittedAt:now,correctFeedback:clone(correct),selectedFeedback:chosen?clone(chosen):null});
+ if(quiz.answers.length===5){
+  for(const wordID of new Set(quiz.questions.map(q=>q.wordID))){
+   const key=`${id}:${wordID}:${quiz.direction}`;if(s.scheduling[key])continue;
+   const ids=new Set(quiz.questions.filter(q=>q.wordID===wordID).map(q=>q.id)),outcomes=quiz.answers.filter(a=>ids.has(a.questionID)).map(a=>a.outcome),lk=`${wordID}:${quiz.direction}`;
+   s.learning[lk]=schedule(s.learning[lk]||initialLearning(),outcomes,now);s.scheduling[key]={sessionID:id,wordID,direction:quiz.direction,appliedAt:now};
+  }
+  quiz.status='completed';quiz.completedAt=now;quiz.score=quiz.answers.filter(a=>a.outcome==='correct').length;
+ }
+ return quiz;
+}
+function next(s,id){const q=s.sessions.find(x=>x.id===id);if(!q)invalid('Quiz not found.');if(q.status==='completed')return q;if(!q.answers.some(a=>a.questionID===q.questions[q.currentIndex].id))invalid('Apply a response before continuing.');q.currentIndex=Math.min(4,q.currentIndex+1);return q;}
+function parseJSON(text,bytes){if(bytes>MAX_BYTES)invalid('File exceeds 1 MiB. Use one vocabulary entry per file.');let c;try{c=JSON.parse(text);}catch{invalid('Malformed or incomplete JSON. Finish the temporary file before renaming it to .json.');}const keys=['english_term','russian_translations','explanation_en','explanation_ru','examples'];if(!c||typeof c!=='object'||Array.isArray(c)||Object.keys(c).sort().join('|')!==keys.sort().join('|')||!Array.isArray(c.examples)||c.examples.some(x=>!x||Object.keys(x).sort().join('|')!=='en|ru'))invalid('JSON must contain exactly english_term, russian_translations, explanation_en, explanation_ru, and examples with en/ru pairs.');validate(c);return trim(c);}
+function recordImport(s,path,hash,status,message,wordID=null,now=Date.now()){let r=s.imports.find(x=>x.path===path&&x.hash===hash&&x.status===status);if(!r){r={id:uid(),path,hash,status};s.imports.push(r);}Object.assign(r,{message,wordID,date:now});}
+function importContent(s,c,path,hash,now=Date.now()){if(s.imports.some(r=>r.hash===hash&&r.status==='success'))return null;validate(c);const word=saveWord(s,{content:c},'ready',now);recordImport(s,path,hash,'success',`Imported ${word.content.english_term}.`,word.id,now);return word;}
+function validateState(s){if(s.schema!==1||!Array.isArray(s.words)||!Array.isArray(s.sessions)||!s.learning||!s.scheduling)invalid('Stored data format is not supported. Use the original browser profile or a compatible app version.');const terms=new Set();for(const w of s.words.filter(w=>!w.deletedAt)){const n=norm(w.content.english_term);if(n&&terms.has(n))invalid('Duplicate active vocabulary detected; no changes were saved.');if(n)terms.add(n);}for(const q of s.sessions){if(q.questions.length!==5||q.questions.some(x=>x.choices.length!==5||!x.choices.some(c=>c.id===x.correctID)))invalid('Saved quiz is invalid. No questions were regenerated.');if(new Set(q.answers.map(x=>x.questionID)).size!==q.answers.length)invalid('Duplicate saved answer.');}}
+root.TrainingCore={DAY,MAX_BYTES,norm,clone,uid,shuffle,blankContent,initial,initialLearning,validate,saveWord,deleteWord,duplicate,resolve,hideAnswers,generate,start,schedule,submit,next,parseJSON,recordImport,importContent,validateState};
+})(globalThis);
+
+/* All learning mutations commit as one IndexedDB read/modify/write transaction. */
+(function(root){
+'use strict';
+class TrainingStore {
+ constructor(){this.db=null;this.listeners=[];this.channel=null;try{if(typeof BroadcastChannel!=='undefined')this.channel=new BroadcastChannel('english-training-updates');}catch{}this.channel?.addEventListener('message',()=>this.listeners.forEach(fn=>fn()));}
+ async open(){if(!root.indexedDB)throw new Error('This browser does not allow local database storage here. Open this HTML in a normal Chrome window, or use the included localhost server.');this.db=await new Promise((resolve,reject)=>{const r=indexedDB.open('EnglishTrainingBrowser',1);r.onupgradeneeded=()=>{r.result.createObjectStore('data');r.result.createObjectStore('handles');};r.onerror=()=>reject(r.error);r.onblocked=()=>reject(new Error('Another tab is blocking the database upgrade. Close other English Training tabs and reload.'));r.onsuccess=()=>resolve(r.result);});this.db.onversionchange=()=>{this.db.close();this.listeners.forEach(fn=>fn(new Error('The local database changed in another tab. Reload this page.')));};await this.transact(()=>null);return this;}
+ async read(){return new Promise((resolve,reject)=>{const t=this.db.transaction('data','readonly'),r=t.objectStore('data').get('state');r.onsuccess=()=>{try{const s=r.result||TrainingCore.initial();TrainingCore.validateState(s);resolve(s);}catch(e){reject(e);}};r.onerror=()=>reject(r.error);});}
+ async transact(mutation){return new Promise((resolve,reject)=>{const t=this.db.transaction('data','readwrite'),store=t.objectStore('data'),r=store.get('state');let result,state,reason;r.onsuccess=()=>{try{state=r.result||TrainingCore.initial();TrainingCore.validateState(state);result=mutation(state);if(result&&typeof result.then==='function')throw new Error('Async work is not allowed inside a local save transaction.');TrainingCore.validateState(state);state.revision++;store.put(state,'state');}catch(e){reason=e;t.abort();}};t.oncomplete=()=>{this.channel?.postMessage('changed');resolve({state,result});};t.onerror=()=>{reason??=t.error;};t.onabort=()=>reject(reason||t.error||new Error('Local save was interrupted. Please retry.'));});}
+ async handle(value){return new Promise((resolve,reject)=>{const t=this.db.transaction('handles',value===undefined?'readonly':'readwrite'),s=t.objectStore('handles');const r=value===undefined?s.get('folder'):s.put(value,'folder');let result;r.onsuccess=()=>{result=r.result;};t.oncomplete=()=>resolve(result);t.onerror=()=>reject(t.error);});}
+}
+root.TrainingStore=TrainingStore;
+})(globalThis);
+
+(function(root){
+'use strict';
+function sha256(bytes){
+ const k=[0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,0xd807aa98,0x12835b01,0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,0xe49b69c1,0xefbe4786,0x0fc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,0x81c2c92e,0x92722c85,0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2];
+ const n=Math.ceil((bytes.length+9)/64)*64,p=new Uint8Array(n);p.set(bytes);p[bytes.length]=128;const v=new DataView(p.buffer);v.setUint32(n-8,Math.floor(bytes.length/0x20000000));v.setUint32(n-4,(bytes.length*8)>>>0);
+ const h=[0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19],w=new Uint32Array(64),r=(x,n)=>(x>>>n)|(x<<(32-n));
+ for(let block=0;block<n;block+=64){for(let i=0;i<16;i++)w[i]=v.getUint32(block+i*4);for(let i=16;i<64;i++){const a=w[i-15],b=w[i-2];w[i]=(w[i-16]+(r(a,7)^r(a,18)^(a>>>3))+w[i-7]+(r(b,17)^r(b,19)^(b>>>10)))>>>0;}let [a,b,c,d,e,f,g,j]=h;for(let i=0;i<64;i++){const t1=(j+(r(e,6)^r(e,11)^r(e,25))+((e&f)^(~e&g))+k[i]+w[i])>>>0,t2=((r(a,2)^r(a,13)^r(a,22))+((a&b)^(a&c)^(b&c)))>>>0;j=g;g=f;f=e;e=(d+t1)>>>0;d=c;c=b;b=a;a=(t1+t2)>>>0;}[a,b,c,d,e,f,g,j].forEach((x,i)=>h[i]=(h[i]+x)>>>0);}
+ return h.map(x=>x.toString(16).padStart(8,'0')).join('');
+}
+class FolderImporter {
+ constructor(store,onChange){this.store=store;this.onChange=onChange;this.folder=null;this.status='No watched folder selected';this.busy=false;this.observations=new Map();this.attempted=new Set();this.pending=0;}
+ async restore(){this.folder=await this.store.handle();if(this.folder){this.status='Folder saved · reconnect if permission is needed';await this.scan();}}
+ async choose(){if(!root.showDirectoryPicker)throw new Error('Automatic folder watching is not available in this browser. Use Import JSON Files, or open this app in a browser that supports folder access.');const handle=await root.showDirectoryPicker({id:'english-training-inbox',mode:'read'});await this.store.handle(handle);await this.store.transact(s=>{s.settings.folderName=handle.name;});this.folder=handle;this.observations.clear();this.attempted.clear();await this.scan();}
+ async reconnect(){if(!this.folder)return this.choose();const p=await this.folder.requestPermission({mode:'read'});if(p!=='granted')throw new Error('Read access was not granted. Choose the folder again or import completed JSON files manually.');this.attempted.clear();await this.scan();}
+ async processFile(file,path=file.name){
+  let hash=`size:${file.size}`,failure=null,content=null,existingID=null;
+  if(!/\.json$/i.test(file.name))throw new Error('Only .json files are accepted.');
+  try{
+   if(file.size>TrainingCore.MAX_BYTES)throw new Error('File exceeds 1 MiB. Use one entry per file.');
+   const data=new Uint8Array(await file.arrayBuffer());if(data.byteLength>TrainingCore.MAX_BYTES)throw new Error('File exceeds 1 MiB.');
+   hash=sha256(data);const key=path+':'+hash;if(this.attempted.has(key))return {skipped:true};
+   let text;try{text=new TextDecoder('utf-8',{fatal:true}).decode(data);}catch{throw new Error('File must use valid UTF-8 encoding.');}
+   content=TrainingCore.parseJSON(text,data.byteLength);
+  }catch(e){failure=e;}
+  const result=await this.store.transact(s=>{
+   if(s.imports.some(r=>r.hash===hash&&r.status==='success'))return {skipped:true};
+   if(!failure){try{return {word:TrainingCore.importContent(s,content,path,hash)};}catch(e){failure=e;existingID=e.existingID||null;}}
+   TrainingCore.recordImport(s,path,hash,'failed',failure.message,existingID);return {error:failure.message};
+  });
+  this.attempted.add(path+':'+hash);this.onChange?.(result.state);return result.result;
+ }
+ async manual(files){let success=0,failed=0,skipped=0;for(const file of files){if(!/\.json$/i.test(file.name)){failed++;continue;}for(const key of this.attempted)if(key.startsWith(file.name+':'))this.attempted.delete(key);const result=await this.processFile(file);if(result.error)failed++;else if(result.word)success++;else skipped++;}return {success,failed,skipped};}
+ async scan(now=Date.now()){
+  if(this.busy||!this.folder)return;this.busy=true;let changed=false;
+  try{
+   if(await this.folder.queryPermission({mode:'read'})!=='granted'){this.status='Read permission needed · click Reconnect Folder';return;}
+   this.pending=0;const seen=new Set();
+   for await(const [name,handle] of this.folder.entries()){
+    if(handle.kind!=='file'||name.startsWith('.')||!/\.json$/i.test(name))continue;seen.add(name);
+    const file=await handle.getFile(),signature=`${file.size}:${file.lastModified}`,prior=this.observations.get(name);
+    if(!prior||prior.signature!==signature){this.observations.set(name,{signature,since:now,count:1});this.pending++;continue;}
+    prior.count++;if(prior.count<3||now-prior.since<4000){this.pending++;continue;}
+    // A second metadata check catches replacement during file acquisition. Producers use atomic handoff.
+    const check=await handle.getFile();if(check.size!==file.size||check.lastModified!==file.lastModified){this.observations.delete(name);this.pending++;continue;}
+    await this.processFile(file,`${this.folder.name}/${name}`);changed=true;
+   }
+   for(const key of this.observations.keys())if(!seen.has(key))this.observations.delete(key);
+   this.status=`Watching ${this.folder.name}${this.pending?` · ${this.pending} file(s) settling`:' · up to date'}`;
+  }catch(e){this.status=`Folder unavailable: ${e.message}. Reconnect the folder or finish synchronization.`;try{await this.store.transact(s=>TrainingCore.recordImport(s,this.folder.name,'folder-access','failed',this.status));changed=true;}catch{} }
+  finally{this.busy=false;this.onChange?.(null,changed);}
+ }
+}
+root.TrainingSHA256=sha256;root.TrainingImporter=FolderImporter;
+})(globalThis);
+
+(function(){
+'use strict';
+const C=TrainingCore,D=TRAINING_DICTIONARY,store=new TrainingStore();
+let data=C.initial(),route='quiz',direction='enRu',quizID=null,showResults=false,selectedWord=null,selectedHistory=null,selection=null,search='',filter='all',ascending=true,busy=false,storageReady=false,error=null,errorID=null,editing=null,originalEditor='',editorError=null,editorDuplicate=null,importer=null,toastTimer;
+const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const title=d=>d==='enRu'?'English → Russian':'Russian → English';
+const date=t=>t===null?'Not practiced':new Date(t).toLocaleString(undefined,{dateStyle:'medium',timeStyle:'short'});
+const dateOnly=t=>new Date(t).toLocaleDateString(undefined,{month:'short',day:'numeric',year:'numeric'});
+const active=()=>data.sessions.find(s=>s.status==='in_progress');
+function appearance(){return ['light','dark','system'].includes(data.settings.appearance)?data.settings.appearance:'dark';}
+function applyAppearance(){
+ const mode=appearance();document.documentElement.dataset.theme=mode;
+ const isDark=mode==='dark'||(mode==='system'&&window.matchMedia('(prefers-color-scheme: dark)').matches);
+ const toggle=$('#theme-toggle');if(toggle){toggle.textContent=isDark?'☀ Switch to Light':'☾ Switch to Dark';toggle.setAttribute('aria-label',isDark?'Switch to light mode':'Switch to dark mode');toggle.disabled=!storageReady||busy;}
+}
+async function setAppearance(mode){
+ if(!['light','dark','system'].includes(mode))return;
+ await mutation(state=>{state.settings.appearance=mode;});render();
+}
+const words=()=>data.words.filter(w=>w.deletedAt===null);
+const wordTitle=w=>w.content.english_term||'Untitled draft';
+const badge=(s,color='')=>`<span class="badge ${color}">${esc(s)}</span>`;
+const icon=name=>{const paths={quiz:'<rect x="4" y="5" width="16" height="14" rx="3"/><path d="M8 2h8M8 22h8M9 10l6 2-6 3z"/>',vocabulary:'<path d="M4 4h6a3 3 0 013 3v14a3 3 0 00-3-3H4zm16 0h-4a3 3 0 00-3 3v14a3 3 0 013-3h4z"/>',history:'<path d="M3 12a9 9 0 119 9M3 4v8h7M12 7v5l3 2"/>',settings:'<path d="M4 7h16M4 17h16M9 4v6M15 14v6"/>'};return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name]||''}</svg>`;};
+const heading=(name,sub,action='')=>`<div class="heading"><div><div class="eyebrow">ENGLISH TRAINING</div><h1>${esc(name)}</h1><p class="sub">${esc(sub)}</p></div>${action}</div>`;
+const button=(label,action,classes='',extra='')=>`<button type="button" class="${classes}" data-action="${action}" ${extra}>${label}</button>`;
+const empty=(glyph,name,text,action='')=>`<div class="empty"><div class="glyph" aria-hidden="true">${glyph}</div><h2>${esc(name)}</h2><p>${esc(text)}</p>${action}</div>`;
+function notify(text){$('#toast').textContent=text;$('#toast').classList.remove('hidden');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').classList.add('hidden'),5000);}
+function friendly(e){if(e?.name==='QuotaExceededError')return 'Browser storage is full. No changes were saved. Free device space and retry.';return e?.message||'The action could not be completed.';}
+function fail(e){error=friendly(e);errorID=e?.existingID||null;renderAlert();}
+function renderAlert(){const el=$('#alert-region');el.innerHTML=error?`<div class="notice error" role="alert">${esc(error)}<div class="error-actions">${errorID?button('Open Existing Entry','open-duplicate','small'):''}${button('Dismiss','dismiss-error','small')}</div></div>`:'';}
+async function mutation(fn){if(busy)return null;busy=true;syncBusy();try{const result=await store.transact(fn);data=result.state;return result.result;}catch(e){fail(e);return null;}finally{busy=false;syncBusy();}}
+function syncBusy(){applyAppearance();document.querySelectorAll('[data-save-action]').forEach(b=>{const action=b.dataset.action;b.disabled=busy||!storageReady||(action==='apply'&&selection===null)||(action==='start'&&!words().some(w=>w.status==='ready'));});}
+function render(){
+ applyAppearance();
+ const focused=document.activeElement,focusID=focused?.id,position=focused?.selectionStart,meaningsOpen=!!$('#supported-meanings')?.open;
+ document.querySelectorAll('.nav button').forEach(b=>{const on=b.dataset.route===route;b.classList.toggle('active',on);if(on)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');});
+ $('#resume-side').classList.toggle('hidden',!active());$('#storage-label').textContent=storageReady?'Saved in this browser':'Checking browser storage…';
+ if(!storageReady){$('#page').innerHTML=empty('↻','Opening your learning space','Checking whether this browser can save your vocabulary and quizzes.');renderAlert();return;}
+ $('#page').innerHTML=route==='quiz'?quizPage():route==='vocabulary'?vocabularyPage():route==='history'?historyPage():settingsPage();renderAlert();syncBusy();
+ if(meaningsOpen&&$('#supported-meanings'))$('#supported-meanings').open=true;
+ if(focusID&&document.getElementById(focusID)){const field=document.getElementById(focusID);field.focus();if(typeof field.setSelectionRange==='function'&&position!==null)try{field.setSelectionRange(position,position);}catch{}}
+}
+function quizPage(){
+ const session=data.sessions.find(s=>s.id===quizID);
+ if(session)return showResults?`<div class="stack">${review(session)}<div>${button('Back to Quiz Setup','quiz-setup','primary')}</div></div>`:activeQuiz(session);
+ const ready=words().filter(w=>w.status==='ready'),completed=data.sessions.filter(s=>s.status==='completed'),current=active();
+ const due=ready.filter(w=>{const l=data.learning[`${w.id}:${direction}`];return l?.nextReview!==null&&l?.nextReview<=Date.now();}).length;
+ return `${heading('Make every word count.','Your daily space to practice, remember, and grow.')}
+ <div class="stack"><div class="hero"><div class="hero-art" aria-hidden="true"><span class="letter-tile first">A</span><span class="letter-tile second">я</span><span class="studio-spark">✳</span></div><span class="hero-stamp" aria-hidden="true">SMALL STEPS. BIG ENERGY.</span><div class="hero-text"><div class="eyebrow">A LITTLE, EVERY DAY</div><h2 style="font-size:26px;line-height:1.4">Small practice.<br><em>Lasting confidence.</em></h2><p class="sub">Five questions. Real-world context. A little more confidence with every session.</p></div></div>
+ <div class="stats"><div class="card stat"><div class="caption">Ready vocabulary</div><div class="value">${ready.length}</div></div><div class="card stat"><div class="caption">Due in this direction</div><div class="value">${due}</div></div><div class="card stat"><div class="caption">Completed quizzes</div><div class="value">${completed.length}</div></div></div>
+ ${current?`<div class="card row between wrap-mobile"><div>${badge('IN PROGRESS','orange')}<h2 style="margin-top:12px">Your next question is waiting.</h2><p class="sub">${title(current.direction)} · ${current.answers.length} of 5 answers saved</p></div>${button('Resume Quiz →','resume','primary')}</div>`:''}
+ <section class="card"><h2>Choose your direction</h2><p class="caption" style="margin-top:7px">Each direction has its own review schedule.</p><div class="directions">${['enRu','ruEn'].map(d=>`<button type="button" class="direction ${direction===d?'selected':''}" data-action="direction" data-id="${d}" aria-pressed="${direction===d}"><span class="glyph" aria-hidden="true">${d==='enRu'?'A → я':'я → A'}</span><strong>${title(d)}</strong><span class="caption">${d==='enRu'?'Read English in context. Recognize its Russian meaning.':'Read Russian in context. Find the English expression.'}</span></button>`).join('')}</div><div class="row between wrap-mobile"><span class="caption">5 questions · 5 choices · your pace</span>${button(current?'Resume Quiz →':'Start Quiz →',current?'resume':'start','primary',`data-save-action ${!ready.length&&!current?'disabled':''}`)}</div></section>
+ ${!ready.length?`<div class="card">${empty('+','Start with your first word','Add a meaning, translations, and examples. Save unfinished work as a draft.',button('Add Word','add-word','primary'))}</div>`:''}<p class="footer-note">New words come first, then due reviews. Fewer than five ready words? We’ll safely reuse them. Unverified meanings are rejected rather than guessed.</p></div>`;
+}
+function activeQuiz(session){
+ const q=session.questions[session.currentIndex],answer=session.answers.find(a=>a.questionID===q.id),isComplete=session.status==='completed';
+ return `${heading('A moment to practice',title(session.direction),button('Leave Quiz','leave'))}<div class="row between"><span class="eyebrow" style="margin:0">QUESTION ${session.currentIndex+1} OF 5</span><span class="caption">${session.answers.length} answers saved</span></div><div class="quiz-progress" role="progressbar" aria-label="Quiz completion" aria-valuemin="0" aria-valuemax="5" aria-valuenow="${session.answers.length}"><span style="width:${(session.answers.length/5)*100}%"></span></div><div class="stack"><section class="card question"><div class="caption">Choose the ${session.direction==='enRu'?'Russian meaning':'English expression'} used in this context.</div><h2 class="prompt">${esc(q.prompt)}</h2><p class="context">${esc(q.context)}</p></section><div class="choices" role="group" aria-label="Answer choices">${[...q.choices,{id:'unknown',label:"I don't know"}].map((choice,i)=>{
+ const chosen=answer?(answer.selectedID??'unknown')===choice.id:selection===choice.id,correct=!!answer&&choice.id===q.correctID;
+ return `<button type="button" class="choice ${chosen?'selected':''} ${correct?'correct':''} ${answer&&chosen&&answer.outcome==='incorrect'?'wrong':''}" data-action="choose-answer" data-id="${esc(choice.id)}" aria-pressed="${chosen}" ${answer?'disabled':''}><span class="num">${i<5?i+1:'?'}</span><span>${esc(choice.label)}</span><span class="check">${correct?'✓':chosen?(answer?'×':'●'):''}</span></button>`;
+ }).join('')}</div>${answer?`<section class="card feedback ${answer.outcome}" aria-live="polite">${feedback(answer)}</section><div class="row between quiz-actions"><span class="caption">Response saved${isComplete?' · review schedule updated':''}</span>${button(isComplete?'View Results →':'Next →',isComplete?'results':'next','primary','data-save-action')}</div>`:`<div class="row between quiz-actions"><span class="caption">${selection===null?'Choose an answer to continue.':'Ready? Check your answer.'}<span class="keyboard-hint" style="display:block"><kbd>1</kbd>–<kbd>5</kbd> choose · <kbd>?</kbd> skip · <kbd>Enter</kbd> check</span></span>${button('Check Answer','apply','primary',`data-save-action ${selection===null?'disabled':''}`)}</div>`}</div>`;
+}
+function choiceFeedback(choice,label){return `<div class="feedback-section"><div class="label">${esc(label)}</div><div class="feedback-label">${esc(choice.label)}</div><p>${esc(choice.definition)}</p><p class="feedback-example">${esc(choice.example)}</p></div>`;}
+function feedback(answer){return `<h2>${answer.outcome==='correct'?'✓ Correct':answer.outcome==='unknown'?'Let’s learn this one':'Keep practicing'}</h2>${choiceFeedback(answer.correctFeedback,'Correct answer')}${answer.outcome==='incorrect'&&answer.selectedFeedback?choiceFeedback(answer.selectedFeedback,'Your selected answer'):''}`;}
+function review(session){return `${heading(session.status==='completed'?'Practice complete.':'Saved quiz',`${title(session.direction)} · ${date(session.completedAt??session.startedAt)}`)}<div class="card row between"><div><div class="score">${session.answers.filter(a=>a.outcome==='correct').length}<span style="font-size:25px;color:var(--muted)"> / 5</span></div><span class="caption">Correct answers</span></div><div class="counts">${['correct','incorrect','unknown'].map((o,i)=>badge(`${session.answers.filter(a=>a.outcome===o).length} ${o}`,['green','orange','gray'][i])).join('')}</div></div>${session.questions.map((q,i)=>{const a=session.answers.find(a=>a.questionID===q.id);return `<section class="card"><div class="label">Question ${i+1}</div><h2>${esc(q.prompt)}</h2><p class="sub">${esc(q.context)}</p><div class="block">${q.choices.map(c=>`<div class="review-choice ${c.id===q.correctID?'correct':''}">${c.id===q.correctID?'✓':'○'} ${esc(c.label)}${a?.selectedID===c.id?' · your answer':''}</div>`).join('')}</div><div class="divider"></div>${a?feedback(a):'<p class="muted">Not answered yet</p>'}</section>`;}).join('')}`;}
+function progressCard(w,d){const l=data.learning[`${w.id}:${d}`]||C.initialLearning();return `<div class="learning"><strong>${title(d)}</strong><p class="caption">${l.lastPracticed===null?'New · not practiced yet':l.nextReview<=Date.now()?'Review due':`Next review ${esc(dateOnly(l.nextReview))}`}</p>${l.lastPracticed===null?'':`<p class="caption">${l.repetitions} repetitions · ${l.intervalDays}-day interval</p>`}<p class="caption">${l.correctCount} correct · ${l.incorrectCount} incorrect · ${l.unknownCount} unknown</p></div>`;}
+function vocabularyPage(){
+ const query=C.norm(search),filtered=words().filter(w=>(filter==='all'||w.status===filter)&&(!query||C.norm(w.content.english_term).includes(query)||w.content.russian_translations.some(t=>C.norm(t).includes(query)))).sort((a,b)=>(ascending?1:-1)*C.norm(a.content.english_term).localeCompare(C.norm(b.content.english_term)));
+ const w=words().find(w=>w.id===selectedWord);
+ return `${heading('Words worth knowing.','Your meanings, your examples, your growing vocabulary.',button('+ Add Word','add-word','primary'))}<div class="toolbar"><input id="word-search" aria-label="Search English or Russian" placeholder="Search English or Russian…" value="${esc(search)}"><select id="word-filter" aria-label="Vocabulary status"><option value="all" ${filter==='all'?'selected':''}>All words</option><option value="ready" ${filter==='ready'?'selected':''}>Ready</option><option value="draft" ${filter==='draft'?'selected':''}>Drafts</option></select>${button(ascending?'↓ A–Z':'↑ Z–A','sort')}</div><div class="row between" style="margin-bottom:13px"><span class="label" style="margin:0">${filtered.length} WORD${filtered.length===1?'':'S'}</span>${button('Import JSON','import-files','quiet small')}</div><div class="library-layout"><div class="card word-list">${filtered.length?filtered.map(word=>{const l=data.learning[`${word.id}:enRu`]||C.initialLearning();return `<button type="button" class="word-item ${selectedWord===word.id?'selected':''}" data-action="select-word" data-id="${esc(word.id)}" aria-pressed="${selectedWord===word.id}"><div class="row between"><strong>${esc(wordTitle(word))}</strong>${badge(word.status==='ready'?'Ready':'Draft',word.status==='ready'?'green':'orange')}</div><div class="translation">${esc(word.content.russian_translations.join('; '))||'Translations not added yet'}</div><div class="caption">${l.lastPracticed===null?'New in English → Russian':`${l.correctCount} correct · ${l.intervalDays}-day interval`}</div></button>`;}).join(''):empty('Aa',words().length?'No matches':'Your collection starts here',words().length?'Try another search or filter.':'Add a word or import a completed vocabulary JSON file.')}</div><div>${w?wordDetail(w):`<div class="card">${empty('Aя','Make words your own.','Select a word to explore its meaning, bilingual examples, and learning progress.')}</div>`}</div></div>`;
+}
+function wordDetail(w){const c=w.content,supported=!!C.resolve(c,D);return `<div class="word-detail"><div class="card"><div class="row between">${badge(w.status==='ready'?'Ready to learn':'Draft',w.status==='ready'?'green':'orange')}<div class="row">${button('Edit','edit-word','small',`data-id="${esc(w.id)}"`)}${button('Delete','delete-word','small danger',`data-id="${esc(w.id)}"`)}</div></div><h2 class="detail-title">${esc(wordTitle(w))}</h2><p class="muted">${esc(c.russian_translations.join('; '))||'No translations yet'}</p>${w.status==='draft'?'<div class="notice block">Drafts stay out of quizzes until every required field is complete.</div>':!supported?'<div class="notice warn block">This meaning is saved. Offline quiz safety cannot yet be verified. See Supported Meanings in Settings.</div>':''}</div><section class="card"><h2>Meaning</h2><div class="block"><div class="label">ENGLISH</div><p>${esc(c.explanation_en)||'Not added yet'}</p></div><div class="block"><div class="label">RUSSIAN</div><p>${esc(c.explanation_ru)||'Not added yet'}</p></div></section><section class="card"><h2 class="section-title">In context</h2>${c.examples.length?c.examples.map(e=>`<div class="bilingual"><p>${esc(e.en)||'English example not added'}</p><p class="muted">${esc(e.ru)||'Russian example not added'}</p></div>`).join(''):'<p class="muted">No examples yet</p>'}</section><section class="card"><h2>Learning progress</h2>${progressCard(w,'enRu')}${progressCard(w,'ruEn')}</section></div>`;}
+function historyPage(){const selected=data.sessions.find(s=>s.id===selectedHistory);if(selected)return `<div class="stack"><div class="row between">${button('← All quizzes','history-back')}${selected.status==='in_progress'?button('Resume Quiz','resume','primary'):''}</div>${review(selected)}</div>`;const sessions=data.sessions.slice().sort((a,b)=>b.startedAt-a.startedAt);return `${heading('Look back. Learn more.','Every practice session, preserved exactly as you experienced it.')}<div class="history-list">${sessions.length?sessions.map(s=>`<button type="button" class="history-item" data-action="select-history" data-id="${esc(s.id)}"><div class="row between"><div><strong>${title(s.direction)}</strong><p class="caption" style="margin-top:8px">${esc(date(s.completedAt??s.startedAt))}</p></div><span class="score-mini">${s.answers.filter(a=>a.outcome==='correct').length}/5</span></div><div class="row between" style="margin-top:15px">${badge(s.status==='completed'?'Completed':'In progress',s.status==='completed'?'green':'orange')}<span class="caption">Review questions →</span></div></button>`).join(''):`<div class="card">${empty('↺','Your practice starts here.','Quizzes appear here with their saved questions, responses, and feedback.')}</div>`}</div>`;}
+function settingsPage(){const records=data.imports.slice().sort((a,b)=>b.date-a.date).slice(0,100);return `${heading('A space for your learning.','Manage local storage and bring vocabulary into your browser.')}<div class="settings-grid"><section class="card"><h2>Appearance</h2><p class="sub">Choose a comfortable reading experience. Your preference is saved in this browser.</p><div class="theme-controls block" role="group" aria-label="Appearance">${['dark','light','system'].map(mode=>button(mode[0].toUpperCase()+mode.slice(1),'set-theme','',`data-id="${mode}" aria-pressed="${appearance()===mode}" data-save-action`)).join('')}</div><p class="caption block">System follows your Mac’s appearance setting. You can also switch quickly from the sidebar.</p></section><section class="card"><div class="row between"><h2>Local browser storage</h2>${badge('Offline ready','green')}</div><p class="sub">Vocabulary, quiz snapshots, answers, and schedules are saved in this browser profile using IndexedDB. This HTML file contains everything needed to run offline.</p><div class="notice warn block">Use the same browser, profile, and file location each time. Private browsing, clearing website data, changing origins, or browser storage eviction can remove access to your data. The browser version starts separately from the macOS app’s database.</div><p class="caption block">If this browser blocks storage for a local file, use the included localhost server and its fixed address. No browser data is sent to a server.</p></section><section class="card"><div class="row between wrap"><h2>JSON vocabulary import</h2>${button('Import JSON Files…','import-files','primary')}</div><p class="sub">Choose one or more completed .json files. Each file creates one ready vocabulary entry after validation. The 1 MiB limit and duplicate checks apply to every file.</p><div class="divider"></div><h3>Automatic folder watching</h3><p class="caption block">${esc(importer?.status||'No folder selected')}</p>${data.settings.folderName?`<p class="caption">Saved folder: ${esc(data.settings.folderName)}</p>`:''}<div class="row wrap block">${window.showDirectoryPicker?button('Choose Folder…','choose-folder'):'<span class="caption">Folder watching is unavailable in this browser. Manual file import is available above.</span>'}${importer?.folder?button('Reconnect Folder','reconnect-folder'):''}${button('Retry Failed Files','retry-imports','quiet',importer?.folder?'':'disabled')}</div><p class="caption block">Folder access requires your permission and may need reconnecting after reopening. Watching runs only while this page is open, subject to browser background throttling. Producers must finish a .partial file and atomically rename it to .json. Three stable observations over at least four seconds are required before processing.</p><div class="notice block">${badge('ChatGPT write workflow · unverified','orange')}<p style="margin-top:9px">Selecting files or a folder does not connect ChatGPT or grant it write access. An authorized external workflow must write the JSON. No such workflow has been verified.</p></div></section><section class="card"><div class="row between"><h2>Recent imports</h2><span class="caption">Last 100 records</span></div>${records.length?records.map(r=>`<div class="import-record"><div class="row between"><span class="file-name">${esc(r.path)}</span>${badge(r.status==='success'?'Imported':'Needs attention',r.status==='success'?'green':'orange')}</div><p style="font-size:13px">${esc(r.message)}</p><div class="row between"><span class="caption">${esc(date(r.date))}</span>${r.wordID?button('Open Entry','select-word','quiet small',`data-id="${esc(r.wordID)}"`):''}</div></div>`).join(''):'<p class="caption block">No imports yet. Files stay in their original folder, including failed files that need correction.</p>'}</section><section class="card"><h2>Offline quiz safety</h2><p class="sub">Save any vocabulary. Quizzes support the curated meanings below, including their listed English aliases and Russian translations. Other senses fail with an actionable error. Your own stored definitions and examples are used in questions and feedback.</p><details class="block" id="supported-meanings"><summary>Supported Meanings (${D.length})</summary><div class="meanings">${D.map(m=>`<div class="meaning"><strong>${esc(m.aliases.join(', '))}</strong><span>${esc(m.content.russian_translations.join('; '))}</span></div>`).join('')}</div></details></section><section class="card"><h2>How to use English Training</h2><ol class="guide"><li>Add a word with both explanations, translations, and complete bilingual examples. Save unfinished work as a draft. Use the attempt sample if you want a first supported meaning.</li><li>Choose a quiz direction. Select an answer or I don't know, then Apply. Read the feedback before choosing Next.</li><li>Leave and resume anytime. Submitted answers survive closing the tab or browser. Completed quizzes are preserved in History after word edits or deletion.</li><li>Each direction has its own schedule. Correct sessions progress through 1 day, 6 days, then multiplied intervals. Any incorrect or unknown attempt resets that word for the next day, once per session.</li></ol><div class="divider"></div><p class="caption">No backup/export/restore, charts, advanced analytics, database cloud synchronization, or multiuser accounts.</p></section></div>`;}
+function readEditor(){if(!editing)return;document.querySelectorAll('[data-editor-field]').forEach(el=>{const p=el.dataset.editorField.split('.');if(p[0]==='translation')editing.content.russian_translations[Number(p[1])]=el.value;else if(p[0]==='example')editing.content.examples[Number(p[1])][p[2]]=el.value;else editing.content[p[0]]=el.value;});}
+function editorMarkup(){const c=editing.content;return `<div class="dialog-head"><h2 id="editor-title">${data.words.some(w=>w.id===editing.id)?'Edit word':'Add a word'}</h2><p class="caption" style="margin-top:7px">Capture a meaning. Bring it to life with examples.</p></div><div class="dialog-content"><label class="field">English word or phrase<input id="editor-term" data-editor-field="english_term" value="${esc(c.english_term)}" placeholder="e.g. attempt" maxlength="300"></label><div class="fields"><h3>Russian translations</h3>${c.russian_translations.map((t,i)=>`<div class="translation-field"><input aria-label="Russian translation ${i+1}" data-editor-field="translation.${i}" value="${esc(t)}" placeholder="Russian translation">${button('−','remove-translation','',`data-index="${i}" aria-label="Remove translation ${i+1}"`)}</div>`).join('')}${button('+ Add Translation','add-translation','quiet')}</div><label class="field">English explanation<textarea data-editor-field="explanation_en" placeholder="Explain this specific meaning in English…">${esc(c.explanation_en)}</textarea></label><label class="field">Russian explanation<textarea data-editor-field="explanation_ru" placeholder="Explain the same meaning in Russian…">${esc(c.explanation_ru)}</textarea></label><div class="fields"><h3>Bilingual examples</h3>${c.examples.map((e,i)=>`<div class="example-fields"><div class="row between"><strong class="caption">Example ${i+1}</strong>${button('Remove','remove-example','quiet small',`data-index="${i}"`)}</div><label class="field">English sentence<textarea data-editor-field="example.${i}.en">${esc(e.en)}</textarea></label><label class="field">Russian sentence<textarea data-editor-field="example.${i}.ru">${esc(e.ru)}</textarea></label></div>`).join('')}${button('+ Add Example Pair','add-example','quiet')}</div><div id="editor-error" role="alert">${editorError?`<div class="notice error">${esc(editorError)}${editorDuplicate?`<div class="block">${button('Open Existing Entry','editor-open-duplicate','small')}</div>`:''}</div>`:''}</div><p class="caption">Save requires every field and at least one complete bilingual example. Save as Draft keeps unfinished work out of quizzes.</p>${!data.words.some(w=>w.id===editing.id)?button('Fill with the attempt example','editor-example','quiet small'):''}</div><div class="dialog-foot">${button('Cancel','editor-cancel','cancel')}${button('Save as Draft','save-draft','','data-save-action')}${button('Save','save-ready','primary','data-save-action')}</div>`;}
+function renderEditor(){const dialog=$('#editor-dialog'),top=dialog.querySelector('.dialog-content')?.scrollTop||0;dialog.innerHTML=editorMarkup();dialog.querySelector('.dialog-content').scrollTop=top;syncBusy();}
+function openEditor(w){editing=w?C.clone(w):{id:C.uid(),content:C.blankContent()};originalEditor=JSON.stringify(editing);editorError=null;editorDuplicate=null;renderEditor();$('#editor-dialog').showModal();$('#editor-term').focus();}
+function closeEditor(ask=true){readEditor();if(ask&&JSON.stringify(editing)!==originalEditor){$('#discard-dialog').showModal();return;}$('#editor-dialog').close();editing=null;}
+async function saveEditor(status){readEditor();editorError=null;editorDuplicate=null;const input=C.clone(editing);busy=true;syncBusy();try{const result=await store.transact(s=>C.saveWord(s,input,status));data=result.state;selectedWord=result.result.id;route='vocabulary';$('#editor-dialog').close();editing=null;render();notify(status==='ready'?'Word saved and ready to learn.':'Draft saved.');}catch(e){editorError=friendly(e);editorDuplicate=e.existingID||null;renderEditor();}finally{busy=false;syncBusy();}}
+function scrollTop(){window.scrollTo({top:0,behavior:'instant'});}
+async function handleAction(action,el){
+ if(action==='set-theme'){await setAppearance(el.dataset.id);return;}
+ if(action==='toggle-theme'){const mode=appearance(),dark=mode==='dark'||(mode==='system'&&window.matchMedia('(prefers-color-scheme: dark)').matches);await setAppearance(dark?'light':'dark');return;}
+ if(action==='add-word'){openEditor();return;}
+ if(action==='edit-word'){openEditor(words().find(w=>w.id===el.dataset.id));return;}
+ if(action==='editor-cancel'){closeEditor();return;}
+ if(action==='discard-cancel'){$('#discard-dialog').close();return;}
+ if(action==='discard-confirm'){$('#discard-dialog').close();closeEditor(false);return;}
+ if(action==='save-draft'||action==='save-ready'){if(!busy)await saveEditor(action==='save-draft'?'draft':'ready');return;}
+ if(action==='editor-open-duplicate'){const id=editorDuplicate;$('#editor-dialog').close();editing=null;route='vocabulary';selectedWord=id;render();return;}
+ if(['add-translation','remove-translation','add-example','remove-example','editor-example'].includes(action)){
+  readEditor();if(action==='add-translation')editing.content.russian_translations.push('');if(action==='remove-translation')editing.content.russian_translations.splice(Number(el.dataset.index),1);if(action==='add-example')editing.content.examples.push({en:'',ru:''});if(action==='remove-example')editing.content.examples.splice(Number(el.dataset.index),1);if(action==='editor-example')editing.content=C.clone(D.find(m=>m.id==='attempt').content);renderEditor();return;
+ }
+ if(action==='delete-word'){const w=words().find(w=>w.id===el.dataset.id);$('#delete-description').textContent=`Delete “${wordTitle(w)}”? It will be hidden from new quizzes. Saved sessions and history remain available.`;$('#delete-confirm').dataset.id=w.id;$('#delete-dialog').showModal();return;}
+ if(action==='delete-cancel'){$('#delete-dialog').close();return;}
+ if(action==='delete-confirm'){const id=el.dataset.id;await mutation(s=>C.deleteWord(s,id));$('#delete-dialog').close();selectedWord=null;render();return;}
+ if(action==='dismiss-error'){error=null;errorID=null;renderAlert();return;}
+ if(action==='open-duplicate'){selectedWord=errorID;route='vocabulary';error=null;errorID=null;render();return;}
+ if(action==='direction'){direction=el.dataset.id;render();return;}
+ if(action==='start'){const session=await mutation(s=>C.start(s,direction,D));if(session){quizID=session.id;selection=null;showResults=false;render();scrollTop();}return;}
+ if(action==='resume'){const s=active();if(s){quizID=s.id;route='quiz';selection=null;showResults=false;render();scrollTop();}return;}
+ if(action==='choose-answer'){selection=el.dataset.id;render();document.querySelector('.choice[data-id="'+selection+'"]')?.focus({preventScroll:true});return;}
+ if(action==='apply'){if(selection===null)return;const current=data.sessions.find(s=>s.id===quizID),s=await mutation(state=>C.submit(state,current.id,current.questions[current.currentIndex].id,selection==='unknown'?null:selection));if(s){render();const fb=$('.feedback');fb?.scrollIntoView({block:'nearest',behavior:'smooth'});}return;}
+ if(action==='next'){const s=await mutation(state=>C.next(state,quizID));if(s){selection=null;render();scrollTop();}return;}
+ if(action==='results'){showResults=true;render();scrollTop();return;}
+ if(action==='quiz-setup'||action==='leave'){quizID=null;showResults=false;selection=null;render();scrollTop();return;}
+ if(action==='select-word'){selectedWord=el.dataset.id;route='vocabulary';render();return;}
+ if(action==='sort'){ascending=!ascending;render();return;}
+ if(action==='select-history'){selectedHistory=el.dataset.id;render();scrollTop();return;}
+ if(action==='history-back'){selectedHistory=null;render();scrollTop();return;}
+ if(action==='import-files'){$('#json-files').click();return;}
+ if(action==='choose-folder'||action==='reconnect-folder'){try{if(action==='choose-folder')await importer.choose();else await importer.reconnect();data=await store.read();render();}catch(e){if(e.name!=='AbortError')fail(e);}return;}
+ if(action==='retry-imports'){importer.attempted.clear();await importer.scan();data=await store.read();render();notify('Retry started. Changing files will settle before import.');return;}
+ if(action==='retry-start'){location.reload();return;}
+}
+document.addEventListener('click',e=>{const routeButton=e.target.closest('[data-route]');if(routeButton){route=routeButton.dataset.route;render();scrollTop();return;}const el=e.target.closest('[data-action]');if(el&&!el.disabled)handleAction(el.dataset.action,el).catch(fail);});
+document.addEventListener('input',e=>{if(e.target.id==='word-search'){search=e.target.value;render();}});
+document.addEventListener('change',e=>{if(e.target.id==='word-filter'){filter=e.target.value;render();}});
+$('#editor-dialog').addEventListener('cancel',e=>{e.preventDefault();closeEditor();});
+$('#json-files').addEventListener('change',async e=>{const files=Array.from(e.target.files);e.target.value='';if(!files.length)return;try{const result=await importer.manual(files);data=await store.read();render();notify(`${result.success} imported · ${result.failed} failed · ${result.skipped} already processed`);}catch(e){fail(e);}});
+window.addEventListener('unhandledrejection',e=>{e.preventDefault();fail(e.reason);});
+window.addEventListener('pageshow',async()=>{if(storageReady)try{data=await store.read();render();}catch(e){fail(e);}});
+document.addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='s'&&editing){e.preventDefault();if(!busy)saveEditor('ready');}});
+document.addEventListener('keydown',e=>{
+ if(e.defaultPrevented||e.repeat||e.metaKey||e.ctrlKey||e.altKey||busy||!storageReady||route!=='quiz'||showResults||document.querySelector('dialog[open]')||e.target.closest('input,textarea,select,[contenteditable]'))return;
+ const session=data.sessions.find(s=>s.id===quizID);if(!session)return;
+ const q=session.questions[session.currentIndex],answered=session.answers.some(a=>a.questionID===q.id);
+ if(!answered&&(/^[1-5]$/.test(e.key)||e.key==='?')){e.preventDefault();const id=e.key==='?'?'unknown':q.choices[Number(e.key)-1].id;const choice=Array.from(document.querySelectorAll('.choice')).find(b=>b.dataset.id===id);if(choice&&!choice.disabled)choice.click();return;}
+ if(e.key==='Enter'&&!e.target.closest('button,a')){const action=answered?(session.status==='completed'?'results':'next'):'apply';const control=document.querySelector('[data-action="'+action+'"]');if(control&&!control.disabled){e.preventDefault();control.click();}}
+ if(e.key==='Enter'&&e.target.closest('.choice')){const control=document.querySelector('[data-action="apply"]');if(control&&!control.disabled){e.preventDefault();control.click();}}
+});
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',applyAppearance);
+async function boot(){render();try{await store.open();data=await store.read();storageReady=true;const current=active();if(current)quizID=current.id;importer=new TrainingImporter(store,async state=>{if(state)data=state;else try{data=await store.read();}catch(e){fail(e);}if(route==='settings'||route==='vocabulary'||(!quizID&&route==='quiz'))render();});store.listeners.push(async e=>{if(e){fail(e);return;}try{data=await store.read();render();}catch(e){fail(e);}});render();await importer.restore();setInterval(()=>importer.scan(),2000);}catch(e){error=friendly(e);$('#page').innerHTML=`<div class="card">${empty('!','Browser storage is unavailable.','Open this file in a normal Chrome window. If storage is still blocked, run the included local server and open its fixed localhost address.',button('Try Again','retry-start','primary'))}<div class="notice error">${esc(error)}</div></div>`;$('#storage-label').textContent='Storage unavailable · no data saved';}}
+boot();
+})();
+</script></body></html>
