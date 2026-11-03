@@ -1,0 +1,579 @@
+[
+  {
+    "english_term": "Abundance",
+    "russian_translations": ["изобилие", "обилие"],
+    "explanation_en": "A very large amount of something, often more than is needed.",
+    "explanation_ru": "Очень большое количество чего-либо, часто больше, чем необходимо.",
+    "examples": [{"en": "The region has an abundance of natural resources.", "ru": "В этом регионе изобилие природных ресурсов."}]
+  },
+  {
+    "english_term": "Affirmation",
+    "russian_translations": ["подтверждение", "утверждение", "позитивное утверждение"],
+    "explanation_en": "A statement confirming something is true, or a positive statement used to encourage yourself.",
+    "explanation_ru": "Подтверждение чего-либо или позитивная фраза, которую человек повторяет для поддержки себя.",
+    "examples": [{"en": "Her words were an affirmation of our decision.", "ru": "Её слова стали подтверждением нашего решения."}]
+  },
+  {
+    "english_term": "Ambitious",
+    "russian_translations": ["амбициозный", "целеустремлённый", "масштабный"],
+    "explanation_en": "Having strong goals and wanting to achieve important things. It can also describe a large or difficult project.",
+    "explanation_ru": "Стремящийся к большим достижениям. Также описывает масштабные или сложные планы.",
+    "examples": [{"en": "She has ambitious plans for her career.", "ru": "У неё амбициозные планы на карьеру."}]
+  },
+  {
+    "english_term": "Amongst",
+    "russian_translations": ["среди", "между"],
+    "explanation_en": "In the middle of or included within a group. A slightly more formal alternative to 'among'.",
+    "explanation_ru": "Находящийся среди людей или предметов либо принадлежащий к группе.",
+    "examples": [{"en": "She was amongst the first employees to join.", "ru": "Она была среди первых сотрудников."}]
+  },
+  {
+    "english_term": "Ascending",
+    "russian_translations": ["восходящий", "поднимающийся", "возрастающий"],
+    "explanation_en": "Moving upward or increasing. In sorting, it means going from smaller values to larger ones.",
+    "explanation_ru": "Движущийся вверх или увеличивающийся. При сортировке — от меньшего к большему.",
+    "examples": [
+      {"en": "The airplane is ascending.", "ru": "Самолёт набирает высоту."},
+      {"en": "Sort the prices in ascending order.", "ru": "Отсортируй цены по возрастанию."}
+    ]
+  },
+  {
+    "english_term": "Ascending order",
+    "russian_translations": ["порядок возрастания", "по возрастанию"],
+    "explanation_en": "Arranging values from smallest to largest or from earliest to latest.",
+    "explanation_ru": "Расположение значений от меньшего к большему или от раннего к позднему.",
+    "examples": [{"en": "Arrange the dates in ascending order.", "ru": "Расположи даты по возрастанию."}]
+  },
+  {
+    "english_term": "Augment",
+    "russian_translations": ["увеличивать", "расширять", "усиливать", "дополнять"],
+    "explanation_en": "To make something bigger, stronger, or more useful by adding something.",
+    "explanation_ru": "Увеличивать, усиливать или улучшать что-либо путём добавления новых элементов.",
+    "examples": [{"en": "AI can augment human capabilities.", "ru": "ИИ может расширять возможности человека."}]
+  },
+  {
+    "english_term": "Commodity",
+    "russian_translations": ["сырьевой товар", "биржевой товар", "массовый товар"],
+    "explanation_en": "A basic product such as oil, wheat, or copper that is bought and sold and is often interchangeable between suppliers.",
+    "explanation_ru": "Базовый товар, например нефть или пшеница, которым торгуют на рынке и который часто взаимозаменяем.",
+    "examples": [{"en": "Oil is an important commodity.", "ru": "Нефть — важный сырьевой товар."}]
+  },
+  {
+    "english_term": "Crew",
+    "russian_translations": ["экипаж", "команда", "бригада"],
+    "explanation_en": "A group of people working together, especially on an airplane, ship, film, or practical task.",
+    "explanation_ru": "Группа людей, работающих вместе, например экипаж самолёта или рабочая бригада.",
+    "examples": [{"en": "The flight crew prepared the airplane.", "ru": "Экипаж подготовил самолёт."}]
+  },
+  {
+    "english_term": "Delete",
+    "russian_translations": ["удалять", "стирать"],
+    "explanation_en": "To remove something, especially text, data, or a file.",
+    "explanation_ru": "Убирать или стирать что-либо, особенно текст, данные или файл.",
+    "examples": [{"en": "Please delete the old document.", "ru": "Пожалуйста, удали старый документ."}]
+  },
+  {
+    "english_term": "Delusional",
+    "russian_translations": ["оторванный от реальности", "имеющий ложные убеждения", "бредовый"],
+    "explanation_en": "Believing something clearly false despite evidence. Informally, having extremely unrealistic expectations.",
+    "explanation_ru": "Имеющий убеждения, противоречащие реальности. Разговорно — с крайне нереалистичными ожиданиями.",
+    "examples": [{"en": "He's delusional if he thinks we can finish in one hour.", "ru": "Он оторван от реальности, если думает, что мы закончим за час."}]
+  },
+  {
+    "english_term": "Deputy",
+    "russian_translations": ["заместитель", "помощник руководителя"],
+    "explanation_en": "Someone who assists a leader and can perform the leader's duties when needed.",
+    "explanation_ru": "Человек, помогающий руководителю и при необходимости выполняющий его обязанности.",
+    "examples": [{"en": "The deputy director will lead the meeting.", "ru": "Собрание проведёт заместитель директора."}]
+  },
+  {
+    "english_term": "Descending",
+    "russian_translations": ["нисходящий", "спускающийся", "убывающий"],
+    "explanation_en": "Moving downward or decreasing. In sorting, going from larger values to smaller ones.",
+    "explanation_ru": "Движущийся вниз или уменьшающийся. При сортировке — от большего к меньшему.",
+    "examples": [{"en": "The airplane is descending.", "ru": "Самолёт снижается."}]
+  },
+  {
+    "english_term": "Descending order",
+    "russian_translations": ["порядок убывания", "по убыванию"],
+    "explanation_en": "Arranging values from largest to smallest or latest to earliest.",
+    "explanation_ru": "Расположение значений от большего к меньшему или от позднего к раннему.",
+    "examples": [{"en": "Sort the salaries in descending order.", "ru": "Отсортируй зарплаты по убыванию."}]
+  },
+  {
+    "english_term": "Deviation",
+    "russian_translations": ["отклонение", "отступление"],
+    "explanation_en": "A difference from what is expected, planned, or normal.",
+    "explanation_ru": "Разница между фактическим и ожидаемым, запланированным или нормальным.",
+    "examples": [{"en": "We noticed a deviation from the plan.", "ru": "Мы заметили отклонение от плана."}]
+  },
+  {
+    "english_term": "Different",
+    "russian_translations": ["другой", "разный", "отличающийся"],
+    "explanation_en": "Not the same as another person or thing.",
+    "explanation_ru": "Не такой, как другой человек или предмет; имеющий отличия.",
+    "examples": [{"en": "This version is different.", "ru": "Эта версия отличается."}]
+  },
+  {
+    "english_term": "Distinctive",
+    "russian_translations": ["отличительный", "характерный", "узнаваемый", "выделяющийся"],
+    "explanation_en": "Having a noticeable quality that makes something different from others and easy to recognize.",
+    "explanation_ru": "Обладающий заметной особенностью, благодаря которой что-либо легко отличить от других.",
+    "examples": [
+      {"en": "She has a distinctive voice.", "ru": "У неё узнаваемый голос."},
+      {"en": "Our product needs a distinctive feature.", "ru": "Нашему продукту нужна отличительная особенность."}
+    ]
+  },
+  {
+    "english_term": "Distinctive feature",
+    "russian_translations": ["отличительная особенность", "характерная черта"],
+    "explanation_en": "A characteristic that makes something easy to recognize or distinguish.",
+    "explanation_ru": "Характеристика, помогающая отличить предмет или человека от других.",
+    "examples": [{"en": "The camera is its most distinctive feature.", "ru": "Камера — его главная отличительная особенность."}]
+  },
+  {
+    "english_term": "Distract",
+    "russian_translations": ["отвлекать", "рассеивать внимание"],
+    "explanation_en": "To take someone's attention away from what they are doing.",
+    "explanation_ru": "Переключать внимание человека с того, чем он занят.",
+    "examples": [{"en": "Don't distract me while I'm working.", "ru": "Не отвлекай меня, пока я работаю."}]
+  },
+  {
+    "english_term": "Domain",
+    "russian_translations": ["область", "сфера", "домен", "предметная область"],
+    "explanation_en": "An area of knowledge or activity. In technology, also an internet address or a defined part of a system.",
+    "explanation_ru": "Область знаний или деятельности. В технологиях — интернет-домен или определённая часть системы.",
+    "examples": [
+      {"en": "That's outside my domain of expertise.", "ru": "Это вне моей области компетенции."},
+      {"en": "We registered a new domain.", "ru": "Мы зарегистрировали новый домен."}
+    ]
+  },
+  {
+    "english_term": "Embedded",
+    "russian_translations": ["встроенный", "внедрённый"],
+    "explanation_en": "Integrated inside something else as part of it.",
+    "explanation_ru": "Встроенный или внедрённый внутрь чего-либо как составная часть.",
+    "examples": [{"en": "The device has an embedded computer.", "ru": "В устройство встроен компьютер."}]
+  },
+  {
+    "english_term": "Evolution",
+    "russian_translations": ["эволюция", "развитие", "постепенное изменение"],
+    "explanation_en": "Gradual change and development over time, including biological changes across generations.",
+    "explanation_ru": "Постепенное изменение и развитие с течением времени, в том числе биологическое развитие.",
+    "examples": [{"en": "The evolution of smartphones changed communication.", "ru": "Развитие смартфонов изменило общение."}]
+  },
+  {
+    "english_term": "Fat",
+    "russian_translations": ["толстый", "полный", "жир"],
+    "explanation_en": "As an adjective, having a lot of body fat. As a noun, fat in the body or food.",
+    "explanation_ru": "Как прилагательное — имеющий много жировой ткани. Как существительное — жир.",
+    "examples": [{"en": "This food contains a lot of fat.", "ru": "В этой пище много жира."}]
+  },
+  {
+    "english_term": "Generic",
+    "russian_translations": ["общий", "типовой", "универсальный", "небрендовый"],
+    "explanation_en": "Not specific to one brand, person, or situation; ordinary or standard.",
+    "explanation_ru": "Не относящийся к конкретному бренду, человеку или ситуации; типовой.",
+    "examples": [{"en": "The website uses a generic design.", "ru": "На сайте используется типовой дизайн."}]
+  },
+  {
+    "english_term": "Genuine",
+    "russian_translations": ["настоящий", "подлинный", "искренний"],
+    "explanation_en": "Real rather than fake, or honest and sincere.",
+    "explanation_ru": "Настоящий, не поддельный; также искренний, без притворства.",
+    "examples": [{"en": "She showed genuine interest.", "ru": "Она проявила искренний интерес."}]
+  },
+  {
+    "english_term": "Homie",
+    "russian_translations": ["кореш", "приятель", "близкий друг"],
+    "explanation_en": "An informal slang word for a close friend.",
+    "explanation_ru": "Разговорное сленговое слово для близкого друга или приятеля.",
+    "examples": [{"en": "What's up, homie?", "ru": "Как дела, кореш?"}]
+  },
+  {
+    "english_term": "Hypocrisy",
+    "russian_translations": ["лицемерие", "двуличие"],
+    "explanation_en": "Claiming to follow beliefs or rules that your own actions contradict.",
+    "explanation_ru": "Когда человек заявляет об одних принципах, но сам поступает вопреки им.",
+    "examples": [{"en": "He criticizes lateness but is always late. That's hypocrisy.", "ru": "Он критикует опоздания, но сам постоянно опаздывает. Это лицемерие."}]
+  },
+  {
+    "english_term": "I can't be bothered to",
+    "russian_translations": ["мне лень", "мне неохота", "не хочу заморачиваться"],
+    "explanation_en": "An informal way to say you do not want to make the effort to do something.",
+    "explanation_ru": "Разговорное выражение: не хочется тратить силы на какое-либо действие.",
+    "examples": [
+      {"en": "I can't be bothered to go to the conference room.", "ru": "Мне лень идти в конференц-зал."},
+      {"en": "I can't be bothered to cook.", "ru": "Мне лень готовить."}
+    ]
+  },
+  {
+    "english_term": "I don't feel like going",
+    "russian_translations": ["мне не хочется идти", "мне неохота идти"],
+    "explanation_en": "A natural, gentle way to say you do not want to go somewhere.",
+    "explanation_ru": "Естественный и мягкий способ сказать, что нет желания куда-либо идти.",
+    "examples": [{"en": "I don't feel like going anywhere today.", "ru": "Мне сегодня никуда не хочется идти."}]
+  },
+  {
+    "english_term": "I'm too lazy to go",
+    "russian_translations": ["мне лень идти", "мне лень куда-то идти"],
+    "explanation_en": "A direct, informal way to say you do not want to make the effort to go somewhere.",
+    "explanation_ru": "Разговорное выражение, означающее нежелание тратить силы на то, чтобы куда-то идти.",
+    "examples": [{"en": "I'm too lazy to go to the conference room.", "ru": "Мне лень идти в конференц-зал."}]
+  },
+  {
+    "english_term": "Idle",
+    "russian_translations": ["бездействующий", "простаивающий", "незанятый"],
+    "explanation_en": "Not working, moving, or being used at the moment.",
+    "explanation_ru": "Не работающий, не занятый или временно не используемый.",
+    "examples": [{"en": "The server has been idle for hours.", "ru": "Сервер простаивает уже несколько часов."}]
+  },
+  {
+    "english_term": "Imitate",
+    "russian_translations": ["подражать", "копировать", "имитировать"],
+    "explanation_en": "To copy someone's behavior, voice, actions, or style without necessarily pretending to be that person.",
+    "explanation_ru": "Копировать поведение, голос или стиль другого человека, не обязательно выдавая себя за него.",
+    "examples": [{"en": "He imitates his manager's speaking style.", "ru": "Он подражает манере речи руководителя."}]
+  },
+  {
+    "english_term": "Impersonate",
+    "russian_translations": ["выдавать себя за кого-то", "изображать другого человека", "пародировать"],
+    "explanation_en": "To pretend to be another person by copying their identity, voice, appearance, or behavior, either for entertainment or deception.",
+    "explanation_ru": "Изображать другого человека или выдавать себя за него. Это может быть пародия или обман.",
+    "examples": [
+      {"en": "The comedian impersonated famous actors.", "ru": "Комик пародировал известных актёров."},
+      {"en": "The scammer impersonated a police officer.", "ru": "Мошенник выдавал себя за полицейского."}
+    ]
+  },
+  {
+    "english_term": "Impersonation",
+    "russian_translations": ["выдача себя за другого человека", "пародирование", "имитация личности"],
+    "explanation_en": "The act of pretending to be someone else, for entertainment or deception.",
+    "explanation_ru": "Действие, при котором человек изображает другого ради развлечения или обмана.",
+    "examples": [{"en": "The account was removed for impersonation.", "ru": "Аккаунт удалили за выдачу себя за другого человека."}]
+  },
+  {
+    "english_term": "Impersonator",
+    "russian_translations": ["пародист", "двойник", "человек, выдающий себя за другого"],
+    "explanation_en": "Someone who imitates or pretends to be another person.",
+    "explanation_ru": "Человек, который изображает или копирует другого человека.",
+    "examples": [{"en": "The impersonator performed on stage.", "ru": "Пародист выступил на сцене."}]
+  },
+  {
+    "english_term": "Incentive",
+    "russian_translations": ["стимул", "побуждение", "мотивация"],
+    "explanation_en": "A reward, benefit, or opportunity that encourages someone to do something.",
+    "explanation_ru": "Награда, выгода или возможность, побуждающая человека действовать.",
+    "examples": [{"en": "Bonuses are an incentive to improve performance.", "ru": "Премии служат стимулом для повышения эффективности."}]
+  },
+  {
+    "english_term": "Inference",
+    "russian_translations": ["вывод", "умозаключение", "заключение"],
+    "explanation_en": "A conclusion reached by reasoning from available information rather than being told directly.",
+    "explanation_ru": "Вывод, сделанный на основе имеющихся данных и рассуждений.",
+    "examples": [{"en": "We can make an inference from the sales data.", "ru": "Мы можем сделать вывод на основе данных о продажах."}]
+  },
+  {
+    "english_term": "Ingratitude",
+    "russian_translations": ["неблагодарность"],
+    "explanation_en": "A lack of appreciation or thanks for help or kindness.",
+    "explanation_ru": "Отсутствие благодарности за помощь или доброту.",
+    "examples": [{"en": "He was disappointed by their ingratitude.", "ru": "Он был разочарован их неблагодарностью."}]
+  },
+  {
+    "english_term": "In plain English",
+    "russian_translations": ["простыми словами", "понятным языком", "без сложных терминов"],
+    "explanation_en": "An expression asking someone to explain something clearly and simply, without jargon.",
+    "explanation_ru": "Просьба объяснить что-либо просто и понятно, без сложных терминов.",
+    "examples": [{"en": "Can you explain it in plain English?", "ru": "Можешь объяснить это простыми словами?"}]
+  },
+  {
+    "english_term": "Lazy",
+    "russian_translations": ["ленивый", "не желающий прилагать усилия"],
+    "explanation_en": "Unwilling to work or make an effort, either generally or at a particular moment.",
+    "explanation_ru": "Не желающий работать или прилагать усилия; может описывать характер или временное состояние.",
+    "examples": [{"en": "I'm feeling lazy today.", "ru": "Мне сегодня лень что-либо делать."}]
+  },
+  {
+    "english_term": "Legal precedent",
+    "russian_translations": ["судебный прецедент", "юридический прецедент"],
+    "explanation_en": "An earlier court decision used as a guide or authority in similar cases.",
+    "explanation_ru": "Предыдущее судебное решение, используемое как ориентир или обязательное основание в похожих делах.",
+    "examples": [{"en": "The judge relied on a legal precedent.", "ru": "Судья опирался на судебный прецедент."}]
+  },
+  {
+    "english_term": "Leverage",
+    "russian_translations": ["рычаг", "преимущество", "использовать с выгодой", "кредитное плечо"],
+    "explanation_en": "To use existing resources or advantages to achieve more. As a noun, influence or an advantage; in finance, use of borrowed money.",
+    "explanation_ru": "Использовать ресурсы или преимущества для большего результата; также рычаг влияния или использование заёмных средств.",
+    "examples": [{"en": "We can leverage our technology to build new products.", "ru": "Мы можем использовать наши технологии для создания новых продуктов."}]
+  },
+  {
+    "english_term": "Lightweight",
+    "russian_translations": ["лёгкий", "облегчённый", "нетребовательный к ресурсам"],
+    "explanation_en": "Not heavy. In technology, software or systems that use relatively few resources.",
+    "explanation_ru": "Имеющий небольшой вес; в технологиях — потребляющий мало ресурсов.",
+    "examples": [{"en": "We need a lightweight application.", "ru": "Нам нужно лёгкое приложение."}]
+  },
+  {
+    "english_term": "Mechanical",
+    "russian_translations": ["механический", "машинный", "автоматический"],
+    "explanation_en": "Related to machines or mechanisms; sometimes describing actions performed without much thought.",
+    "explanation_ru": "Связанный с машинами и механизмами; иногда — выполняемый автоматически, без размышлений.",
+    "examples": [{"en": "The engineer found a mechanical problem.", "ru": "Инженер обнаружил механическую неисправность."}]
+  },
+  {
+    "english_term": "Moat",
+    "russian_translations": ["ров", "защитный ров", "устойчивое конкурентное преимущество"],
+    "explanation_en": "A protective ditch around a castle. In business, an advantage that protects a company from competitors.",
+    "explanation_ru": "Защитный ров вокруг замка; в бизнесе — устойчивое преимущество перед конкурентами.",
+    "examples": [
+      {"en": "The castle was surrounded by a moat.", "ru": "Замок был окружён рвом."},
+      {"en": "A strong brand creates a competitive moat.", "ru": "Сильный бренд создаёт устойчивое конкурентное преимущество."}
+    ]
+  },
+  {
+    "english_term": "Occasionally",
+    "russian_translations": ["иногда", "изредка", "время от времени"],
+    "explanation_en": "Sometimes, but not regularly or frequently.",
+    "explanation_ru": "Иногда, но не регулярно и не часто.",
+    "examples": [{"en": "I occasionally work from home.", "ru": "Я иногда работаю из дома."}]
+  },
+  {
+    "english_term": "Overseen",
+    "russian_translations": ["находившийся под надзором", "контролируемый", "курируемый"],
+    "explanation_en": "The past participle of 'oversee', meaning supervised or managed.",
+    "explanation_ru": "Третья форма глагола 'oversee': находившийся под чьим-либо контролем.",
+    "examples": [{"en": "The project was overseen by the director.", "ru": "Проект находился под контролем директора."}]
+  },
+  {
+    "english_term": "Overseeing",
+    "russian_translations": ["контроль", "надзор", "курирование", "осуществляющий контроль"],
+    "explanation_en": "Supervising and managing work to make sure it is done correctly.",
+    "explanation_ru": "Наблюдение за работой и управление процессом для обеспечения правильного выполнения.",
+    "examples": [{"en": "She is overseeing product development.", "ru": "Она курирует разработку продукта."}]
+  },
+  {
+    "english_term": "Perplexed",
+    "russian_translations": ["озадаченный", "растерянный", "сбитый с толку"],
+    "explanation_en": "Confused because something is difficult to understand.",
+    "explanation_ru": "Испытывающий недоумение или растерянность из-за непонятной ситуации.",
+    "examples": [{"en": "I was perplexed by his response.", "ru": "Я был озадачен его ответом."}]
+  },
+  {
+    "english_term": "Pillars",
+    "russian_translations": ["столбы", "колонны", "опоры", "основы"],
+    "explanation_en": "Plural of pillar: physical supports or, figuratively, the main principles supporting a system or strategy.",
+    "explanation_ru": "Множественное число от 'pillar': колонны, опоры или основные принципы, на которых что-либо держится.",
+    "examples": [{"en": "Trust and transparency are pillars of our culture.", "ru": "Доверие и прозрачность — основы нашей культуры."}]
+  },
+  {
+    "english_term": "Plain English",
+    "russian_translations": ["простой английский", "понятный английский", "объяснение простыми словами"],
+    "explanation_en": "Clear English without unnecessary jargon or complicated expressions.",
+    "explanation_ru": "Простой и понятный английский без лишних сложных терминов.",
+    "examples": [{"en": "The instructions are written in plain English.", "ru": "Инструкции написаны простым английским языком."}]
+  },
+  {
+    "english_term": "Plain language",
+    "russian_translations": ["простой язык", "понятный язык", "доступное изложение"],
+    "explanation_en": "Clear, easy-to-understand communication without unnecessary complexity.",
+    "explanation_ru": "Простое и понятное изложение информации без сложных формулировок.",
+    "examples": [
+      {"en": "Can you explain it in plain language?", "ru": "Можешь объяснить это простыми словами?"},
+      {"en": "Write the documentation in plain language.", "ru": "Пиши документацию простым языком."}
+    ]
+  },
+  {
+    "english_term": "Precedent",
+    "russian_translations": ["прецедент", "предыдущий случай, служащий примером"],
+    "explanation_en": "A past event or decision that guides future similar situations, including earlier court decisions.",
+    "explanation_ru": "Событие или решение из прошлого, которое служит примером для будущих похожих ситуаций.",
+    "examples": [
+      {"en": "We don't want to set a precedent.", "ru": "Мы не хотим создавать прецедент."},
+      {"en": "There is no precedent for this situation.", "ru": "Для этой ситуации нет прецедента."}
+    ]
+  },
+  {
+    "english_term": "Retrieve",
+    "russian_translations": ["извлекать", "получать", "возвращать", "восстанавливать"],
+    "explanation_en": "To find and bring something back, especially information, data, or an object.",
+    "explanation_ru": "Находить и возвращать что-либо, особенно данные, информацию или предмет.",
+    "examples": [{"en": "The system can retrieve data from the database.", "ru": "Система может извлекать данные из базы данных."}]
+  },
+  {
+    "english_term": "Rollout",
+    "russian_translations": ["запуск", "развёртывание", "поэтапное внедрение"],
+    "explanation_en": "The process of introducing a new product, feature, or system to users.",
+    "explanation_ru": "Процесс запуска или внедрения нового продукта, функции или системы.",
+    "examples": [{"en": "The rollout begins next week.", "ru": "Развёртывание начнётся на следующей неделе."}]
+  },
+  {
+    "english_term": "Self-replicate",
+    "russian_translations": ["самовоспроизводиться", "самокопироваться", "самостоятельно создавать свои копии"],
+    "explanation_en": "To create copies of itself. Used in biology and technology, such as viruses or computer worms.",
+    "explanation_ru": "Создавать собственные копии. Используется в биологии и технологиях.",
+    "examples": [
+      {"en": "A virus cannot self-replicate without a host cell.", "ru": "Вирус не может самовоспроизводиться без клетки хозяина."},
+      {"en": "Some programs can self-replicate.", "ru": "Некоторые программы могут самостоятельно создавать свои копии."}
+    ]
+  },
+  {
+    "english_term": "Self-replicating",
+    "russian_translations": ["самовоспроизводящийся", "самокопирующийся"],
+    "explanation_en": "Able to create copies of itself.",
+    "explanation_ru": "Способный самостоятельно создавать свои копии.",
+    "examples": [{"en": "Scientists are exploring self-replicating robots.", "ru": "Учёные исследуют самовоспроизводящихся роботов."}]
+  },
+  {
+    "english_term": "Self-replication",
+    "russian_translations": ["самовоспроизведение", "самокопирование"],
+    "explanation_en": "The process of creating copies of oneself or itself.",
+    "explanation_ru": "Процесс создания объектом или системой собственных копий.",
+    "examples": [{"en": "Self-replication is important in biology.", "ru": "Самовоспроизведение важно в биологии."}]
+  },
+  {
+    "english_term": "Set a precedent",
+    "russian_translations": ["создать прецедент", "заложить прецедент"],
+    "explanation_en": "To make a decision that becomes an example for similar decisions in the future.",
+    "explanation_ru": "Принять решение, которое станет примером для будущих похожих ситуаций.",
+    "examples": [{"en": "This decision could set a precedent.", "ru": "Это решение может создать прецедент."}]
+  },
+  {
+    "english_term": "Set a dangerous precedent",
+    "russian_translations": ["создать опасный прецедент"],
+    "explanation_en": "To make a decision that may encourage harmful similar decisions in the future.",
+    "explanation_ru": "Принять решение, которое может привести к повторению нежелательных ситуаций.",
+    "examples": [{"en": "Ignoring the rule could set a dangerous precedent.", "ru": "Игнорирование правила может создать опасный прецедент."}]
+  },
+  {
+    "english_term": "Short",
+    "russian_translations": ["короткий", "низкий", "невысокий"],
+    "explanation_en": "Having little length, height, or duration compared with what is usual.",
+    "explanation_ru": "Имеющий небольшую длину, высоту или продолжительность.",
+    "examples": [
+      {"en": "He is short, but his brother is tall.", "ru": "Он невысокий, а его брат высокий."},
+      {"en": "We had a short meeting.", "ru": "У нас было короткое совещание."}
+    ]
+  },
+  {
+    "english_term": "Skinny",
+    "russian_translations": ["очень худой", "тощий", "худощавый"],
+    "explanation_en": "Very thin, often with little body fat or muscle. It can sound negative about a person.",
+    "explanation_ru": "Очень худой, часто с небольшим количеством жира или мышц; иногда звучит неодобрительно.",
+    "examples": [{"en": "The abandoned dog looked skinny.", "ru": "Брошенная собака выглядела очень худой."}]
+  },
+  {
+    "english_term": "Slim",
+    "russian_translations": ["стройный", "худощавый", "тонкий"],
+    "explanation_en": "Thin in an attractive or healthy-looking way; also narrow.",
+    "explanation_ru": "Стройный, обычно с положительным оттенком; также тонкий или узкий.",
+    "examples": [{"en": "She has a slim figure.", "ru": "У неё стройная фигура."}]
+  },
+  {
+    "english_term": "Tall",
+    "russian_translations": ["высокий", "высокорослый"],
+    "explanation_en": "Having greater height than usual.",
+    "explanation_ru": "Имеющий большую высоту по сравнению с обычным.",
+    "examples": [{"en": "He is the tallest person in our team.", "ru": "Он самый высокий в нашей команде."}]
+  },
+  {
+    "english_term": "Thin",
+    "russian_translations": ["тонкий", "худой", "негустой"],
+    "explanation_en": "Having little thickness or, for a person, little body fat.",
+    "explanation_ru": "Имеющий небольшую толщину; о человеке — худой.",
+    "examples": [
+      {"en": "The walls are very thin.", "ru": "Стены очень тонкие."},
+      {"en": "He became thin after losing weight.", "ru": "Он стал худым после снижения веса."}
+    ]
+  },
+  {
+    "english_term": "Through",
+    "russian_translations": ["через", "сквозь", "посредством", "до конца"],
+    "explanation_en": "Moving from one side to another, passing inside something, or using a particular method.",
+    "explanation_ru": "Движение через что-либо или получение результата определённым способом.",
+    "examples": [
+      {"en": "We walked through the park.", "ru": "Мы прошли через парк."},
+      {"en": "I found out through a colleague.", "ru": "Я узнал об этом через коллегу."}
+    ]
+  },
+  {
+    "english_term": "Throughput",
+    "russian_translations": ["пропускная способность", "производительность", "объём обработки"],
+    "explanation_en": "The amount of work, data, or material a system processes in a given time.",
+    "explanation_ru": "Количество работы, данных или материалов, обрабатываемое системой за определённое время.",
+    "examples": [{"en": "We improved the system's throughput.", "ru": "Мы повысили пропускную способность системы."}]
+  },
+  {
+    "english_term": "Thumb",
+    "russian_translations": ["большой палец руки"],
+    "explanation_en": "The short, thick finger on the side of your hand.",
+    "explanation_ru": "Короткий широкий палец сбоку ладони.",
+    "examples": [{"en": "He gave me a thumbs-up.", "ru": "Он показал большой палец в знак одобрения."}]
+  },
+  {
+    "english_term": "Transactional",
+    "russian_translations": ["транзакционный", "связанный с операциями", "основанный на обмене выгодами"],
+    "explanation_en": "Related to transactions or exchanges. In relationships, focused mainly on what each side gives and receives.",
+    "explanation_ru": "Связанный со сделками или операциями; в отношениях — основанный на взаимной выгоде.",
+    "examples": [
+      {"en": "The system processes transactional data.", "ru": "Система обрабатывает транзакционные данные."},
+      {"en": "Their relationship was purely transactional.", "ru": "Их отношения строились исключительно на взаимной выгоде."}
+    ]
+  },
+  {
+    "english_term": "Turnover",
+    "russian_translations": ["оборот", "выручка", "текучесть кадров"],
+    "explanation_en": "The value of sales over a period, especially in British English, or the rate at which employees leave and are replaced.",
+    "explanation_ru": "Оборот или объём продаж за период; также текучесть кадров.",
+    "examples": [
+      {"en": "The company increased its annual turnover.", "ru": "Компания увеличила годовой оборот."},
+      {"en": "High employee turnover is expensive.", "ru": "Высокая текучесть кадров дорого обходится."}
+    ]
+  },
+  {
+    "english_term": "Unique",
+    "russian_translations": ["уникальный", "единственный в своём роде", "неповторимый"],
+    "explanation_en": "Being the only one of its kind or unlike anything else.",
+    "explanation_ru": "Единственный в своём роде или обладающий неповторимыми характеристиками.",
+    "examples": [{"en": "This product has a unique feature.", "ru": "У этого продукта есть уникальная функция."}]
+  },
+  {
+    "english_term": "Unlikely",
+    "russian_translations": ["маловероятный", "вряд ли", "непохожий на правду"],
+    "explanation_en": "Not expected to happen or probably not true.",
+    "explanation_ru": "То, что, скорее всего, не произойдёт или маловероятно является правдой.",
+    "examples": [{"en": "It's unlikely we'll finish today.", "ru": "Маловероятно, что мы закончим сегодня."}]
+  },
+  {
+    "english_term": "Unprecedented",
+    "russian_translations": ["беспрецедентный", "небывалый", "не имеющий аналогов"],
+    "explanation_en": "Never having happened before or never having reached such a level or scale. It can describe good or bad events.",
+    "explanation_ru": "То, чего раньше никогда не было, или событие невиданного масштаба.",
+    "examples": [
+      {"en": "The company is experiencing unprecedented growth.", "ru": "Компания переживает беспрецедентный рост."},
+      {"en": "AI is developing at an unprecedented pace.", "ru": "ИИ развивается беспрецедентными темпами."}
+    ]
+  },
+  {
+    "english_term": "Unprecedented growth",
+    "russian_translations": ["беспрецедентный рост", "небывалый рост"],
+    "explanation_en": "Growth at a speed or scale never experienced before.",
+    "explanation_ru": "Рост с такой скоростью или в таком масштабе, которого раньше не наблюдалось.",
+    "examples": [{"en": "The startup achieved unprecedented growth.", "ru": "Стартап добился беспрецедентного роста."}]
+  },
+  {
+    "english_term": "Variant",
+    "russian_translations": ["вариант", "разновидность", "модификация"],
+    "explanation_en": "A version of something that differs slightly from other versions.",
+    "explanation_ru": "Версия или разновидность чего-либо, немного отличающаяся от других.",
+    "examples": [{"en": "We are testing a new variant of the app.", "ru": "Мы тестируем новый вариант приложения."}]
+  },
+  {
+    "english_term": "Without precedent",
+    "russian_translations": ["без прецедентов", "не имеющий прецедентов", "беспрецедентный"],
+    "explanation_en": "Having no known previous example or comparable event.",
+    "explanation_ru": "Не имеющий известных аналогов или подобных случаев в прошлом.",
+    "examples": [{"en": "The scale of the disaster was without precedent.", "ru": "Масштаб катастрофы был беспрецедентным."}]
+  }
+]

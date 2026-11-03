@@ -6,19 +6,25 @@ The existing English/Russian vocabulary app, published in its own repository. Th
 
 ## Your data
 
-Vocabulary, drafts, answers, session history and learning schedules are stored privately in IndexedDB in the current browser. No account, backend, analytics, or cloud sync is used. Updates at the same web address preserve browser data. Clearing site data or changing browser/device/origin does not.
+The platform includes 76 shared vocabulary entries, stored in [data/vocabulary.json](data/vocabulary.json) and bundled into both HTML entry points. Every new visitor gets the same words automatically, including all Russian translations, English and Russian explanations, and 91 bilingual example pairs. No account, token or manual import is needed.
 
-This website uses a different origin from a local file or localhost. Existing local vocabulary and quiz history are not automatically transferred or overwritten. Use Settings → Import JSON Files to add vocabulary here, or Vocabulary → Add Word. The bundled attempt.json is a supported example. This original app does not provide full history backup/export/restore; no such capability is implied by publication.
+Personal additions, edits, drafts, answers, session history and learning schedules are stored privately in IndexedDB in the current browser. Updates at the same web address preserve browser data. Clearing site data or changing browser/device/origin resets personal data; the shared vocabulary is available again automatically. Optional authenticated progress sync is described below.
+
+This website uses a different origin from a local file or localhost. Existing local vocabulary and quiz history are not automatically transferred or overwritten. Use Settings → Import JSON Files or Vocabulary → Add Word for additional personal vocabulary. The bundled attempt.json is a supported example. Publication does not transfer history between origins.
 
 Folder import is optional and browser-dependent. Choosing a folder grants the browser read access; it does not grant ChatGPT permission to write there. Imported vocabulary remains private in your browser and is never added to this public repository.
 
-## Starter vocabulary
+## Shared vocabulary
 
-[Download the supplied 76-word vocabulary pack](Vocabulary-76.zip). Unzip it, then use Settings → Import JSON Files to select the numbered JSON files. The current dictionary supports all 76. These are the supplied learning examples, not personal vocabulary history. Nothing is inserted until you import it.
+The complete supplied 76-entry dataset is versioned in [data/vocabulary.json](data/vocabulary.json). The build embeds it into the standalone app, and startup saves missing entries into the browser database in one transaction. It works offline after the app is downloaded, without a separate data request.
+
+Existing visitors receive missing words on their next reload. Matching terms (including drafts), existing edits, renamed shared entries, deletion tombstones, quiz history and review schedules are preserved. Stable word IDs prevent duplicate entries between devices. The original shared content remains in the repository; personal edits and deletions affect that visitor's collection. The “Included for everyone” label identifies an unchanged shared entry.
+
+The quiz dictionary accepts all supplied translations and retains previously accepted synonyms, so both old imports and the new shared vocabulary remain usable. The older [76-word vocabulary pack](Vocabulary-76.zip) remains available for compatibility; importing it is unnecessary.
 
 ## Practice
 
-1. Open Vocabulary → Add Word, or import completed JSON vocabulary files.
+1. Open Vocabulary to browse the 76 included words, or add/import personal entries.
 2. Choose English → Russian or Russian → English.
 3. Answer five contextual multiple-choice questions. Check Answer saves each response; feedback explains both correct and selected answers.
 4. Resume unfinished quizzes, and review completed sessions in History.
@@ -27,7 +33,7 @@ Both directions have independent SM-2-style schedules. A successful word/directi
 
 ## Source and tests
 
-EnglishTraining.html is the exact installed application selected for publication. index.html is its identical GitHub Pages entry point. Source/ contains the matching dictionary, logic, storage, importer, UI, styles and reproducible HTML template.
+EnglishTraining.html and index.html are identical, generated GitHub Pages entry points. Source/ contains the dictionary, shared vocabulary loader, logic, storage, importer, UI, styles and reproducible HTML template. Update data/vocabulary.json and rebuild to publish shared content changes. Existing personal versions are preserved during startup.
 
 ```sh
 python3 Source/build.py
