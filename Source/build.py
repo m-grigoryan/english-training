@@ -1,6 +1,6 @@
 from pathlib import Path
 root=Path(__file__).resolve().parent
-script='\n'.join((root/name).read_text() for name in ['dictionary.js','core.js','storage.js','importer.js','app.js'])
+script='\n'.join((root/name).read_text() for name in ['dictionary.js','core.js','storage.js','github-sync.js','quick-clock.js','importer.js','app.js'])
 assert '</script' not in script.lower()
 html=(root/'template.html').read_text().replace('__ENGLISH_STYLE__',(root/'style.css').read_text()).replace('__ENGLISH_SCRIPT__',script)
 (root/'dist').mkdir(exist_ok=True)

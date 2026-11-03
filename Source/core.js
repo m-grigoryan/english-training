@@ -34,7 +34,7 @@ function saveWord(s,word,status,now=Date.now()) {
  const w={id:old?.id||word.id||uid(),content:c,status,createdAt:old?.createdAt??now,updatedAt:now,deletedAt:null};
  if(old)s.words[s.words.indexOf(old)]=w;else s.words.push(w);
  for(const d of ['enRu','ruEn'])s.learning[`${w.id}:${d}`]??=initialLearning();
- return w;
+ if(status==='ready')attachDictionaryHistory(s,w,root.TRAINING_DICTIONARY);return w;
 }
 function deleteWord(s,id,now=Date.now()){const w=s.words.find(w=>w.id===id);if(w){w.deletedAt=now;w.updatedAt=now;}}
 function resolve(c,dictionary){const ru=new Set(c.russian_translations.map(norm));const found=dictionary.filter(m=>m.aliases.map(norm).includes(norm(c.english_term))&&ru.size&&[...ru].every(t=>m.content.russian_translations.map(norm).includes(t)));return found.length===1?found[0]:null;}
@@ -66,7 +66,7 @@ function generate(s,d,dictionary,now=Date.now()){
  }
  return shuffle(questions);
 }
-function start(s,d,dictionary,now=Date.now()){const active=s.sessions.find(x=>x.status==='in_progress');if(active)return active;const questions=generate(s,d,dictionary,now);const session={id:uid(),direction:d,status:'in_progress',startedAt:now,completedAt:null,currentIndex:0,questions,answers:[],score:0};s.sessions.push(session);return session;}
+function start(s,d,dictionary,now=Date.now()){const active=s.sessions.find(x=>x.status==='in_progress'&&x.kind!=='quick_match');if(active)return active;const questions=generate(s,d,dictionary,now);const session={id:uid(),direction:d,status:'in_progress',startedAt:now,completedAt:null,currentIndex:0,questions,answers:[],score:0};s.sessions.push(session);return session;}
 function schedule(previous,outcomes,now){const s=clone(previous);for(const o of outcomes)s[o==='correct'?'correctCount':o==='incorrect'?'incorrectCount':'unknownCount']++;if(outcomes.every(o=>o==='correct')){s.repetitions++;s.intervalDays=s.repetitions===1?1:s.repetitions===2?6:Math.max(1,Math.round(s.intervalDays*s.ease));}else{s.repetitions=0;s.ease=Math.max(1.3,s.ease-0.2);s.intervalDays=1;}s.lastPracticed=now;s.nextReview=now+s.intervalDays*DAY;return s;}
 function submit(s,id,qid,selectedID,now=Date.now()){
  const quiz=s.sessions.find(x=>x.id===id);if(!quiz)invalid('Quiz not found.');
@@ -76,7 +76,7 @@ function submit(s,id,qid,selectedID,now=Date.now()){
  if(selectedID!==null&&!chosen)invalid('Select one of the saved answer choices.');
  const outcome=selectedID===null?'unknown':selectedID===q.correctID?'correct':'incorrect';
  quiz.answers.push({questionID:qid,selectedID,outcome,submittedAt:now,correctFeedback:clone(correct),selectedFeedback:chosen?clone(chosen):null});
- if(quiz.answers.length===5){
+ if(quiz.answers.length===quiz.questions.length){
   for(const wordID of new Set(quiz.questions.map(q=>q.wordID))){
    const key=`${id}:${wordID}:${quiz.direction}`;if(s.scheduling[key])continue;
    const ids=new Set(quiz.questions.filter(q=>q.wordID===wordID).map(q=>q.id)),outcomes=quiz.answers.filter(a=>ids.has(a.questionID)).map(a=>a.outcome),lk=`${wordID}:${quiz.direction}`;
@@ -86,10 +86,53 @@ function submit(s,id,qid,selectedID,now=Date.now()){
  }
  return quiz;
 }
-function next(s,id){const q=s.sessions.find(x=>x.id===id);if(!q)invalid('Quiz not found.');if(q.status==='completed')return q;if(!q.answers.some(a=>a.questionID===q.questions[q.currentIndex].id))invalid('Apply a response before continuing.');q.currentIndex=Math.min(4,q.currentIndex+1);return q;}
+function next(s,id){const q=s.sessions.find(x=>x.id===id);if(!q)invalid('Quiz not found.');if(q.status==='completed')return q;if(!q.answers.some(a=>a.questionID===q.questions[q.currentIndex].id))invalid('Apply a response before continuing.');q.currentIndex=Math.min(q.questions.length-1,q.currentIndex+1);return q;}
 function parseJSON(text,bytes){if(bytes>MAX_BYTES)invalid('File exceeds 1 MiB. Use one vocabulary entry per file.');let c;try{c=JSON.parse(text);}catch{invalid('Malformed or incomplete JSON. Finish the temporary file before renaming it to .json.');}const keys=['english_term','russian_translations','explanation_en','explanation_ru','examples'];if(!c||typeof c!=='object'||Array.isArray(c)||Object.keys(c).sort().join('|')!==keys.sort().join('|')||!Array.isArray(c.examples)||c.examples.some(x=>!x||Object.keys(x).sort().join('|')!=='en|ru'))invalid('JSON must contain exactly english_term, russian_translations, explanation_en, explanation_ru, and examples with en/ru pairs.');validate(c);return trim(c);}
 function recordImport(s,path,hash,status,message,wordID=null,now=Date.now()){let r=s.imports.find(x=>x.path===path&&x.hash===hash&&x.status===status);if(!r){r={id:uid(),path,hash,status};s.imports.push(r);}Object.assign(r,{message,wordID,date:now});}
 function importContent(s,c,path,hash,now=Date.now()){if(s.imports.some(r=>r.hash===hash&&r.status==='success'))return null;validate(c);const word=saveWord(s,{content:c},'ready',now);recordImport(s,path,hash,'success',`Imported ${word.content.english_term}.`,word.id,now);return word;}
-function validateState(s){if(s.schema!==1||!Array.isArray(s.words)||!Array.isArray(s.sessions)||!s.learning||!s.scheduling)invalid('Stored data format is not supported. Use the original browser profile or a compatible app version.');const terms=new Set();for(const w of s.words.filter(w=>!w.deletedAt)){const n=norm(w.content.english_term);if(n&&terms.has(n))invalid('Duplicate active vocabulary detected; no changes were saved.');if(n)terms.add(n);}for(const q of s.sessions){if(q.questions.length!==5||q.questions.some(x=>x.choices.length!==5||!x.choices.some(c=>c.id===x.correctID)))invalid('Saved quiz is invalid. No questions were regenerated.');if(new Set(q.answers.map(x=>x.questionID)).size!==q.answers.length)invalid('Duplicate saved answer.');}}
-root.TrainingCore={DAY,MAX_BYTES,norm,clone,uid,shuffle,blankContent,initial,initialLearning,validate,saveWord,deleteWord,duplicate,resolve,hideAnswers,generate,start,schedule,submit,next,parseJSON,recordImport,importContent,validateState};
+function validateState(s){if(s.schema!==1||!Array.isArray(s.words)||!Array.isArray(s.sessions)||!s.learning||!s.scheduling)invalid('Stored data format is not supported. Use the original browser profile or a compatible app version.');const terms=new Set();for(const w of s.words.filter(w=>!w.deletedAt)){const n=norm(w.content.english_term);if(n&&terms.has(n))invalid('Duplicate active vocabulary detected; no changes were saved.');if(n)terms.add(n);}for(const q of s.sessions){if(q.kind==='quick_match'&&!(q.status==='completed'?q.deadline===null:Number.isFinite(q.deadline)))invalid('Saved timed game has an invalid deadline.');if(q.questions.length!==(q.kind==='quick_match'?30:5)||q.questions.some(x=>x.choices.length!==(q.kind==='quick_match'?2:5)||!x.choices.some(c=>c.id===x.correctID)))invalid('Saved quiz is invalid. No questions were regenerated.');if(new Set(q.answers.map(x=>x.questionID)).size!==q.answers.length)invalid('Duplicate saved answer.');}}
+
+function quickQuestions(s,dictionary){
+ if(!Array.isArray(dictionary)||dictionary.length<2)invalid('At least two dictionary meanings are required.');
+ const saved=new Map();for(const w of s.words.filter(w=>w.deletedAt===null&&w.status==='ready')){const sense=resolve(w.content,dictionary);if(sense&&!saved.has(sense.id))saved.set(sense.id,w)}
+ const priority=shuffle(dictionary.filter(m=>saved.has(m.id))),rest=shuffle(dictionary.filter(m=>!saved.has(m.id)));
+ const pool=[...priority,...rest];if(!pool.length)invalid('No dictionary words are available.');
+ const result=[];for(let i=0;i<30;i++){
+  const sense=pool[i%pool.length],w=saved.get(sense.id),translations=new Set(sense.content.russian_translations.map(norm));
+  const safe=dictionary.filter(m=>m.id!==sense.id&&!sense.conflicts.includes(m.id)&&!m.conflicts.includes(sense.id)&&!m.content.russian_translations.some(t=>translations.has(norm(t)))&&!m.aliases.some(t=>sense.aliases.map(norm).includes(norm(t))));
+  if(!safe.length)invalid('Could not find an unambiguous second translation for '+sense.content.english_term+'.');
+  const distractor=shuffle(safe)[0],correct=makeChoice(sense.content,sense.id,'enRu',sense.content.examples[0]),wrong=makeChoice(distractor.content,distractor.id,'enRu',distractor.content.examples[0]);
+  result.push({id:uid(),wordID:w?.id||'dictionary:'+sense.id,prompt:sense.content.english_term,context:'',choices:shuffle([correct,wrong]),correctID:correct.id});
+ }
+ return result;
+}
+function startQuick(s,dictionary,now=Date.now()){
+ const old=s.sessions.find(q=>q.kind==='quick_match'&&q.status==='in_progress');if(old)return old;
+ const q={id:uid(),kind:'quick_match',direction:'enRu',status:'in_progress',startedAt:now,completedAt:null,currentIndex:0,questions:quickQuestions(s,dictionary),answers:[],score:0,deadline:now+4000};
+ s.sessions.push(q);return q;
+}
+function answerQuick(s,id,qid,selectedID,now=Date.now(),reason='answer'){
+ const q=s.sessions.find(q=>q.id===id&&q.kind==='quick_match');if(!q)invalid('Timed game not found.');
+ if(q.status!=='in_progress'||q.questions[q.currentIndex]?.id!==qid||q.answers.some(a=>a.questionID===qid))return q;
+ const expired=now>=q.deadline,timeout=reason==='timeout'||expired;
+ if(reason==='timeout'&&!expired)return q;
+ submit(s,id,qid,timeout?null:selectedID,now);q.answers.at(-1).reason=timeout?'timeout':selectedID===null?'unknown':'answer';
+ if(q.status==='in_progress'){next(s,id);q.deadline=now+4000}else q.deadline=null;
+ return q;
+}
+function attachDictionaryHistory(s,w,dictionary){
+ const sense=resolve(w.content,dictionary||[]);if(!sense)return;
+ const old='dictionary:'+sense.id;if(old===w.id)return;
+ for(const q of s.sessions)for(const x of q.questions)if(x.wordID===old)x.wordID=w.id;
+ for(const d of ['enRu','ruEn']){const k=old+':'+d,other=w.id+':'+d;if(s.learning[k]&&!(s.learning[other]?.lastPracticed))s.learning[other]=clone(s.learning[k]);delete s.learning[k]}
+ for(const [key,value] of Object.entries(s.scheduling)){if(value.wordID===old){const next={...value,wordID:w.id};delete s.scheduling[key];s.scheduling[value.sessionID+':'+w.id+':'+value.direction]=next}}
+}
+
+function wordRating(state,wordID){
+ const seen=new Set();let correct=0,incorrect=0,unknown=0;
+ for(const session of state.sessions){const ids=new Set(session.questions.filter(q=>q.wordID===wordID).map(q=>q.id));for(const answer of session.answers){const id=session.id+':'+answer.questionID;if(!ids.has(answer.questionID)||seen.has(id))continue;seen.add(id);if(answer.outcome==='correct')correct++;else if(answer.outcome==='incorrect')incorrect++;else unknown++;}}
+ const total=correct+incorrect+unknown,stars=total?Math.max(1,Math.min(5,Math.round(5*correct/total))):0;
+ return {stars,total,correct,incorrect,unknown,accuracy:total?Math.round(100*correct/total):null};
+}
+root.TrainingCore={quickQuestions,startQuick,answerQuick,wordRating,DAY,MAX_BYTES,norm,clone,uid,shuffle,blankContent,initial,initialLearning,validate,saveWord,deleteWord,duplicate,resolve,hideAnswers,generate,start,schedule,submit,next,parseJSON,recordImport,importContent,validateState};
 })(globalThis);
