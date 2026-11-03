@@ -111,13 +111,14 @@ function startQuick(s,dictionary,now=Date.now()){
  const q={id:uid(),kind:'quick_match',direction:'enRu',status:'in_progress',startedAt:now,completedAt:null,currentIndex:0,questions:quickQuestions(s,dictionary),answers:[],score:0,deadline:now+4000};
  s.sessions.push(q);return q;
 }
-function answerQuick(s,id,qid,selectedID,now=Date.now(),reason='answer'){
+function answerQuick(s,id,qid,selectedID,now=Date.now(),reason='answer',feedbackMs=0){
+ if(!Number.isFinite(feedbackMs)||feedbackMs<0||feedbackMs>2000)invalid('Invalid feedback duration.');
  const q=s.sessions.find(q=>q.id===id&&q.kind==='quick_match');if(!q)invalid('Timed game not found.');
  if(q.status!=='in_progress'||q.questions[q.currentIndex]?.id!==qid||q.answers.some(a=>a.questionID===qid))return q;
  const expired=now>=q.deadline,timeout=reason==='timeout'||expired;
  if(reason==='timeout'&&!expired)return q;
  submit(s,id,qid,timeout?null:selectedID,now);q.answers.at(-1).reason=timeout?'timeout':selectedID===null?'unknown':'answer';
- if(q.status==='in_progress'){next(s,id);q.deadline=now+4000}else q.deadline=null;
+ if(q.status==='in_progress'){next(s,id);q.deadline=now+4000+feedbackMs}else q.deadline=null;
  return q;
 }
 function attachDictionaryHistory(s,w,dictionary){

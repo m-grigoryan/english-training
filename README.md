@@ -132,3 +132,8 @@ Additional checks: 10 Quick Match groups, 183,051 assertions, including
 GitHub merge, dictionary-to-vocabulary rating transfer, exact deadline and stale
 clock callbacks. Production markup helpers were checked for ready, running,
 and results states. A real browser and physical iPhone still need verification.
+
+
+### Quick Match choice feedback
+
+The two translations are now large equal-width cards beside each other, including on phones. The unknown option spans the row below. A choice immediately shows Correct (green) or Incorrect (red), highlights the correct translation, and disables all three controls. Feedback stays for 650 ms before automatic advancement. The following question receives its own full four seconds after that feedback interval. Unknown and timeout outcomes reveal the right translation too. Ratings and scoring are unchanged.

@@ -1,7 +1,7 @@
 (function(){
 'use strict';
 const C=TrainingCore,D=TRAINING_DICTIONARY,store=new TrainingStore();
-let github=null,githubReceipt=null,githubNotice=false,quickRunning=false,quickClock=new TrainingQuickClock(),quickSubmitting=false;
+let github=null,githubReceipt=null,githubNotice=false,quickRunning=false,quickClock=new TrainingQuickClock(),quickSubmitting=false,quickFeedback=null;
 let data=C.initial(),route='quiz',direction='enRu',quizID=null,showResults=false,selectedWord=null,selectedHistory=null,selection=null,search='',filter='all',ascending=true,busy=false,storageReady=false,error=null,errorID=null,editing=null,originalEditor='',editorError=null,editorDuplicate=null,importer=null,toastTimer;
 const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const title=d=>d==='enRu'?'English → Russian':'Russian → English';
@@ -56,20 +56,29 @@ function quizPage(){
 }
 
 function quickReady(session){return heading('Quick Match','30 questions · 4 seconds each')+'<section class="card quick-intro"><h2>Ready when you are.</h2><p class="sub">Choose the correct Russian meaning. “I don’t know” and timeouts earn no point. The game runs only after you press Start or Resume.</p><p class="caption block">'+session.answers.length+' of 30 answers already saved. If the last question’s deadline passed, it will count as a timeout when you resume.</p>'+button('Resume game','quick-start','primary block','data-save-action data-id="'+esc(session.id)+'"')+'</section>'}
+
+function quickChoiceButtons(q,answer=null){return '<div class="choices quick-choices" role="group" aria-label="Russian translations">'+[...q.choices,{id:'unknown',label:'I don’t know'}].map((c,i)=>{const correct=!!answer&&c.id===q.correctID,wrong=!!answer&&c.id===answer.selectedID&&answer.outcome==='incorrect';return button('<span class="num">'+(i<2?i+1:'?')+'</span><span class="quick-choice-label">'+esc(c.label)+'</span>'+(correct?'<span class="quick-choice-mark" aria-label="Correct translation">✓</span>':wrong?'<span class="quick-choice-mark" aria-label="Incorrect choice">×</span>':''),'quick-answer','choice'+(i===2?' quick-unknown':'')+(correct?' correct':'')+(wrong?' wrong':''),'data-id="'+esc(c.id)+'" data-question="'+esc(q.id)+'" '+(answer?'disabled':'data-save-action'))}).join('')+'</div>'}
+function quickFeedbackPage(session){
+ const {question:q,answer:a}=quickFeedback,correct=q.choices.find(c=>c.id===q.correctID),positive=a.outcome==='correct',label=positive?'Correct!':a.reason==='timeout'?'Time’s up':a.reason==='unknown'?'I don’t know':'Incorrect';
+ return heading('Quick Match','Your answer is saved.',button('Leave game','quick-leave'))+'<section class="card question quick-question"><div class="eyebrow">ENGLISH WORD</div><h2 class="prompt">'+esc(q.prompt)+'</h2></section>'+quickChoiceButtons(q,a)+'<div class="quick-instant-feedback '+(positive?'is-correct':'is-incorrect')+'" role="status" aria-live="assertive"><strong>'+(positive?'✓ ':'✕ ')+label+'</strong><p>Correct translation: '+esc(correct.label)+'</p></div><p class="caption block">Next word in a moment…</p>';
+}
+
 function quickPage(session){
+ if(quickFeedback?.sessionId===session.id&&quickRunning)return quickFeedbackPage(session);
  if(session.status==='completed'){const correct=session.answers.filter(a=>a.outcome==='correct').length,unknown=session.answers.filter(a=>a.reason==='unknown').length,timeouts=session.answers.filter(a=>a.reason==='timeout').length,wrong=session.answers.filter(a=>a.outcome==='incorrect').length;const unique=[...new Set(session.questions.map(q=>q.wordID))];return heading('Quick Match complete','Your answers are saved and included in your existing word ratings.')+'<div class="stack"><section class="card"><div class="score">'+correct+'<span style="font-size:25px"> / 30</span></div><p class="sub">Correct answers</p><div class="row wrap block">'+badge((30-correct)+' incorrect / not correct','orange')+badge(wrong+' wrong choice')+badge(unknown+' I don’t know')+badge(timeouts+' timed out')+'</div><p class="caption block">Each correct answer earns one point. Wrong choices, “I don’t know”, and timeouts earn zero. Unknown and timed-out answers use the existing unknown outcome in your review schedule.</p><div class="row wrap block">'+button('Play again','quick-again','primary','data-save-action')+button('Back to quiz setup','quiz-setup')+'</div></section><section class="card"><h2>Your word ratings</h2>'+unique.map(id=>{const q=session.questions.find(q=>q.wordID===id),word=data.words.find(w=>w.id===id)||{id};return '<div class="quick-word-result"><strong>'+esc(q.prompt)+'</strong>'+wordStars(word)+'</div>'}).join('')+'</section><details class="card"><summary>Review all 30 answers</summary>'+session.questions.map((q,i)=>{const a=session.answers.find(a=>a.questionID===q.id),correct=q.choices.find(c=>c.id===q.correctID);return '<div class="quick-word-result"><strong>'+(i+1)+'. '+esc(q.prompt)+'</strong><p class="caption">'+esc(correct.label)+' · '+(a.reason==='timeout'?'Timed out':a.reason==='unknown'?'I don’t know':a.outcome==='correct'?'Correct':'Incorrect')+'</p></div>'}).join('')+'</details></div>'}
  if(!quickRunning)return quickReady(session);
- const q=session.questions[session.currentIndex];return heading('Quick Match','Choose the Russian meaning.',button('Leave game','quick-leave'))+'<div class="row between"><strong>Question '+(session.currentIndex+1)+' of 30</strong><span class="caption">'+session.answers.filter(a=>a.outcome==='correct').length+' correct</span></div><div class="quiz-progress" role="progressbar" aria-label="Game completion" aria-valuemin="0" aria-valuemax="30" aria-valuenow="'+session.answers.length+'"><span style="width:'+session.answers.length/30*100+'%"></span></div><section class="card question quick-question"><div class="row between"><span class="eyebrow">ENGLISH WORD</span><span class="quick-time" id="quick-seconds" role="timer" aria-label="Seconds remaining">4.0s</span></div><h2 class="prompt" id="quick-prompt" tabindex="-1">'+esc(q.prompt)+'</h2><div class="quick-time-track" aria-hidden="true"><span id="quick-time-bar"></span></div></section><div class="choices quick-choices" role="group" aria-label="Russian translations">'+[...q.choices,{id:'unknown',label:'I don’t know'}].map((c,i)=>button('<span class="num">'+(i<2?i+1:'?')+'</span><span>'+esc(c.label)+'</span>','quick-answer','choice', 'data-id="'+esc(c.id)+'" data-question="'+esc(q.id)+'" data-save-action')).join('')+'</div><p class="caption block">One correct choice · moves on immediately · four seconds per word</p>';
+ const q=session.questions[session.currentIndex];return heading('Quick Match','Choose the Russian meaning.',button('Leave game','quick-leave'))+'<div class="row between"><strong>Question '+(session.currentIndex+1)+' of 30</strong><span class="caption">'+session.answers.filter(a=>a.outcome==='correct').length+' correct</span></div><div class="quiz-progress" role="progressbar" aria-label="Game completion" aria-valuemin="0" aria-valuemax="30" aria-valuenow="'+session.answers.length+'"><span style="width:'+session.answers.length/30*100+'%"></span></div><section class="card question quick-question"><div class="row between"><span class="eyebrow">ENGLISH WORD</span><span class="quick-time" id="quick-seconds" role="timer" aria-label="Seconds remaining">4.0s</span></div><h2 class="prompt" id="quick-prompt" tabindex="-1">'+esc(q.prompt)+'</h2><div class="quick-time-track" aria-hidden="true"><span id="quick-time-bar"></span></div></section>'+quickChoiceButtons(q)+'<p class="caption block">Tap a translation · instant feedback · four seconds per word</p>';
 }
 function refreshQuickClock(){
- quickClock.stop();const s=data.sessions.find(s=>s.id===quizID);if(!storageReady||!quickRunning||route!=='quiz'||s?.kind!=='quick_match'||s.status!=='in_progress'||quickSubmitting)return;
+ quickClock.stop();const s=data.sessions.find(s=>s.id===quizID);if(!storageReady||!quickRunning||route!=='quiz'||s?.kind!=='quick_match'||quickSubmitting)return;
+ if(quickFeedback?.sessionId===s.id){const id=quickFeedback.question.id;quickClock.arm('feedback:'+id,quickFeedback.until,()=>{if(quickFeedback?.question.id!==id)return;quickFeedback=null;render();$('#quick-prompt')?.focus({preventScroll:true});if(s.status==='completed')scrollTop()});return}if(s.status!=='in_progress')return;
  const q=s.questions[s.currentIndex],key=s.id+':'+q.id;
  quickClock.arm(key,s.deadline,()=>{if(busy){setTimeout(refreshQuickClock,75);return}quickRespond(q.id,null,'timeout').catch(fail)},remaining=>{const label=$('#quick-seconds'),bar=$('#quick-time-bar');if(label)label.textContent=(remaining/1000).toFixed(1)+'s';if(bar)bar.style.width=remaining/4000*100+'%'});
 }
 async function quickRespond(qid,selected,reason='answer'){
- if(quickSubmitting||busy||!quickRunning||route!=='quiz')return;
+ if(quickSubmitting||quickFeedback||busy||!quickRunning||route!=='quiz')return;
  const current=data.sessions.find(s=>s.id===quizID);if(current?.kind!=='quick_match'||current.status!=='in_progress'||current.questions[current.currentIndex]?.id!==qid)return;
- quickSubmitting=true;quickClock.stop();try{const session=await mutation(s=>C.answerQuick(s,current.id,qid,selected,Date.now(),reason));if(session){render();$('#quick-prompt')?.focus({preventScroll:true});if(session.status==='completed')scrollTop()}else{quickRunning=false;render()}}finally{quickSubmitting=false;refreshQuickClock()}
+ quickSubmitting=true;quickClock.stop();const shown=C.clone(current.questions[current.currentIndex]),answeredAt=Date.now();try{const session=await mutation(s=>C.answerQuick(s,current.id,qid,selected,answeredAt,reason,650));if(session){const answer=session.answers.find(a=>a.questionID===qid);quickFeedback={sessionId:session.id,question:shown,answer:C.clone(answer),until:answeredAt+650};render()}else{quickRunning=false;render()}}finally{quickSubmitting=false;refreshQuickClock()}
 }
 
 function activeQuiz(session){
@@ -109,10 +118,10 @@ async function handleAction(action,el){
  if(action==='quick-start'||action==='quick-again'){
   if(busy||quickSubmitting)return;
   const s=await mutation(state=>{const requested=el.dataset.id&&state.sessions.find(q=>q.id===el.dataset.id&&q.kind==='quick_match'&&q.status==='in_progress');const session=requested||C.startQuick(state,D);if(session.deadline<=Date.now())C.answerQuick(state,session.id,session.questions[session.currentIndex].id,null,Date.now(),'timeout');return session});
-  if(s){quickRunning=true;quizID=s.id;route='quiz';showResults=false;selection=null;render();scrollTop();$('#quick-prompt')?.focus({preventScroll:true})}return;
+  if(s){quickFeedback=null;quickRunning=true;quizID=s.id;route='quiz';showResults=false;selection=null;render();scrollTop();$('#quick-prompt')?.focus({preventScroll:true})}return;
  }
  if(action==='quick-answer'){await quickRespond(el.dataset.question,el.dataset.id==='unknown'?null:el.dataset.id);return;}
- if(action==='quick-leave'){quickRunning=false;quickClock.stop();quizID=null;render();scrollTop();return;}
+ if(action==='quick-leave'){quickRunning=false;quickFeedback=null;quickClock.stop();quizID=null;render();scrollTop();return;}
 
  if(action==='github-connect'){const field=$('#github-token'),token=field.value.trim();field.value='';try{await github.connect(token);notify('Words and history saved to GitHub. Cloud icons confirm saved words.');render()}catch(e){refreshGitHubStatus();fail(e)}return;}
  if(action==='github-now'){try{await github.sync();render();notify('GitHub sync finished.')}catch(e){refreshGitHubStatus();fail(e)}return;}
@@ -143,7 +152,7 @@ async function handleAction(action,el){
  if(action==='apply'){if(selection===null)return;const current=data.sessions.find(s=>s.id===quizID),s=await mutation(state=>C.submit(state,current.id,current.questions[current.currentIndex].id,selection==='unknown'?null:selection));if(s){render();const fb=$('.feedback');fb?.scrollIntoView({block:'nearest',behavior:'smooth'});}return;}
  if(action==='next'){const s=await mutation(state=>C.next(state,quizID));if(s){selection=null;render();scrollTop();}return;}
  if(action==='results'){showResults=true;render();scrollTop();return;}
- if(action==='quiz-setup'||action==='leave'){quickRunning=false;quickClock.stop();quizID=null;showResults=false;selection=null;render();scrollTop();return;}
+ if(action==='quiz-setup'||action==='leave'){quickRunning=false;quickFeedback=null;quickClock.stop();quizID=null;showResults=false;selection=null;render();scrollTop();return;}
  if(action==='select-word'){selectedWord=el.dataset.id;route='vocabulary';render();return;}
  if(action==='sort'){ascending=!ascending;render();return;}
  if(action==='select-history'){selectedHistory=el.dataset.id;render();scrollTop();return;}
@@ -153,7 +162,7 @@ async function handleAction(action,el){
  if(action==='retry-imports'){importer.attempted.clear();await importer.scan();data=await store.read();render();notify('Retry started. Changing files will settle before import.');return;}
  if(action==='retry-start'){location.reload();return;}
 }
-document.addEventListener('click',e=>{const routeButton=e.target.closest('[data-route]');if(routeButton){quickRunning=false;quickClock.stop();route=routeButton.dataset.route;render();scrollTop();return;}const el=e.target.closest('[data-action]');if(el&&!el.disabled)handleAction(el.dataset.action,el).catch(fail);});
+document.addEventListener('click',e=>{const routeButton=e.target.closest('[data-route]');if(routeButton){quickRunning=false;quickFeedback=null;quickClock.stop();route=routeButton.dataset.route;render();scrollTop();return;}const el=e.target.closest('[data-action]');if(el&&!el.disabled)handleAction(el.dataset.action,el).catch(fail);});
 document.addEventListener('input',e=>{if(e.target.id==='word-search'){search=e.target.value;render();}});
 document.addEventListener('change',e=>{if(e.target.id==='word-filter'){filter=e.target.value;render();}});
 $('#editor-dialog').addEventListener('cancel',e=>{e.preventDefault();closeEditor();});
